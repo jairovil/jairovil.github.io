@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Agenda Esportiva | Programação de Jogos e Transmissões</title>
+<meta name="description" content="Agenda esportiva completa com horários, canais de transmissão e informações de jogos do dia. Programação de futebol atualizada diariamente.">
+<meta name="keywords" content="agenda esportiva, programação de jogos, futebol hoje, transmissão ao vivo, brasileirão, champions league">
+<meta name="author" content="Agenda Esportiva">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Agenda Esportiva | Programação de Jogos">
+<meta property="og:description" content="Programação completa de jogos e transmissões esportivas do dia.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- ========== ADCASH BIBLIOTECA (OBRIGATÓRIO) ========== -->
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0a0f1a 0%, #0f1622 50%, #1a1f2e 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.main-header {
+    background: linear-gradient(180deg, rgba(10,15,26,0.95) 0%, rgba(15,22,34,0.98) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,255,174,0.15);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 38px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); text-shadow: 0 0 10px #00ffae; }
+}
+
+.logo h1 {
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 0%, #00ffae 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: #00ffae;
+}
+
+.tagline {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tagline span {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tagline i {
+    color: #00ffae;
+}
+
+.date-badge {
+    background: rgba(0,255,174,0.1);
+    border-radius: 30px;
+    padding: 8px 18px;
+    border: 1px solid rgba(0,255,174,0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-badge i {
+    color: #00ffae;
+}
+
+.adsense-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.adsense-box {
+    background: linear-gradient(135deg, #1a1f2e, #151a28);
+    border-radius: 16px;
+    text-align: center;
+    padding: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tabela Estilos */
+.tabela-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f1420;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: left;
+}
+
+th {
+    background: #1e293b;
+    color: #00ffae;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+td {
+    border-bottom: 1px solid #1e293b;
+}
+
+tr:nth-child(even) {
+    background: #111827;
+}
+
+tr:hover {
+    background: #1f2937;
+    transition: all 0.3s ease;
+}
+
+/* Badges de canais */
+.canal-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 2px 3px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.canal-badge:hover {
+    transform: scale(1.05);
+}
+
+/* Busca */
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.search-input {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    background: #1e293b;
+    color: white;
+    border: 1px solid #334155;
+}
+
+.search-input::placeholder {
+    color: #94a3b8;
+}
+
+.search-input:focus {
+    border-color: #00ffae;
+    box-shadow: 0 0 5px rgba(0,255,174,0.3);
+}
+
+.resultado-mensagem {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+}
+
+.btn-copiar {
+    max-width: 1200px;
+    margin: 0 auto 15px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.btn-copiar button {
+    padding: 8px 16px;
+    background: linear-gradient(90deg, #00ffae, #00cc88);
+    border: none;
+    border-radius: 20px;
+    color: #0f2027;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-copiar button:hover {
+    transform: scale(1.05);
+}
+
+.contador-eventos {
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.loading, .waiting-message {
+    text-align: center;
+    padding: 40px;
+    color: #00ffae;
+}
+
+.loading i, .waiting-message i {
+    font-size: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.main-footer {
+    background: #0a0e16;
+    border-top: 1px solid rgba(0,255,174,0.1);
+    padding: 40px 20px 20px;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff, #00ffae);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer-links a:hover {
+    color: #00ffae;
+}
+
+.footer-info p {
+    color: #888;
+    font-size: 13px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.footer-legal {
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 11px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.content-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-card {
+    background: linear-gradient(145deg, #131824, #0e121c);
+    border-radius: 24px;
+    padding: 40px;
+    border: 1px solid rgba(0,255,174,0.2);
+}
+
+.content-card h1 {
+    font-size: 28px;
+    color: #00ffae;
+    margin-bottom: 20px;
+}
+
+.content-card h2 {
+    font-size: 20px;
+    color: #fff;
+    margin: 25px 0 15px;
+}
+
+.content-card p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.back-button {
+    display: inline-block;
+    background: #00ffae;
+    color: #0f2027;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.back-button:hover {
+    background: #00dd96;
+}
+
+@media (max-width: 767px) {
+    th, td {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+    .content-card {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-content">
+        <div class="logo">
+            <div class="logo-icon">⚽</div>
+            <h1>Agenda Esportiva</h1>
+        </div>
+        <div class="nav-links">
+            <a onclick="showHome()">Início</a>
+            <a onclick="showPrivacy()">Privacidade</a>
+            <a onclick="showTerms()">Termos</a>
+            <a onclick="showContact()">Contato</a>
+        </div>
+        <div class="tagline">
+            <span><i class="fas fa-futbol"></i> Futebol</span>
+            <span><i class="fas fa-trophy"></i> Competições</span>
+            <span><i class="fas fa-tv"></i> Transmissões</span>
+        </div>
+        <div class="date-badge">
+            <i class="fas fa-calendar-alt"></i>
+            <span id="currentDate"></span>
+        </div>
+    </div>
+</header>
+
+<!-- ========== BANNER SUPERIOR ADCASH - 728x90 ========== -->
+<div class="adsense-container">
+    <div class="adsense-box">
+        <div>
+            <script type="text/javascript">
+                aclib.runBanner({
+                    zoneId: '11275518',
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+<main class="main-grid" id="mainContent">
+    <div class="section-title">
+        <h2><i class="fas fa-list-ol"></i> Programação do Dia</h2>
+        <div class="bar"></div>
+    </div>
+    
+    <!-- TABELA DE PROGRAMAÇÃO -->
+    <div class="tabela-container">
+        <div class="btn-copiar">
+            <button id="btnCopiarTabela">📋 Copiar tabela</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar por time, esporte ou canal...">
+        </div>
+        <div id="resultadoMensagem" class="resultado-mensagem" style="display:none;"></div>
+        
+        <div id="loadingTabela" class="loading">
+            <i class="fas fa-spinner"></i><br>
+            Carregando programação...
+        </div>
+        
+        <div id="waitingMessage" class="waiting-message" style="display:none;">
+            <i class="fas fa-clock"></i><br>
+            ⏳ Aguardando programação...<br>
+            <small>Atualizarei a tabela assim que possível.</small>
+        </div>
+        
+        <table id="programacaoTable" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Esporte</th>
+                    <th>Jogo</th>
+                    <th>Transmissão</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaBody">
+                <!-- Dados carregados do JSON -->
+            </tbody>
+        </table>
+        
+        <div id="contadorEventos" class="contador-eventos"></div>
+    </div>
+</main>
+
+<!-- PÁGINA DE PRIVACIDADE -->
+<div id="privacyPage" style="display:none;">
+    <div class="content-page">
+        <div class="content-card">
+            <h1><i class="fas fa-lock"></i> Política de Privacidade</h1>
+            <p><strong>Última atualização:</strong> <span id="currentYear"></span></p>
+            <p>A <strong>Agenda Esportiva</strong> respeita sua privacidade. Este site é informativo e não coleta dados pessoais.</p>
+            <h2>📊 Cookies</h2>
+            <p>Utilizamos cookies para melhorar sua experiência e exibir anúncios personalizados através do Google AdSense.</p>
+            <h2>📧 Contato</h2>
+            <p>Dúvidas: <strong>contatoagendaesportiva@gmail.com</strong></p>
+            <button class="back-button" onclick="showHome()">← Voltar ao Início</button>
+        </div>
+    </div>
+</div>
+
+<!-- PÁGINA DE TERMOS -->
+<div id="termsPage" style="display:none;">
+    <div class="content-page">
+        <div class="content-card">
+            <h1><i class="fas fa-file-contract"></i> Termos de Uso</h1>
+            <p><strong>Última atualização:</strong> <span id="currentYear2"></span></p>
+            <h2>📌 Natureza do Site</h2>
+            <p>Este site é <strong>100% INFORMATIVO</strong>. Não disponibilizamos streaming ou conteúdo protegido.</p>
+            <button class="back-button" onclick="showHome()">← Voltar ao Início</button>
+        </div>
+    </div>
+</div>
+
+<!-- PÁGINA DE CONTATO -->
+<div id="contactPage" style="display:none;">
+    <div class="content-page">
+        <div class="content-card">
+            <h1><i class="fas fa-envelope"></i> Contato</h1>
+            <p>Entre em contato conosco:</p>
+            <h2>📧 E-mail</h2>
+            <p><a href="mailto:contatoagendaesportiva@gmail.com" style="color:#00ffae">contatoagendaesportiva@gmail.com</a></p>
+            <button class="back-button" onclick="showHome()">← Voltar ao Início</button>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-logo">Agenda Esportiva</div>
+        <div class="footer-links">
+            <a onclick="showHome()">Início</a>
+            <a onclick="showPrivacy()">Privacidade</a>
+            <a onclick="showTerms()">Termos</a>
+            <a onclick="showContact()">Contato</a>
+        </div>
+        <div class="footer-info">
+            <p>📺 Guia informativo de horários e canais de transmissão esportiva.</p>
+            <p><strong>⚠️ Disclaimer:</strong> Site independente, sem afiliação com emissoras de TV.</p>
+        </div>
+        <div class="footer-legal">
+            <p>© <span id="footerYear"></span> Agenda Esportiva - Todos os direitos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===================== CONFIGURAÇÃO =====================
+const ARQUIVO_JSON = 'dados.json';
+
+// ===================== FUNÇÕES PRINCIPAIS =====================
+async function carregarTabela() {
+    const loading = document.getElementById('loadingTabela');
+    const waitingMsg = document.getElementById('waitingMessage');
+    const tabela = document.getElementById('programacaoTable');
+    const tbody = document.getElementById('tabelaBody');
+    
+    try {
+        const resposta = await fetch(`${ARQUIVO_JSON}?t=${new Date().getTime()}`);
+        
+        if (!resposta.ok) {
+            throw new Error('Arquivo não encontrado');
+        }
+        
+        const dados = await resposta.json();
+        
+        if (!dados.eventos || dados.eventos.length === 0) {
+            throw new Error('Nenhum evento encontrado');
+        }
+        
+        // Monta a tabela
+        tbody.innerHTML = '';
+        dados.eventos.forEach(evento => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${evento.hora}</td>
+                <td>${evento.esporte}</td>
+                <td>${evento.jogo}</td>
+                <td>${evento.canais.join(', ')}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+        
+        loading.style.display = 'none';
+        waitingMsg.style.display = 'none';
+        tabela.style.display = 'table';
+        
+        // Aplica formatações (sem AO VIVO)
+        formatarCanais();
+        adicionarIcones();
+        atualizarContador();
+        
+        // Habilita busca
+        enableSearch(true);
+        
+    } catch (erro) {
+        console.error('Erro ao carregar:', erro);
+        loading.style.display = 'none';
+        waitingMsg.style.display = 'block';
+        tabela.style.display = 'none';
+        enableSearch(false);
+    }
+}
+
+function formatarCanais() {
+    const celulasCanais = document.querySelectorAll('#tabelaBody td:last-child');
+    const cores = {
+        'SBT': '#e74c3c', 'TNT': '#e74c3c', 'HBO': '#e74c3c', 'Max': '#e74c3c',
+        'SPORTV': '#2ecc71', 'SPORTV2': '#2ecc71', 'SPORTV3': '#2ecc71',
+        'ESPN': '#3498db', 'ESPN2': '#3498db', 'ESPN3': '#3498db', 'ESPN4': '#3498db',
+        'YouTube': '#ff0000', 'Youtube': '#ff0000',
+        'XSPORTS': '#9b59b6', 'XSPORTS2': '#9b59b6',
+        'Paramount': '#0066ff', 'Paramount+': '#0066ff',
+        'Jovem Pan': '#f39c12', 'Pan': '#f39c12',
+        'CazéTV': '#1abc9c', 'CazeTV': '#1abc9c',
+        'Globo': '#2ecc71', 'Record': '#e74c3c', 'Band': '#f39c12'
+    };
+    
+    celulasCanais.forEach(celula => {
+        const texto = celula.innerHTML;
+        const canais = texto.split(',').map(c => c.trim());
+        
+        if (canais.length > 0 && !celula.querySelector('.canal-badge')) {
+            celula.innerHTML = '';
+            canais.forEach(canal => {
+                const span = document.createElement('span');
+                span.textContent = canal;
+                span.className = 'canal-badge';
+                let bgColor = '#7f8c8d';
+                for (let [key, color] of Object.entries(cores)) {
+                    if (canal.includes(key)) {
+                        bgColor = color;
+                        break;
+                    }
+                }
+                span.style.background = bgColor;
+                span.style.color = 'white';
+                celula.appendChild(span);
+            });
+        }
+    });
+}
+
+function adicionarIcones() {
+    const linhas = document.querySelectorAll('#tabelaBody tr');
+    
+    const icones = {
+        'Ciclismo': '🚴', 'Libertadores Areia': '🏖️', 'Tênis de Mesa': '🏓',
+        'Basquete': '🏀', 'Futebol': '⚽', 'Champions League': '🏆',
+        'Futebol Fem': '👩⚽', 'Futebol Areia': '🏖️⚽', 'Futsal': '⚽',
+        'Handebol': '🤾', 'Libertadores': '🟡', 'Copa do Brasil': '🏆',
+        'Brasileirão': '🇧🇷', 'Premier League': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'La Liga': '🇪🇸',
+        'Série A': '🇧🇷', 'Série B': '🇧🇷'
+    };
+    
+    linhas.forEach(linha => {
+        const esporteCelula = linha.children[1];
+        
+        if (esporteCelula) {
+            const esporte = esporteCelula.textContent;
+            for (let [key, icone] of Object.entries(icones)) {
+                if (esporte.includes(key)) {
+                    esporteCelula.innerHTML = `${icone} ${esporte}`;
+                    break;
+                }
+            }
+        }
+    });
+}
+
+function atualizarContador() {
+    const totalEventos = document.querySelectorAll('#tabelaBody tr').length;
+    const contador = document.getElementById('contadorEventos');
+    if (contador) contador.innerHTML = `📊 Total de eventos: ${totalEventos}`;
+}
+
+// ===================== BUSCA =====================
+let buscaAtiva = false;
+
+function enableSearch(ativo) {
+    const searchInput = document.getElementById('searchInput');
+    buscaAtiva = ativo;
+    if (!ativo) {
+        searchInput.disabled = true;
+        searchInput.value = '';
+        searchInput.placeholder = '🔍 Aguardando programação...';
+    } else {
+        searchInput.disabled = false;
+        searchInput.placeholder = '🔍 Buscar por time, esporte ou canal...';
+        // Limpa busca anterior
+        const linhas = document.querySelectorAll('#tabelaBody tr');
+        linhas.forEach(linha => linha.style.display = '');
+        document.getElementById('resultadoMensagem').style.display = 'none';
+    }
+}
+
+function initSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const resultadoMensagem = document.getElementById('resultadoMensagem');
+    
+    searchInput.addEventListener('keyup', function() {
+        if (!buscaAtiva) return;
+        
+        const termo = this.value.toLowerCase();
+        const linhas = document.querySelectorAll('#tabelaBody tr');
+        let encontrados = 0;
+        
+        linhas.forEach(linha => {
+            const texto = linha.textContent.toLowerCase();
+            if (texto.includes(termo)) {
+                linha.style.display = '';
+                encontrados++;
+            } else {
+                linha.style.display = 'none';
+            }
+        });
+        
+        if (encontrados === 0 && termo !== '') {
+            resultadoMensagem.textContent = '❌ Nenhum evento encontrado';
+            resultadoMensagem.style.display = 'block';
+        } else {
+            resultadoMensagem.style.display = 'none';
+        }
+    });
+}
+
+// ===================== COPIAR TABELA =====================
+function initCopyButton() {
+    const btn = document.getElementById('btnCopiarTabela');
+    if (btn) {
+        btn.onclick = function() {
+            const tabela = document.getElementById('programacaoTable');
+            if (tabela.style.display === 'none') {
+                btn.textContent = '⚠️ Nenhuma tabela disponível';
+                setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
+                return;
+            }
+            const range = document.createRange();
+            range.selectNode(tabela);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            btn.textContent = '✅ Copiado!';
+            setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
+        };
+    }
+}
+
+// ===================== RESET DIÁRIO =====================
+function verificarEexecutarResetDiario() {
+    const agora = new Date();
+    const hora = agora.getHours();
+    const minutos = agora.getMinutes();
+    
+    // Verifica se é meia-noite (00:00)
+    if (hora === 0 && minutos === 0) {
+        resetarProgramacao();
+    }
+}
+
+function resetarProgramacao() {
+    console.log('Resetando programação - meia-noite');
+    const loading = document.getElementById('loadingTabela');
+    const waitingMsg = document.getElementById('waitingMessage');
+    const tabela = document.getElementById('programacaoTable');
+    const tbody = document.getElementById('tabelaBody');
+    
+    // Limpa tabela
+    tbody.innerHTML = '';
+    tabela.style.display = 'none';
+    waitingMsg.style.display = 'block';
+    loading.style.display = 'none';
+    
+    // Desativa busca
+    enableSearch(false);
+    
+    // Limpa contador
+    const contador = document.getElementById('contadorEventos');
+    if (contador) contador.innerHTML = '';
+    
+    // Força recarregar o JSON depois de um tempo (para ver se já tem nova programação)
+    setTimeout(() => {
+        carregarTabela();
+    }, 5000); // Tenta recarregar após 5 segundos
+}
+
+// ===================== DATA ATUAL =====================
+function displayCurrentDate() {
+    const data = new Date();
+    const dia = data.getDate();
+    const mes = data.toLocaleString('pt-BR', { month: 'long' });
+    const ano = data.getFullYear();
+    const semana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+    const diaSemana = semana[data.getDay()];
+    document.getElementById('currentDate').innerHTML = `<i class="fas fa-futbol"></i> ${diaSemana}, ${dia} de ${mes} de ${ano}`;
+}
+
+// ===================== NAVEGAÇÃO =====================
+function showHome() {
+    document.getElementById('mainContent').style.display = 'block';
+    document.getElementById('privacyPage').style.display = 'none';
+    document.getElementById('termsPage').style.display = 'none';
+    document.getElementById('contactPage').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showPrivacy() {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('privacyPage').style.display = 'block';
+    document.getElementById('termsPage').style.display = 'none';
+    document.getElementById('contactPage').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showTerms() {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('privacyPage').style.display = 'none';
+    document.getElementById('termsPage').style.display = 'block';
+    document.getElementById('contactPage').style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showContact() {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('privacyPage').style.display = 'none';
+    document.getElementById('termsPage').style.display = 'none';
+    document.getElementById('contactPage').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===================== INICIALIZAÇÃO =====================
+const ano = new Date().getFullYear();
+document.querySelectorAll('#currentYear, #currentYear2, #footerYear').forEach(el => { if(el) el.textContent = ano; });
+
+displayCurrentDate();
+carregarTabela();
+initSearch();
+initCopyButton();
+showHome();
+
+// Verifica reset a cada minuto
+setInterval(verificarEexecutarResetDiario, 60000);
+</script>
+</body>
+</html>
