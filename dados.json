@@ -1,57 +1,79 @@
 {
   "eventos": [
-    {"hora":"10h35","esporte":"Ciclismo","jogo":"La Vuelta (Fem.) - etapa 3","canais":["ESPN3"]},
+    {"hora":"01h00","esporte":"Camp. Japonês","jogo":"Shimizu S-Pulse x Cerezo Osaka","canais":["YouTube"]},
+    {"hora":"03h00","esporte":"Camp. Japonês","jogo":"Sanfrec. Hiroshima x Vissel Kobe","canais":["YouTube"]},
+    {"hora":"04h00","esporte":"Camp. Japonês","jogo":"Machida Zelvia x Yokohama Marinos","canais":["YouTube"]},
 
-    {"hora":"12h00","esporte":"Libertadores Fut. Areia","jogo":"Ceilândia x Tito Drago-PER","canais":["SPORTV2","YouTube"]},
+    {"hora":"06h00","esporte":"Masters 1000 Roma","jogo":"Marozsan x Kopriva","canais":["ESPN2"]},
+    {"hora":"07h00","esporte":"Camp. Japonês","jogo":"Kashiwa Reysol x Urawa Reds","canais":["YouTube"]},
+    {"hora":"07h30","esporte":"WTA 1000 Roma","jogo":"Jeanjean x Bia Haddad","canais":["ESPN2"]},
+    {"hora":"09h30","esporte":"ATP/WTA Roma","jogo":"Jogos de 1ª Rodada","canais":["ESPN2"]},
 
-    {"hora":"13h00","esporte":"Mundial T. Mesa Equipes","jogo":"Brasil F x Luxemburgo F","canais":["SPORTV3","CazéTV"]},
-    {"hora":"13h00","esporte":"Euroliga - Playoffs","jogo":"Hapoel Tel-Aviv x Real Madrid","canais":["XSPORTS"]},
+    {"hora":"10h35","esporte":"Ciclismo","jogo":"La Vuelta (Fem.) - etapa 4","canais":["ESPN3"]},
 
-    {"hora":"14h30","esporte":"Copa da Turquia","jogo":"Besiktas x Konyaspor","canais":["Jovem Pan","YouTube"]},
+    {"hora":"14h00","esporte":"Euroliga","jogo":"Zalgiris x Fenerbahçe","canais":["XSPORTS"]},
+    {"hora":"15h00","esporte":"Camp. Saudita","jogo":"Al Ahli x Al Fateh","canais":["YouTube"]},
 
-    {"hora":"15h00","esporte":"Camp. Saudita","jogo":"Al Khaleej x Al Hilal","canais":["YouTube"]},
+    {"hora":"15h30","esporte":"Tênis de Mesa","jogo":"Inglaterra x Brasil","canais":["SPORTV2","CazéTV"]},
+    {"hora":"15h30","esporte":"Masters 1000 Roma","jogo":"Cina x Blockx","canais":["ESPN2"]},
 
-    {"hora":"15h30","esporte":"Mundial T. Mesa Equipes","jogo":"Singapura x Brasil","canais":["SPORTV3","CazéTV"]},
+    {"hora":"15h45","esporte":"Handebol","jogo":"Barcelona x Nantes","canais":["XSPORTS"]},
+    {"hora":"15h45","esporte":"Futebol Fem.","jogo":"Brighton x Arsenal","canais":["ESPN4"]},
 
-    {"hora":"15h45","esporte":"Liga Europa Hand.","jogo":"Porto x Melsungen-ALE","canais":["XSPORTS"]},
+    {"hora":"16h00","esporte":"Champions League","jogo":"Bayern x PSG","canais":["TNT","HBO Max"]},
 
-    {"hora":"16h00","esporte":"Champions League","jogo":"Arsenal x Atl. Madrid","canais":["SBT","TNT","HBO Max"]},
-    {"hora":"16h00","esporte":"Brasileirão sub20 Fem.","jogo":"São Paulo F x Ferroviária F","canais":["SPORTV"]},
-    {"hora":"16h00","esporte":"Libertadores Fut. Areia","jogo":"Sampaio Corrêa x Dep. Salud-BOL","canais":["SPORTV2","YouTube"]},
+    {"hora":"17h00","esporte":"Sul-Americano Sub17","jogo":"Argentina x Venezuela","canais":["SPORTV2"]},
 
-    {"hora":"18h00","esporte":"Brasileirão sub20 Fem.","jogo":"Flamengo F x Internacional F","canais":["SPORTV2"]},
+    {"hora":"18h00","esporte":"Paulistão Fem.","jogo":"Palmeiras x Mirassol","canais":["SPORTV"]},
 
-    {"hora":"18h30","esporte":"Copa do Brasil Futsal","jogo":"Vasco x Minas","canais":["YouTube"]},
+    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Audax Italiano x Vasco","canais":["Paramount+"]},
+    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Montevideo City x Palestino","canais":["ESPN3"]},
 
-    {"hora":"19h00","esporte":"NBB - Playoffs","jogo":"Franca x Mogi","canais":["XSPORTS","YouTube"]},
-    {"hora":"19h00","esporte":"Libertadores","jogo":"Sporting Cristal x Palmeiras","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Libertadores","jogo":"Rosario Central x Libertad","canais":["Paramount+"]},
+    {"hora":"19h00","esporte":"Libertadores","jogo":"Cusco x Estudiantes","canais":["ESPN"]},
+    {"hora":"19h00","esporte":"Libertadores","jogo":"La Guaira x Bolívar","canais":["ESPN4"]},
 
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Juventud-URU x Atlético-MG","canais":["ESPN"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Deportivo Riestra x Grêmio","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Indep. Petrolero-BOL x Caracas","canais":["Paramount+"]},
+    {"hora":"19h00","esporte":"Copa Norte","jogo":"Águia de Marabá x Paysandu","canais":["YouTube"]},
+    {"hora":"19h00","esporte":"Copa Nordeste","jogo":"ABC x Juazeirense","canais":["YouTube"]},
 
-    {"hora":"20h00","esporte":"Libertadores Fut. Areia","jogo":"Vasco x Guaicuacu-VEN","canais":["SPORTV","YouTube"]},
+    {"hora":"19h15","esporte":"Futsal","jogo":"Jaraguá x Corinthians","canais":["XSPORTS"]},
 
-    {"hora":"20h00","esporte":"NBA - Playoffs","jogo":"Detroit Pistons x Cleveland Cavaliers","canais":["Prime Video"]},
+    {"hora":"19h30","esporte":"Série D","jogo":"Moto Club x Sampaio Corrêa","canais":["YouTube"]},
+    {"hora":"19h30","esporte":"NBB","jogo":"Brusque x Fluminense","canais":["YouTube"]},
+    {"hora":"19h30","esporte":"LBF","jogo":"São José x Sodie Mesquita","canais":["YouTube"]},
 
-    {"hora":"20h30","esporte":"NBB - Playoffs","jogo":"Brasília x Flamengo","canais":["SPORTV2"]},
+    {"hora":"20h00","esporte":"NBA","jogo":"Knicks x 76ers","canais":["ESPN2"]},
+    {"hora":"20h00","esporte":"Recopa Gaúcha","jogo":"Brasil-RS x Internacional","canais":["YouTube"]},
+    {"hora":"20h00","esporte":"Paulistão Fem.","jogo":"Ferroviária x Santos","canais":["CazéTV"]},
+    {"hora":"20h00","esporte":"Sul-Americano Sub17","jogo":"Brasil x Chile","canais":["SPORTV2"]},
 
-    {"hora":"21h00","esporte":"LNF Silver Futsal","jogo":"Concórdia x Joaçaba","canais":["XSPORTS","LNF TV"]},
+    {"hora":"20h30","esporte":"Copa Centro-Oeste","jogo":"Gama x Rio Branco","canais":["YouTube"]},
 
-    {"hora":"21h00","esporte":"NHL - Playoffs","jogo":"Colorado Avalanche x Minnesota Wild","canais":["ESPN2"]},
+    {"hora":"21h00","esporte":"Copa Norte","jogo":"Nacional-AM x Porto Velho","canais":["YouTube"]},
 
-    {"hora":"21h00","esporte":"Libertadores","jogo":"Barcelona-EQU x Boca Juniors","canais":["Paramount+"]},
-    {"hora":"21h00","esporte":"Libertadores","jogo":"Univ. Central-VEN x Ind. del Valle","canais":["ESPN4"]},
+    {"hora":"21h00","esporte":"Sul-Americana","jogo":"Barracas Central x Olimpia","canais":["ESPN4"]},
+    {"hora":"21h00","esporte":"Sul-Americana","jogo":"Macará x Tigre","canais":["Paramount+"]},
 
-    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Recoleta-PAR x Santos","canais":["SBT","ESPN"]},
-    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Puerto Cabello x Cienciano-PER","canais":["ESPN3"]},
-    {"hora":"21h30","esporte":"Libertadores","jogo":"Always Ready x Lanús","canais":["Paramount+"]},
+    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Botafogo x Racing","canais":["Paramount+"]},
 
-    {"hora":"21h30","esporte":"NBA - Playoffs","jogo":"OKC Thunder x LA Lakers","canais":["Prime Video"]},
+    {"hora":"21h30","esporte":"Libertadores","jogo":"Santa Fé x Corinthians","canais":["Globo","Paramount+"]},
+    {"hora":"21h30","esporte":"Libertadores","jogo":"Indep. Rivadavia x Fluminense","canais":["Globo","ESPN"]},
 
-    {"hora":"22h30","esporte":"Concacaf Champions","jogo":"Tigres x Nashville","canais":["Disney+"]},
+    {"hora":"21h30","esporte":"Copa Nordeste","jogo":"Vitória x Ceará","canais":["SBT","YouTube"]},
+    {"hora":"21h30","esporte":"Copa Nordeste","jogo":"Sport x ASA","canais":["SBT","YouTube"]},
 
-    {"hora":"23h00","esporte":"Sul-Americana","jogo":"Dep Cuenca-EQU x San Lorenzo","canais":["ESPN4"]}
+    {"hora":"21h30","esporte":"Copa Sul-Sudeste","jogo":"Operário-PR x Chapecoense","canais":["YouTube"]},
+    {"hora":"21h30","esporte":"Copa Sul-Sudeste","jogo":"Volta Redonda x Novorizontino","canais":["YouTube"]},
+    {"hora":"21h30","esporte":"Copa Sul-Sudeste","jogo":"Avaí x Sampaio Corrêa","canais":["YouTube"]},
+    {"hora":"21h30","esporte":"Copa Sul-Sudeste","jogo":"São Bernardo x Caxias","canais":["YouTube"]},
+    {"hora":"21h30","esporte":"Copa Sul-Sudeste","jogo":"América-MG x Cianorte","canais":["YouTube"]},
+    {"hora":"21h30","esporte":"Copa Sul-Sudeste","jogo":"Juventude x Tombense","canais":["YouTube"]},
+
+    {"hora":"22h30","esporte":"NBA","jogo":"Spurs x Timberwolves","canais":["ESPN2"]},
+    {"hora":"22h30","esporte":"Concacaf Champions","jogo":"Toluca x LAFC","canais":["Disney+"]},
+
+    {"hora":"23h00","esporte":"Libertadores","jogo":"Univ. Católica x Cruzeiro","canais":["ESPN4"]},
+    {"hora":"23h00","esporte":"Libertadores","jogo":"Tolima x Nacional","canais":["ESPN3"]},
+
+    {"hora":"23h00","esporte":"Sul-Americana","jogo":"Alianza Lima x América de Cali","canais":["Paramount+"]}
   ]
 }
