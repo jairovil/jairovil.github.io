@@ -12,6 +12,7 @@
 <meta property="og:description" content="Programação completa de jogos e transmissões esportivas do dia.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="google-adsense-account" content="ca-pub-4839644858313586">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -436,21 +437,19 @@ tr:hover {
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-4839644858313586"
-             data-ad-slot="YOUR_SLOT_1"
+             data-ad-slot="1234567890"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 </div>
 
-<main class="main-grid" id="mainContent">
-    <div class="section-title">
-        <h2><i class="fas fa-list-ol"></i> Programação do Dia</h2>
-        <div class="bar"></div>
-    </div>
-    
-    <!-- TABELA DE PROGRAMAÇÃO -->
+<main id="mainContent">
     <div class="tabela-container">
+        <div class="section-title" style="text-align: center; margin-bottom: 25px;">
+            <h2 style="color: #00ffae;"><i class="fas fa-list-ol"></i> Programação do Dia</h2>
+        </div>
+        
         <div class="btn-copiar">
             <button id="btnCopiarTabela">📋 Copiar tabela</button>
         </div>
@@ -467,7 +466,7 @@ tr:hover {
         <div id="waitingMessage" class="waiting-message" style="display:none;">
             <i class="fas fa-clock"></i><br>
             ⏳ Aguardando programação...<br>
-            <small>Atualizarei a tabela assim que possível.</small>
+            <small>Programação será carregada automaticamente.</small>
         </div>
         
         <table id="programacaoTable" style="display:none;">
@@ -480,26 +479,12 @@ tr:hover {
                 </tr>
             </thead>
             <tbody id="tabelaBody">
-                <!-- Dados carregados do JSON -->
             </tbody>
         </table>
         
         <div id="contadorEventos" class="contador-eventos"></div>
     </div>
 </main>
-
-<!-- ADSENSE - ENTRE CARDS -->
-<div class="adsense-container">
-    <div class="adsense-box">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4839644858313586"
-             data-ad-slot="YOUR_SLOT_2"
-             data-ad-format="rectangle"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-</div>
 
 <!-- PÁGINA DE PRIVACIDADE -->
 <div id="privacyPage" style="display:none;">
@@ -523,8 +508,9 @@ tr:hover {
         <div class="content-card">
             <h1><i class="fas fa-file-contract"></i> Termos de Uso</h1>
             <p><strong>Última atualização:</strong> <span id="currentYear2"></span></p>
-            <h2>📌 Natureza do Site</h2>
             <p>Este site é <strong>100% INFORMATIVO</strong>. Não disponibilizamos streaming ou conteúdo protegido.</p>
+            <h2>📌 Isenção de Responsabilidade</h2>
+            <p>As informações de horários e canais são obtidas de fontes públicas e podem sofrer alterações sem aviso prévio.</p>
             <button class="back-button" onclick="showHome()">← Voltar ao Início</button>
         </div>
     </div>
@@ -538,6 +524,8 @@ tr:hover {
             <p>Entre em contato conosco:</p>
             <h2>📧 E-mail</h2>
             <p><a href="mailto:contatoagendaesportiva@gmail.com" style="color:#00ffae">contatoagendaesportiva@gmail.com</a></p>
+            <h2>💬 Redes Sociais</h2>
+            <p>Em breve teremos perfis no Instagram e Twitter!</p>
             <button class="back-button" onclick="showHome()">← Voltar ao Início</button>
         </div>
     </div>
@@ -549,7 +537,7 @@ tr:hover {
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-4839644858313586"
-             data-ad-slot="YOUR_SLOT_3"
+             data-ad-slot="1234567891"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -576,10 +564,21 @@ tr:hover {
 </footer>
 
 <script>
-// ===================== CONFIGURAÇÃO =====================
+// Dados emulados para demonstração (substitua pelo seu JSON)
+const DADOS_EMULADOS = {
+    eventos: [
+        { hora: "16:00", esporte: "Futebol", jogo: "Flamengo vs Corinthians", canais: ["SPORTV", "Globo"] },
+        { hora: "16:30", esporte: "Futebol", jogo: "Palmeiras vs São Paulo", canais: ["ESPN", "TNT"] },
+        { hora: "17:00", esporte: "Basquete", jogo: "NBA: Lakers vs Warriors", canais: ["ESPN2", "YouTube"] },
+        { hora: "18:00", esporte: "Futebol", jogo: "Manchester City vs Liverpool", canais: ["ESPN", "TNT"] },
+        { hora: "19:00", esporte: "Futebol", jogo: "Real Madrid vs Barcelona", canais: ["SPORTV2", "ESPN3"] }
+    ]
+};
+
+// Configuração
 const ARQUIVO_JSON = 'dados.json';
 
-// ===================== FUNÇÕES PRINCIPAIS =====================
+// Funções principais
 async function carregarTabela() {
     const loading = document.getElementById('loadingTabela');
     const waitingMsg = document.getElementById('waitingMessage');
@@ -587,13 +586,20 @@ async function carregarTabela() {
     const tbody = document.getElementById('tabelaBody');
     
     try {
-        const resposta = await fetch(`${ARQUIVO_JSON}?t=${new Date().getTime()}`);
+        let dados;
         
-        if (!resposta.ok) {
-            throw new Error('Arquivo não encontrado');
+        // Tenta carregar do arquivo JSON
+        try {
+            const resposta = await fetch(`${ARQUIVO_JSON}?t=${new Date().getTime()}`);
+            if (resposta.ok) {
+                dados = await resposta.json();
+            } else {
+                throw new Error('Arquivo não encontrado');
+            }
+        } catch (erro) {
+            console.log('Usando dados emulados');
+            dados = DADOS_EMULADOS;
         }
-        
-        const dados = await resposta.json();
         
         if (!dados.eventos || dados.eventos.length === 0) {
             throw new Error('Nenhum evento encontrado');
@@ -616,12 +622,9 @@ async function carregarTabela() {
         waitingMsg.style.display = 'none';
         tabela.style.display = 'table';
         
-        // Aplica formatações (sem AO VIVO)
         formatarCanais();
         adicionarIcones();
         atualizarContador();
-        
-        // Habilita busca
         enableSearch(true);
         
     } catch (erro) {
@@ -637,14 +640,13 @@ function formatarCanais() {
     const celulasCanais = document.querySelectorAll('#tabelaBody td:last-child');
     const cores = {
         'SBT': '#e74c3c', 'TNT': '#e74c3c', 'HBO': '#e74c3c', 'Max': '#e74c3c',
-        'SPORTV': '#2ecc71', 'SPORTV2': '#2ecc71', 'SPORTV3': '#2ecc71',
+        'SPORTV': '#2ecc71', 'SPORTV2': '#2ecc71', 'SPORTV3': '#2ecc71', 'Globo': '#2ecc71',
         'ESPN': '#3498db', 'ESPN2': '#3498db', 'ESPN3': '#3498db', 'ESPN4': '#3498db',
-        'YouTube': '#ff0000', 'Youtube': '#ff0000',
+        'YouTube': '#ff0000',
         'XSPORTS': '#9b59b6', 'XSPORTS2': '#9b59b6',
-        'Paramount': '#0066ff', 'Paramount+': '#0066ff',
-        'Jovem Pan': '#f39c12', 'Pan': '#f39c12',
-        'CazéTV': '#1abc9c', 'CazeTV': '#1abc9c',
-        'Globo': '#2ecc71', 'Record': '#e74c3c', 'Band': '#f39c12'
+        'Paramount+': '#0066ff', 'Paramount': '#0066ff',
+        'Jovem Pan': '#f39c12',
+        'CazéTV': '#1abc9c'
     };
     
     celulasCanais.forEach(celula => {
@@ -674,19 +676,16 @@ function formatarCanais() {
 
 function adicionarIcones() {
     const linhas = document.querySelectorAll('#tabelaBody tr');
-    
     const icones = {
-        'Ciclismo': '🚴', 'Libertadores Areia': '🏖️', 'Tênis de Mesa': '🏓',
+        'Ciclismo': '🚴', 'Tênis': '🎾', 'Tênis de Mesa': '🏓',
         'Basquete': '🏀', 'Futebol': '⚽', 'Champions League': '🏆',
-        'Futebol Fem': '👩⚽', 'Futebol Areia': '🏖️⚽', 'Futsal': '⚽',
+        'Futebol Fem': '👩⚽', 'Futsal': '⚽', 'Vôlei': '🏐',
         'Handebol': '🤾', 'Libertadores': '🟡', 'Copa do Brasil': '🏆',
-        'Brasileirão': '🇧🇷', 'Premier League': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'La Liga': '🇪🇸',
-        'Série A': '🇧🇷', 'Série B': '🇧🇷'
+        'Brasileirão': '🇧🇷', 'Premier League': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'La Liga': '🇪🇸'
     };
     
     linhas.forEach(linha => {
         const esporteCelula = linha.children[1];
-        
         if (esporteCelula) {
             const esporte = esporteCelula.textContent;
             for (let [key, icone] of Object.entries(icones)) {
@@ -705,7 +704,6 @@ function atualizarContador() {
     if (contador) contador.innerHTML = `📊 Total de eventos: ${totalEventos}`;
 }
 
-// ===================== BUSCA =====================
 let buscaAtiva = false;
 
 function enableSearch(ativo) {
@@ -718,7 +716,6 @@ function enableSearch(ativo) {
     } else {
         searchInput.disabled = false;
         searchInput.placeholder = '🔍 Buscar por time, esporte ou canal...';
-        // Limpa busca anterior
         const linhas = document.querySelectorAll('#tabelaBody tr');
         linhas.forEach(linha => linha.style.display = '');
         document.getElementById('resultadoMensagem').style.display = 'none';
@@ -755,7 +752,6 @@ function initSearch() {
     });
 }
 
-// ===================== COPIAR TABELA =====================
 function initCopyButton() {
     const btn = document.getElementById('btnCopiarTabela');
     if (btn) {
@@ -778,56 +774,17 @@ function initCopyButton() {
     }
 }
 
-// ===================== RESET DIÁRIO =====================
-function verificarEexecutarResetDiario() {
-    const agora = new Date();
-    const hora = agora.getHours();
-    const minutos = agora.getMinutes();
-    
-    // Verifica se é meia-noite (00:00)
-    if (hora === 0 && minutos === 0) {
-        resetarProgramacao();
-    }
-}
-
-function resetarProgramacao() {
-    console.log('Resetando programação - meia-noite');
-    const loading = document.getElementById('loadingTabela');
-    const waitingMsg = document.getElementById('waitingMessage');
-    const tabela = document.getElementById('programacaoTable');
-    const tbody = document.getElementById('tabelaBody');
-    
-    // Limpa tabela
-    tbody.innerHTML = '';
-    tabela.style.display = 'none';
-    waitingMsg.style.display = 'block';
-    loading.style.display = 'none';
-    
-    // Desativa busca
-    enableSearch(false);
-    
-    // Limpa contador
-    const contador = document.getElementById('contadorEventos');
-    if (contador) contador.innerHTML = '';
-    
-    // Força recarregar o JSON depois de um tempo (para ver se já tem nova programação)
-    setTimeout(() => {
-        carregarTabela();
-    }, 5000); // Tenta recarregar após 5 segundos
-}
-
-// ===================== DATA ATUAL =====================
 function displayCurrentDate() {
     const data = new Date();
     const dia = data.getDate();
-    const mes = data.toLocaleString('pt-BR', { month: 'long' });
+    const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+    const mes = meses[data.getMonth()];
     const ano = data.getFullYear();
-    const semana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+    const semana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
     const diaSemana = semana[data.getDay()];
     document.getElementById('currentDate').innerHTML = `<i class="fas fa-futbol"></i> ${diaSemana}, ${dia} de ${mes} de ${ano}`;
 }
 
-// ===================== NAVEGAÇÃO =====================
 function showHome() {
     document.getElementById('mainContent').style.display = 'block';
     document.getElementById('privacyPage').style.display = 'none';
@@ -860,7 +817,7 @@ function showContact() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ===================== INICIALIZAÇÃO =====================
+// Inicialização
 const ano = new Date().getFullYear();
 document.querySelectorAll('#currentYear, #currentYear2, #footerYear').forEach(el => { if(el) el.textContent = ano; });
 
@@ -869,9 +826,6 @@ carregarTabela();
 initSearch();
 initCopyButton();
 showHome();
-
-// Verifica reset a cada minuto
-setInterval(verificarEexecutarResetDiario, 60000);
 </script>
 </body>
 </html>
