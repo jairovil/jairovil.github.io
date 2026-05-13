@@ -1,9 +1,15 @@
 {
   "eventos": [
     {
-      "hora": "06h00",
-      "esporte": "Masters1000 Roma",
-      "jogo": "OF - Musetti x Ruud",
+      "hora": "07h00",
+      "esporte": "Camp. Japonês",
+      "jogo": "Vissel Kobe x Kyoto Sanga / Machida Zelvia x Tokyo Verdy",
+      "canais": ["YouTube", "Canal GOAT"]
+    },
+    {
+      "hora": "08h00",
+      "esporte": "WTA1000 Roma",
+      "jogo": "QF - Pegula x Swiatek",
       "canais": ["ESPN2"]
     },
     {
@@ -13,136 +19,184 @@
       "canais": ["XSPORTS", "YouTube"]
     },
     {
-      "hora": "08h00",
-      "esporte": "WTA1000 Roma",
-      "jogo": "QF - Cirstea x Ostapenko",
-      "canais": ["ESPN2"]
-    },
-    {
       "hora": "10h00",
       "esporte": "Masters1000 Roma",
-      "jogo": "OF - Sinner x Pellegrino",
+      "jogo": "QF - Ruud x Khachanov",
       "canais": ["ESPN2"]
     },
     {
-      "hora": "13h20",
-      "esporte": "Camp. Saudita",
-      "jogo": "Al Kholood x Al Okhdood",
-      "canais": ["YouTube", "Canal GOAT"]
+      "hora": "13h30",
+      "esporte": "Camp. Grego",
+      "jogo": "PAOK x AEK",
+      "canais": ["YouTube", "SportyNet"]
+    },
+    {
+      "hora": "14h00",
+      "esporte": "La Liga",
+      "jogo": "Villarreal x Sevilla",
+      "canais": ["ESPN4"]
     },
     {
       "hora": "14h00",
       "esporte": "WTA1000 Roma",
-      "jogo": "QF - Gauff x Andreeva",
+      "jogo": "QF - Svitolina x Rybakina",
       "canais": ["ESPN2"]
     },
     {
-      "hora": "15h00",
-      "esporte": "La Liga",
-      "jogo": "Betis x Elche",
-      "canais": ["ESPN"]
+      "hora": "14h30",
+      "esporte": "Copa da Turquia",
+      "jogo": "SF - Genclerbirligi x Trabzonspor",
+      "canais": ["Jovem Pan", "YouTube"]
     },
     {
       "hora": "15h00",
-      "esporte": "Camp. Saudita",
-      "jogo": "Al Nassr x Al Hilal",
-      "canais": ["BandSports", "SPORTV", "GOAT", "Band"]
+      "esporte": "Camp. Inglês Feminino",
+      "jogo": "Arsenal F x Everton F",
+      "canais": ["XSPORTS", "ESPN3", "YouTube", "Canal GOAT"]
+    },
+    {
+      "hora": "15h00",
+      "esporte": "Copa do Brasil Feminina",
+      "jogo": "Itabirito-MG F x Ceará F",
+      "canais": ["SPORTV"]
     },
     {
       "hora": "15h30",
       "esporte": "Masters1000 Roma",
-      "jogo": "OF - Tirante x Medvedev",
+      "jogo": "QF - Jodar x Darderi",
       "canais": ["ESPN2"]
     },
     {
       "hora": "16h00",
-      "esporte": "Camp. Inglês 2ª Div.",
-      "jogo": "SF - Southampton x Midd'brough",
-      "canais": ["XSPORTS", "ESPN4"]
+      "esporte": "Copa Itália",
+      "jogo": "Final - Lazio x Inter",
+      "canais": ["SportyNet", "YouTube"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "Premier League",
+      "jogo": "Manchester City x Crystal Palace",
+      "canais": ["ESPN"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "Ligue 1 Francesa",
+      "jogo": "Lens x PSG",
+      "canais": ["YouTube", "CazéTV"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "Camp. Escocês",
+      "jogo": "Hearts x Falkirk / Motherwell x Celtic",
+      "canais": ["YouTube", "Canal GOAT"]
     },
     {
       "hora": "16h30",
       "esporte": "La Liga",
-      "jogo": "Osasuna x Atlético de Madrid",
+      "jogo": "Alavés x Barcelona",
       "canais": ["Disney+"]
-    },
-    {
-      "hora": "18h30",
-      "esporte": "Copa do Brasil Feminina",
-      "jogo": "Vasco F x Araguari F",
-      "canais": ["SPORTV"]
-    },
-    {
-      "hora": "19h00",
-      "esporte": "Copa do Brasil",
-      "jogo": "Internacional x Athletic",
-      "canais": ["Prime Video"]
     },
     {
       "hora": "19h00",
       "esporte": "NBB - Playoffs",
-      "jogo": "Minas x Corinthians",
+      "jogo": "Franca x Mogi",
       "canais": ["ESPN4"]
     },
     {
       "hora": "19h00",
-      "esporte": "LBF",
-      "jogo": "SESI-Araraquara x Salvador",
-      "canais": ["ge.globo", "LBFETV"]
+      "esporte": "Copa do Brasil",
+      "jogo": "Juventude x São Paulo",
+      "canais": ["SPORTV", "Premiere"]
+    },
+    {
+      "hora": "19h00",
+      "esporte": "Copa do Brasil",
+      "jogo": "Vasco x Paysandu",
+      "canais": ["SPORTV2", "Premiere", "YouTube GETV"]
+    },
+    {
+      "hora": "19h00",
+      "esporte": "Copa Centro-Oeste",
+      "jogo": "SF - Vila Nova x Anápolis",
+      "canais": ["YouTube", "Benja"]
+    },
+    {
+      "hora": "19h00",
+      "esporte": "Copa do Brasil Feminina",
+      "jogo": "Sport F x Criciúma F",
+      "canais": ["YouTube", "NSports"]
+    },
+    {
+      "hora": "19h15",
+      "esporte": "Camp. Paulista A2",
+      "jogo": "Final - Ferroviária x Juventus",
+      "canais": ["XSPORTS", "YouTube"]
     },
     {
       "hora": "19h30",
-      "esporte": "Brasileirão Série B",
-      "jogo": "Londrina x São Bernardo",
-      "canais": ["ESPN"]
+      "esporte": "Copa do Brasil",
+      "jogo": "Coritiba x Santos",
+      "canais": ["Prime Video"]
     },
     {
       "hora": "20h00",
-      "esporte": "NWSL Fut. Feminino",
-      "jogo": "Boston Legacy x Orlando Pride",
-      "canais": ["YouTube", "Canal GOAT"]
+      "esporte": "LBF",
+      "jogo": "Cerrado x Maringá",
+      "canais": ["YouTube", "LiveBasketBR"]
     },
     {
-      "hora": "20h00",
-      "esporte": "NHL - Playoffs",
-      "jogo": "Montr. Canadiens x Buff. Sabres",
-      "canais": ["ESPN2"]
+      "hora": "20h30",
+      "esporte": "NBB - Playoffs",
+      "jogo": "Brasília x Flamengo",
+      "canais": ["SPORTV3"]
     },
     {
-      "hora": "20h15",
-      "esporte": "MLB",
-      "jogo": "Atlanta Braves x Chicago Cubs",
-      "canais": ["ESPN3"]
+      "hora": "20h30",
+      "esporte": "Copa do Brasil",
+      "jogo": "Mirassol x RB Bragantino",
+      "canais": ["Prime Video"]
     },
     {
       "hora": "21h00",
       "esporte": "NBA - Playoffs",
-      "jogo": "S. Ant. Spurs x Minn. T'wolves",
+      "jogo": "Detr. Pistons x Clev. Cavaliers",
+      "canais": ["ESPN2"]
+    },
+    {
+      "hora": "21h30",
+      "esporte": "Copa do Brasil",
+      "jogo": "Jacuipense x Palmeiras",
       "canais": ["Prime Video"]
     },
     {
       "hora": "21h30",
       "esporte": "Copa do Brasil",
-      "jogo": "Cruzeiro x Goiás",
-      "canais": ["SPORTV", "Premiere", "YouTube GETV"]
+      "jogo": "Ceará x Atlético-MG",
+      "canais": ["SPORTV", "Premiere"]
     },
     {
       "hora": "21h30",
       "esporte": "Copa do Brasil",
-      "jogo": "Fluminense x Operário-PR",
-      "canais": ["Prime Video"]
+      "jogo": "Remo x Bahia",
+      "canais": ["SPORTV2", "Premiere"]
     },
     {
       "hora": "21h30",
       "esporte": "Camp. Argentino",
-      "jogo": "QF - Argentinos Jrs x Huracán",
-      "canais": ["ESPN"]
+      "jogo": "QF - River Plate x Gimnasia L. Plata",
+      "canais": ["ESPN4"]
     },
     {
-      "hora": "22h30",
-      "esporte": "NHL - Playoffs",
-      "jogo": "Vegas G Knights x Anah. Ducks",
-      "canais": ["Disney+"]
+      "hora": "21h30",
+      "esporte": "LNF Silver Futsal",
+      "jogo": "São Miguel-PR x Vasco",
+      "canais": ["XSPORTS", "LNF TV"]
+    },
+    {
+      "hora": "23h00",
+      "esporte": "Camp. Mexicano",
+      "jogo": "SF (ida) - Cruz Azul x Chivas",
+      "canais": ["SportyNet", "YouTube"]
     }
   ]
 }
