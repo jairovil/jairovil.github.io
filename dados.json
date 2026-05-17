@@ -1,138 +1,355 @@
 {
-  "data": "17/05/2026",
+  "data": "2026-05-17",
   "dia": "Domingo",
   "eventos": [
     {
-      "horario": "11h00",
+      "hora": "11:00",
       "competicao": "LNF Futsal",
-      "evento": "Umuarama x Santo André",
-      "transmissao": ["youtube LNF TV"]
+      "jogo": "Umuarama x Santo André",
+      "canais": ["YouTube LNF TV"]
     },
     {
-      "horario": "11h00",
+      "hora": "11:00",
       "competicao": "LBF",
-      "evento": "Cerrado x SESI-Araraquara",
-      "transmissao": ["TV BRASIL"]
+      "jogo": "Cerrado x SESI-Araraquara",
+      "canais": ["TV Brasil"]
     },
     {
-      "horario": "11h00",
+      "hora": "11:00",
       "competicao": "Vôlei - Exibição",
-      "evento": "Festival das Estrelas - Serginho",
-      "transmissao": ["youtube CazéTV"]
+      "jogo": "Festival das Estrelas - Serginho",
+      "canais": ["YouTube CazéTV"]
     },
     {
-      "horario": "12h00",
-      "competicao": "Masters1000 Roma",
-      "evento": "Final - Sinner x Ruud",
-      "transmissao": ["ESPN2"]
+      "hora": "12:00",
+      "competicao": "Masters 1000 Roma",
+      "jogo": "Final - Sinner x Ruud",
+      "canais": ["ESPN2"]
     },
     {
-      "horario": "12h00",
+      "hora": "12:00",
       "competicao": "Stock Car",
-      "evento": "Etapa de Goiânia",
-      "transmissao": ["BAND", "youtube"]
+      "jogo": "Etapa de Goiânia",
+      "canais": ["BAND", "YouTube"]
     },
     {
-      "horario": "12h00",
+      "hora": "12:00",
       "competicao": "Campeonato Russo",
-      "evento": "Rostov x Zenit",
-      "transmissao": ["BANDSPORTS", "youtube"]
+      "jogo": "Rostov x Zenit",
+      "canais": ["Bandsports", "YouTube"]
     },
     {
-      "horario": "13h30",
+      "hora": "13:30",
       "competicao": "Premier League",
-      "evento": "Newcastle x West Ham",
-      "transmissao": ["ESPN"]
+      "jogo": "Newcastle x West Ham",
+      "canais": ["ESPN"]
     },
     {
-      "horario": "13h30",
+      "hora": "13:30",
       "competicao": "Campeonato Grego",
-      "evento": "AEK x Olympiacos",
-      "transmissao": ["SportyNet", "youtube"]
+      "jogo": "AEK x Olympiacos",
+      "canais": ["SportyNet", "YouTube"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Sevilla x Real Madrid",
-      "transmissao": ["Disney+"]
+      "jogo": "Sevilla x Real Madrid",
+      "canais": ["Disney+"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Atlético de Madrid x Girona",
-      "transmissao": ["XSPORTS", "Disney+"]
+      "jogo": "Atlético de Madrid x Girona",
+      "canais": ["XSports", "Disney+"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Athletic Bilbao x Celta",
-      "transmissao": ["ESPN4"]
+      "jogo": "Athletic Bilbao x Celta",
+      "canais": ["ESPN4"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Real Sociedad x Valencia",
-      "transmissao": ["youtube ESPN Brasil"]
+      "jogo": "Real Sociedad x Valencia",
+      "canais": ["YouTube ESPN Brasil"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Rayo Vallecano x Villarreal",
-      "transmissao": ["Disney+"]
+      "jogo": "Rayo Vallecano x Villarreal",
+      "canais": ["Disney+"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Elche x Getafe",
-      "transmissao": ["Disney+"]
+      "jogo": "Elche x Getafe",
+      "canais": ["Disney+"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Levante x Mallorca",
-      "transmissao": ["Disney+"]
+      "jogo": "Levante x Mallorca",
+      "canais": ["Disney+"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Osasuna x Espanyol",
-      "transmissao": ["Disney+"]
+      "jogo": "Osasuna x Espanyol",
+      "canais": ["Disney+"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "La Liga",
-      "evento": "Real Oviedo x Alavés",
-      "transmissao": ["Disney+"]
+      "jogo": "Real Oviedo x Alavés",
+      "canais": ["Disney+"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "Golfe",
-      "evento": "PGA Championship - Final",
-      "transmissao": ["ESPN3"]
+      "jogo": "PGA Championship - Final",
+      "canais": ["ESPN3"]
     },
     {
-      "horario": "14h00",
+      "hora": "14:00",
       "competicao": "Nascar Cup",
-      "evento": "Etapa de Dover",
-      "transmissao": ["PhizTV", "Disney+"]
+      "jogo": "Etapa de Dover",
+      "canais": ["PhizTV", "Disney+"]
     },
     {
-      "horario": "14h15",
+      "hora": "14:15",
       "competicao": "AMG Cup Brasil",
-      "evento": "Etapa de Interlagos - corrida 2",
-      "transmissao": ["BANDSPORTS", "youtube"]
+      "jogo": "Etapa de Interlagos - corrida 2",
+      "canais": ["Bandsports", "YouTube"]
     },
     {
-      "horario": "15h00",
-      "competicao": "Camp. Saudita",
-      "evento": "Al Shabab x Al Ittihad",
-      "transmissao": ["youtube Canal GOAT"]
+      "hora": "15:00",
+      "competicao": "Campeonato Saudita",
+      "jogo": "Al Shabab x Al Ittihad",
+      "canais": ["YouTube Canal GOAT"]
     },
     {
-      "horario": "15h00",
-      "competicao": "Brasileirão - Série D",
-      "evento": "Central-PE x Maguary-PE",
-      "transmissao": ["youtube Metrópoles"]
+      "hora": "15:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "Central-PE x Maguary-PE",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "15:30",
+      "competicao": "Champions Vôlei Masculino",
+      "jogo": "Final - Perugia x Zawiercie-POL",
+      "canais": ["XSports", "YouTube"]
+    },
+    {
+      "hora": "15:50",
+      "competicao": "Turismo Nacional",
+      "jogo": "Etapa de Goiânia - corrida 4",
+      "canais": ["Bandsports", "YouTube"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão",
+      "jogo": "Botafogo x Corinthians",
+      "canais": ["Globo", "Premiere"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão",
+      "jogo": "Bahia x Grêmio",
+      "canais": ["Globo BA", "Globo RS", "Premiere 3", "GETV"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série B",
+      "jogo": "Athletic x Juventude",
+      "canais": ["Disney+"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série C",
+      "jogo": "Caxias x Paysandu",
+      "canais": ["SportyNet", "YouTube"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série C",
+      "jogo": "Ferroviária x Brusque",
+      "canais": ["SportyNet+"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "América-RN x Laguna-RN",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "CSE x CSA",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "Tuna Luso x Águia Marabá",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "Cianorte x Cascavel",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "Brasil-RS x São José-RS",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Ligue 1",
+      "jogo": "Paris FC x PSG",
+      "canais": ["YouTube CazéTV"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Ligue 1",
+      "jogo": "Lyon x Lens",
+      "canais": ["YouTube CazéTV"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Ligue 1",
+      "jogo": "Lille x Auxerre",
+      "canais": ["YouTube CazéTV"]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Ligue 1",
+      "jogo": "Marseille x Rennes",
+      "canais": ["YouTube CazéTV"]
+    },
+    {
+      "hora": "16:15",
+      "competicao": "La Liga",
+      "jogo": "Barcelona x Betis",
+      "canais": ["ESPN"]
+    },
+    {
+      "hora": "16:30",
+      "competicao": "World Surf League",
+      "jogo": "Etapa da Nova Zelândia",
+      "canais": ["Sportv3", "YouTube"]
+    },
+    {
+      "hora": "17:00",
+      "competicao": "Fórmula Indy",
+      "jogo": "Indy 500 - classificação",
+      "canais": ["ESPN4"]
+    },
+    {
+      "hora": "17:00",
+      "competicao": "Campeonato Argentino",
+      "jogo": "SF - Argentinos Jrs. x Belgrano",
+      "canais": ["ESPN2"]
+    },
+    {
+      "hora": "17:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "Ferroviário-CE x Atlético-CE",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "18:00",
+      "competicao": "Brasileirão Série B",
+      "jogo": "Vila Nova x Avaí",
+      "canais": ["RedeTV!", "Disney+", "SportyNet", "YouTube"]
+    },
+    {
+      "hora": "18:00",
+      "competicao": "Brasileirão Série C",
+      "jogo": "Anápolis x Barra-SC",
+      "canais": ["SportyNet+"]
+    },
+    {
+      "hora": "18:00",
+      "competicao": "Brasileirão Feminino",
+      "jogo": "Santos F x Red Bull F",
+      "canais": ["YouTube Nsports"]
+    },
+    {
+      "hora": "18:30",
+      "competicao": "Brasileirão",
+      "jogo": "Red Bull Bragantino x Vitória",
+      "canais": ["Premiere 2"]
+    },
+    {
+      "hora": "18:30",
+      "competicao": "Brasileirão",
+      "jogo": "Chapecoense x Remo",
+      "canais": ["Premiere 5"]
+    },
+    {
+      "hora": "18:30",
+      "competicao": "Brasileirão Série B",
+      "jogo": "Ceará x Fortaleza",
+      "canais": ["Disney+"]
+    },
+    {
+      "hora": "18:30",
+      "competicao": "Brasileirão Série B",
+      "jogo": "Criciúma x Atlético-GO",
+      "canais": ["ESPN"]
+    },
+    {
+      "hora": "18:30",
+      "competicao": "Brasileirão Série C",
+      "jogo": "Guarani x Ituano",
+      "canais": ["SportyNet", "YouTube Benja"]
+    },
+    {
+      "hora": "19:30",
+      "competicao": "Brasileirão",
+      "jogo": "Athletico PR x Flamengo",
+      "canais": ["Sportv", "Premiere 4"]
+    },
+    {
+      "hora": "20:20",
+      "competicao": "MLB",
+      "jogo": "Seattle Mariners x San Diego Padres",
+      "canais": ["ESPN3"]
+    },
+    {
+      "hora": "20:30",
+      "competicao": "Brasileirão Série B",
+      "jogo": "Sport x CRB",
+      "canais": ["XSports", "ESPN4", "YouTube Canal GOAT"]
+    },
+    {
+      "hora": "20:30",
+      "competicao": "LBF",
+      "jogo": "Salvador x Santo André",
+      "canais": ["YouTube LiveBasketBR"]
+    },
+    {
+      "hora": "21:00",
+      "competicao": "NBA Playoffs",
+      "jogo": "J7 - Detroit Pistons x Cleveland Cavaliers",
+      "canais": ["Prime Video"]
+    },
+    {
+      "hora": "21:00",
+      "competicao": "NWSL Feminino",
+      "jogo": "Utah Royals x Racing Louisville",
+      "canais": ["YouTube Canal GOAT"]
+    },
+    {
+      "hora": "22:00",
+      "competicao": "Campeonato Mexicano",
+      "jogo": "SF - Pumas x Pachuca",
+      "detalhe": "0x1",
+      "canais": ["SportyNet", "YouTube"]
     }
   ]
 }
