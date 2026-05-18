@@ -12,9 +12,20 @@
 <meta property="og:description" content="Programação completa de jogos e transmissões esportivas do dia.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="google-adsense-account" content="ca-pub-4839644858313586">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- SEU CÓDIGO DE BANNER - SOMENTE TOPO -->
+<script>
+  atOptions = {
+    'key' : 'b8faf8b8fb0e8e2f3358fc5893986ebe',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/b8faf8b8fb0e8e2f3358fc5893986ebe/invoke.js"></script>
 
 <style>
 * {
@@ -128,77 +139,15 @@ body {
     color: #00ffae;
 }
 
-/* BANNER ADSENSE - ESTILO LIMPO */
-.banner-container {
+/* BANNER TOPO */
+.banner-topo {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-}
-
-.banner-box {
-    background: linear-gradient(135deg, #1a1f2e, #151a28);
-    border-radius: 16px;
     text-align: center;
-    padding: 15px;
-    min-height: 100px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(0,255,174,0.15);
-}
-
-.banner-box-top {
-    min-height: 120px;
-}
-
-.banner-box-footer {
-    min-height: 280px;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.banner-placeholder {
-    background: rgba(0,255,174,0.05);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.banner-placeholder i {
-    font-size: 32px;
-    color: #00ffae;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.banner-placeholder p {
-    color: #888;
-    font-size: 12px;
-}
-
-.banner-split {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.banner-split-item {
-    flex: 1;
-    min-width: 280px;
-    background: rgba(0,255,174,0.05);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-}
-
-.banner-split-item i {
-    font-size: 28px;
-    color: #00ffae;
-    margin-bottom: 10px;
-    display: block;
 }
 
 /* Tabela Estilos */
@@ -455,13 +404,6 @@ tr:hover {
     .content-card {
         padding: 20px;
     }
-    .banner-split {
-        flex-direction: column;
-        align-items: center;
-    }
-    .banner-split-item {
-        width: 100%;
-    }
 }
 </style>
 </head>
@@ -491,23 +433,9 @@ tr:hover {
     </div>
 </header>
 
-<!-- BANNER TOPO - Espaço para Google AdSense (banner 1) -->
-<div class="banner-container">
-    <div class="banner-box banner-box-top" id="bannerTopo">
-        <div class="banner-placeholder">
-<script>
-  atOptions = {
-    'key' : 'b8faf8b8fb0e8e2f3358fc5893986ebe',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/b8faf8b8fb0e8e2f3358fc5893986ebe/invoke.js"></script>
-
-        </div>
-    </div>
+<!-- SEU BANNER - SOMENTE NO TOPO (código original) -->
+<div class="banner-topo">
+    <!-- O script do seu banner será executado aqui -->
 </div>
 
 <main id="mainContent">
@@ -595,7 +523,7 @@ tr:hover {
             <button class="back-button" onclick="showHome()">← Voltar ao Início</button>
         </div>
     </div>
-
+</div>
 
 <footer class="main-footer">
     <div class="footer-content">
