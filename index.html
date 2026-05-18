@@ -16,19 +16,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- Google AdSense -->
-<script>
-  atOptions = {
-    'key' : 'b8faf8b8fb0e8e2f3358fc5893986ebe',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/b8faf8b8fb0e8e2f3358fc5893986ebe/invoke.js"></script>
-
-
 <style>
 * {
     margin: 0;
@@ -141,21 +128,77 @@ body {
     color: #00ffae;
 }
 
-.adsense-container {
+/* BANNER ADSENSE - ESTILO LIMPO */
+.banner-container {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
 }
 
-.adsense-box {
+.banner-box {
     background: linear-gradient(135deg, #1a1f2e, #151a28);
     border-radius: 16px;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(0,255,174,0.15);
+}
+
+.banner-box-top {
+    min-height: 120px;
+}
+
+.banner-box-footer {
+    min-height: 280px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner-placeholder {
+    background: rgba(0,255,174,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.banner-placeholder i {
+    font-size: 32px;
+    color: #00ffae;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.banner-placeholder p {
+    color: #888;
+    font-size: 12px;
+}
+
+.banner-split {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.banner-split-item {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(0,255,174,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-split-item i {
+    font-size: 28px;
+    color: #00ffae;
+    margin-bottom: 10px;
+    display: block;
 }
 
 /* Tabela Estilos */
@@ -412,9 +455,15 @@ tr:hover {
     .content-card {
         padding: 20px;
     }
+    .banner-split {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-split-item {
+        width: 100%;
+    }
 }
-</style>   
-<script src="https://pl29487555.effectivecpmnetwork.com/7f/81/ac/7f81ac3bebc2cdabe575e682d00e7d40.js"></script> 
+</style>
 </head>
 <body>
 
@@ -442,8 +491,16 @@ tr:hover {
     </div>
 </header>
 
-<!-- ADSENSE - TOPO -->
-
+<!-- BANNER TOPO - Espaço para Google AdSense (banner 1) -->
+<div class="banner-container">
+    <div class="banner-box banner-box-top" id="bannerTopo">
+        <div class="banner-placeholder">
+            <i class="fas fa-ad"></i>
+            <p>📢 Espaço para Publicidade - Google AdSense<br><small>Banner 728x90 ou 320x50 responsivo</small></p>
+            <p style="font-size: 10px; margin-top: 8px;">Agenda Esportiva - Site Informativo</p>
+        </div>
+    </div>
+</div>
 
 <main id="mainContent">
     <div class="tabela-container">
@@ -532,20 +589,24 @@ tr:hover {
     </div>
 </div>
 
-<!-- ADSENSE - RODAPÉ -->
-<script>
-  atOptions = {
-    'key' : 'b8faf8b8fb0e8e2f3358fc5893986ebe',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/b8faf8b8fb0e8e2f3358fc5893986ebe/invoke.js"></script>
+<!-- BANNER RODAPÉ - Espaço para Google AdSense (2 banners lado a lado) -->
+<div class="banner-container">
+    <div class="banner-box banner-box-footer" id="bannerRodape">
+        <div class="banner-split">
+            <div class="banner-split-item">
+                <i class="fas fa-ad"></i>
+                <p>📢 Espaço para Publicidade 1<br><small>Google AdSense - Banner 300x250</small></p>
+                <p style="font-size: 10px; margin-top: 5px;">Agenda Esportiva</p>
+            </div>
+            <div class="banner-split-item">
+                <i class="fas fa-ad"></i>
+                <p>📢 Espaço para Publicidade 2<br><small>Google AdSense - Banner 300x250</small></p>
+                <p style="font-size: 10px; margin-top: 5px;">Programação de Jogos</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-    
 <footer class="main-footer">
     <div class="footer-content">
         <div class="footer-logo">Agenda Esportiva</div>
@@ -566,14 +627,16 @@ tr:hover {
 </footer>
 
 <script>
-// Dados emulados para demonstração (substitua pelo seu JSON)
+// Dados emulados para demonstração
 const DADOS_EMULADOS = {
     eventos: [
         { hora: "16:00", esporte: "Futebol", jogo: "Flamengo vs Corinthians", canais: ["SPORTV", "Globo"] },
         { hora: "16:30", esporte: "Futebol", jogo: "Palmeiras vs São Paulo", canais: ["ESPN", "TNT"] },
         { hora: "17:00", esporte: "Basquete", jogo: "NBA: Lakers vs Warriors", canais: ["ESPN2", "YouTube"] },
         { hora: "18:00", esporte: "Futebol", jogo: "Manchester City vs Liverpool", canais: ["ESPN", "TNT"] },
-        { hora: "19:00", esporte: "Futebol", jogo: "Real Madrid vs Barcelona", canais: ["SPORTV2", "ESPN3"] }
+        { hora: "19:00", esporte: "Futebol", jogo: "Real Madrid vs Barcelona", canais: ["SPORTV2", "ESPN3"] },
+        { hora: "20:00", esporte: "Vôlei", jogo: "Brasil vs Argentina", canais: ["SPORTV", "YouTube"] },
+        { hora: "21:00", esporte: "Futebol", jogo: "Internacional vs Grêmio", canais: ["Globo", "Premiere"] }
     ]
 };
 
@@ -648,7 +711,8 @@ function formatarCanais() {
         'XSPORTS': '#9b59b6', 'XSPORTS2': '#9b59b6',
         'Paramount+': '#0066ff', 'Paramount': '#0066ff',
         'Jovem Pan': '#f39c12',
-        'CazéTV': '#1abc9c'
+        'CazéTV': '#1abc9c',
+        'Premiere': '#e67e22'
     };
     
     celulasCanais.forEach(celula => {
