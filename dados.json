@@ -1,168 +1,235 @@
 {
-  "data": "19/05/2026",
-  "dia_semana": "Terça-feira",
-  "eventos": [
+  "data": "2026-05-19",
+  "diaSemana": "terça-feira",
+  "agenda": [
     {
-      "horario": "13:00",
-      "categoria": "ATP500 Hamburgo",
-      "evento": "OF - Altmaier x Shelton",
-      "canal": "ESPN2"
+      "hora": "13:00",
+      "competicao": "ATP500 Hamburgo",
+      "jogo": "Altmaier x Shelton",
+      "fase": "OF",
+      "transmissao": [
+        "ESPN2"
+      ]
     },
     {
-      "horario": "15:00",
-      "categoria": "Serie B Italiana",
-      "evento": "SF - Monza x Juve Stabia (2x2)",
-      "canal": "SportyNet, youtube"
+      "hora": "15:00",
+      "competicao": "Serie B Italiana",
+      "jogo": "Monza x Juve Stabia",
+      "fase": "SF",
+      "placarAnterior": "2x2",
+      "transmissao": [
+        "SportyNet",
+        "YouTube"
+      ]
     },
     {
-      "horario": "15:30",
-      "categoria": "Premier League",
-      "evento": "Bournemouth x Manchester City",
-      "canal": "ESPN"
+      "hora": "15:30",
+      "competicao": "Premier League",
+      "jogo": "Bournemouth x Manchester City",
+      "transmissao": [
+        "ESPN"
+      ]
     },
     {
-      "horario": "16:15",
-      "categoria": "Premier League",
-      "evento": "Chelsea x Tottenham",
-      "canal": "Disney+"
+      "hora": "16:15",
+      "competicao": "Premier League",
+      "jogo": "Chelsea x Tottenham",
+      "transmissao": [
+        "Disney+"
+      ]
     },
     {
-      "horario": "16:30",
-      "categoria": "World Surf League",
+      "hora": "16:30",
+      "competicao": "World Surf League",
       "evento": "Etapa da Nova Zelândia",
-      "canal": "SPORTV3, youtube"
+      "transmissao": [
+        "SPORTV3",
+        "YouTube"
+      ]
     },
     {
-      "horario": "17:10",
-      "categoria": "MLB",
-      "evento": "Miami Marlins x Atlanta Braves",
-      "canal": "ESPN3"
+      "hora": "17:10",
+      "competicao": "MLB",
+      "jogo": "Miami Marlins x Atlanta Braves",
+      "transmissao": [
+        "ESPN3"
+      ]
     },
     {
-      "horario": "18:00",
-      "categoria": "Natação",
+      "hora": "18:00",
+      "competicao": "Natação",
       "evento": "Troféu Maria Lenk - finais",
-      "canal": "SPORTV2, youtube"
+      "transmissao": [
+        "SPORTV2",
+        "YouTube"
+      ]
     },
     {
-      "horario": "18:00",
-      "categoria": "Brasileirão sub-20",
-      "evento": "Corinthians s20 x Palmeiras s20",
-      "canal": "SPORTV"
+      "hora": "18:00",
+      "competicao": "Brasileirão Sub-20",
+      "jogo": "Corinthians Sub-20 x Palmeiras Sub-20",
+      "transmissao": [
+        "SPORTV"
+      ]
     },
     {
-      "horario": "19:00",
-      "categoria": "Libertadores",
-      "evento": "Fluminense x Bolivar",
-      "canal": "ESPN"
+      "hora": "19:00",
+      "competicao": "Libertadores",
+      "jogo": "Fluminense x Bolívar",
+      "transmissao": [
+        "ESPN"
+      ]
     },
     {
-      "horario": "19:00",
-      "categoria": "Libertadores",
-      "evento": "Rosario Central x Univ. Central",
-      "canal": "ESPN4"
+      "hora": "19:00",
+      "competicao": "Libertadores",
+      "jogo": "Rosario Central x Univ. Central",
+      "transmissao": [
+        "ESPN4"
+      ]
     },
     {
-      "horario": "19:00",
-      "categoria": "Libertadores",
-      "evento": "Coquimbo Unido x Tolima",
-      "canal": "Paramount+"
+      "hora": "19:00",
+      "competicao": "Libertadores",
+      "jogo": "Coquimbo Unido x Tolima",
+      "transmissao": [
+        "Paramount+"
+      ]
     },
     {
-      "horario": "19:00",
-      "categoria": "Sul-Americana",
-      "evento": "Audax Italiano x Barracas Central",
-      "canal": "Paramount+"
+      "hora": "19:00",
+      "competicao": "Sul-Americana",
+      "jogo": "Audax Italiano x Barracas Central",
+      "transmissao": [
+        "Paramount+"
+      ]
     },
     {
-      "horario": "19:00",
-      "categoria": "Sul-Americana",
-      "evento": "Montevideo City x Dep. Riestra",
-      "canal": "Paramount+"
+      "hora": "19:00",
+      "competicao": "Sul-Americana",
+      "jogo": "Montevideo City x Dep. Riestra",
+      "transmissao": [
+        "Paramount+"
+      ]
     },
     {
-      "horario": "19:00",
-      "categoria": "Brasileirão - Série D",
-      "evento": "São Joseense-PR x Azuriz-PR",
-      "canal": "youtube FPF TV PR"
+      "hora": "19:00",
+      "competicao": "Brasileirão Série D",
+      "jogo": "São Joseense-PR x Azuriz-PR",
+      "transmissao": [
+        "YouTube FPF TV PR"
+      ]
     },
     {
-      "horario": "19:30",
-      "categoria": "LNF Futsal",
-      "evento": "Carlos Barbosa x Magnus",
-      "canal": "youtube LNF TV"
+      "hora": "19:30",
+      "competicao": "LNF Futsal",
+      "jogo": "Carlos Barbosa x Magnus",
+      "transmissao": [
+        "YouTube LNF TV"
+      ]
     },
     {
-      "horario": "20:00",
-      "categoria": "LNF Silver Futsal",
-      "evento": "Vasco x Velez-RS, Sport x Joaçaba",
-      "canal": "youtube LNF TV"
+      "hora": "20:00",
+      "competicao": "LNF Silver Futsal",
+      "jogos": [
+        "Vasco x Velez-RS",
+        "Sport x Joaçaba"
+      ],
+      "transmissao": [
+        "YouTube LNF TV"
+      ]
     },
     {
-      "horario": "20:00",
-      "categoria": "NBB - Liga Ouro",
-      "evento": "Final (j.1) - Tatuí-SP x Brusque",
-      "canal": "youtube NBB"
+      "hora": "20:00",
+      "competicao": "NBB Liga Ouro",
+      "jogo": "Tatuí-SP x Brusque",
+      "fase": "Final - Jogo 1",
+      "transmissao": [
+        "YouTube NBB"
+      ]
     },
     {
-      "horario": "21:00",
-      "categoria": "LNF Silver Futsal",
-      "evento": "Dracena-SP x Chopinzinho-PR",
-      "canal": "XSPORTS, LNF TV"
+      "hora": "21:00",
+      "competicao": "LNF Silver Futsal",
+      "jogo": "Dracena-SP x Chopinzinho-PR",
+      "transmissao": [
+        "XSPORTS",
+        "LNF TV"
+      ]
     },
     {
-      "horario": "21:00",
-      "categoria": "NBA - Final Leste",
-      "evento": "J1 - NY Knicks x Clev. Cavaliers",
-      "canal": "ESPN2"
+      "hora": "21:00",
+      "competicao": "NBA Final Leste",
+      "jogo": "NY Knicks x Cleveland Cavaliers",
+      "fase": "Jogo 1",
+      "transmissao": [
+        "ESPN2"
+      ]
     },
     {
-      "horario": "21:00",
-      "categoria": "Libertadores",
-      "evento": "Always Ready x Mirassol",
-      "canal": "Paramount+"
+      "hora": "21:00",
+      "competicao": "Libertadores",
+      "jogo": "Always Ready x Mirassol",
+      "transmissao": [
+        "Paramount+"
+      ]
     },
     {
-      "horario": "21:00",
-      "categoria": "Libertadores",
-      "evento": "Santa Fé x Platense",
-      "canal": "ESPN4"
+      "hora": "21:00",
+      "competicao": "Libertadores",
+      "jogo": "Santa Fé x Platense",
+      "transmissao": [
+        "ESPN4"
+      ]
     },
     {
-      "horario": "21:30",
-      "categoria": "Libertadores",
-      "evento": "Boca Juniors x Cruzeiro",
-      "canal": "Paramount+"
+      "hora": "21:30",
+      "competicao": "Libertadores",
+      "jogo": "Boca Juniors x Cruzeiro",
+      "transmissao": [
+        "Paramount+"
+      ]
     },
     {
-      "horario": "21:30",
-      "categoria": "Sul-Americana",
-      "evento": "São Paulo x Millonarios",
-      "canal": "SBT, ESPN"
+      "hora": "21:30",
+      "competicao": "Sul-Americana",
+      "jogo": "São Paulo x Millonarios",
+      "transmissao": [
+        "SBT",
+        "ESPN"
+      ]
     },
     {
-      "horario": "23:00",
-      "categoria": "WNBA",
-      "evento": "Phoenix Mercury x Toronto Tempo",
-      "canal": "youtube NBA Brasil"
+      "hora": "23:00",
+      "competicao": "WNBA",
+      "jogo": "Phoenix Mercury x Toronto Tempo",
+      "transmissao": [
+        "YouTube NBA Brasil"
+      ]
     },
     {
-      "horario": "23:00",
-      "categoria": "Libertadores",
-      "evento": "Indep. del Valle x Libertad",
-      "canal": "ESPN4"
+      "hora": "23:00",
+      "competicao": "Libertadores",
+      "jogo": "Indep. del Valle x Libertad",
+      "transmissao": [
+        "ESPN4"
+      ]
     },
     {
-      "horario": "23:00",
-      "categoria": "Sul-Americana",
-      "evento": "América de Cali x Tigre-ARG",
-      "canal": "Paramount+"
+      "hora": "23:00",
+      "competicao": "Sul-Americana",
+      "jogo": "América de Cali x Tigre-ARG",
+      "transmissao": [
+        "Paramount+"
+      ]
     },
     {
-      "horario": "23:00",
-      "categoria": "Sul-Americana",
-      "evento": "Dep. Cuenca x Recoleta-PAR",
-      "canal": "Disney+"
+      "hora": "23:00",
+      "competicao": "Sul-Americana",
+      "jogo": "Dep. Cuenca x Recoleta-PAR",
+      "transmissao": [
+        "Disney+"
+      ]
     }
   ]
 }
