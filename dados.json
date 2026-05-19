@@ -1,147 +1,168 @@
 {
-  "data": "2026-05-18",
-  "dia": "Segunda-feira",
+  "data": "19/05/2026",
+  "dia_semana": "Terça-feira",
   "eventos": [
     {
-      "hora": "13:00",
-      "competicao": "ATP500 Hamburgo",
-      "jogo": "1R - Mensik x Struff",
-      "canais": ["ESPN2"]
+      "horario": "13:00",
+      "categoria": "ATP500 Hamburgo",
+      "evento": "OF - Altmaier x Shelton",
+      "canal": "ESPN2"
     },
     {
-      "hora": "16:00",
-      "competicao": "Premier League",
-      "jogo": "Arsenal x Burnley",
-      "canais": ["ESPN4"]
+      "horario": "15:00",
+      "categoria": "Serie B Italiana",
+      "evento": "SF - Monza x Juve Stabia (2x2)",
+      "canal": "SportyNet, youtube"
     },
     {
-      "hora": "16:30",
-      "competicao": "World Surf League",
-      "jogo": "Etapa da Nova Zelândia",
-      "canais": ["Sportv3", "YouTube"]
+      "horario": "15:30",
+      "categoria": "Premier League",
+      "evento": "Bournemouth x Manchester City",
+      "canal": "ESPN"
     },
     {
-      "hora": "17:00",
-      "competicao": "Copa do Mundo FIFA 2026",
-      "jogo": "Convocação do Brasil",
-      "canais": [
-        "Globo",
-        "SBT",
-        "Sportv",
-        "ESPN",
-        "XSports",
-        "CazéTV",
-        "GETV",
-        "GOAT"
-      ]
+      "horario": "16:15",
+      "categoria": "Premier League",
+      "evento": "Chelsea x Tottenham",
+      "canal": "Disney+"
     },
     {
-      "hora": "18:00",
-      "competicao": "Natação",
-      "jogo": "Troféu Maria Lenk - finais",
-      "canais": ["Sportv2", "YouTube"]
+      "horario": "16:30",
+      "categoria": "World Surf League",
+      "evento": "Etapa da Nova Zelândia",
+      "canal": "SPORTV3, youtube"
     },
     {
-      "hora": "18:30",
-      "competicao": "LNF Futsal",
-      "jogo": "Minas x Atlântico",
-      "canais": ["YouTube LNF TV"]
+      "horario": "17:10",
+      "categoria": "MLB",
+      "evento": "Miami Marlins x Atlanta Braves",
+      "canal": "ESPN3"
     },
     {
-      "hora": "19:00",
-      "competicao": "Brasileirão Feminino",
-      "jogo": "Ferroviária F x Vitória F",
-      "canais": ["YouTube UOL Esporte"]
+      "horario": "18:00",
+      "categoria": "Natação",
+      "evento": "Troféu Maria Lenk - finais",
+      "canal": "SPORTV2, youtube"
     },
     {
-      "hora": "19:00",
-      "competicao": "Brasileirão Série B",
-      "jogo": "Ponte Preta x Londrina",
-      "canais": ["ESPN4"]
+      "horario": "18:00",
+      "categoria": "Brasileirão sub-20",
+      "evento": "Corinthians s20 x Palmeiras s20",
+      "canal": "SPORTV"
     },
     {
-      "hora": "19:30",
-      "competicao": "Brasileirão Série D",
-      "jogo": "Uberlândia x Betim",
-      "canais": ["YouTube Metrópoles"]
+      "horario": "19:00",
+      "categoria": "Libertadores",
+      "evento": "Fluminense x Bolivar",
+      "canal": "ESPN"
     },
     {
-      "hora": "19:30",
-      "competicao": "LBF",
-      "jogo": "Maringá x Sampaio",
-      "canais": ["YouTube LiveBasketBR"]
+      "horario": "19:00",
+      "categoria": "Libertadores",
+      "evento": "Rosario Central x Univ. Central",
+      "canal": "ESPN4"
     },
     {
-      "hora": "20:00",
-      "competicao": "NBB - Semifinais",
-      "jogo": "J1 - Franca x Brasília",
-      "canais": ["Sportv2"]
+      "horario": "19:00",
+      "categoria": "Libertadores",
+      "evento": "Coquimbo Unido x Tolima",
+      "canal": "Paramount+"
     },
     {
-      "hora": "20:00",
-      "competicao": "Brasileirão Série C",
-      "jogo": "Botafogo-PB x Inter de Limeira",
-      "canais": ["SportyNet+", "YouTube Benja"]
+      "horario": "19:00",
+      "categoria": "Sul-Americana",
+      "evento": "Audax Italiano x Barracas Central",
+      "canal": "Paramount+"
     },
     {
-      "hora": "20:00",
-      "competicao": "Brasileirão Série C",
-      "jogo": "Confiança x Maranhão",
-      "canais": ["SportyNet", "YouTube"]
+      "horario": "19:00",
+      "categoria": "Sul-Americana",
+      "evento": "Montevideo City x Dep. Riestra",
+      "canal": "Paramount+"
     },
     {
-      "hora": "20:00",
-      "competicao": "Brasileirão Feminino",
-      "jogo": "São Paulo F x Juventude F",
-      "canais": ["YouTube Nsports"]
+      "horario": "19:00",
+      "categoria": "Brasileirão - Série D",
+      "evento": "São Joseense-PR x Azuriz-PR",
+      "canal": "youtube FPF TV PR"
     },
     {
-      "hora": "20:30",
-      "competicao": "NHL Playoffs",
-      "jogo": "J7 - Buffalo Sabres x Montreal Canadiens",
-      "canais": ["Disney+"]
+      "horario": "19:30",
+      "categoria": "LNF Futsal",
+      "evento": "Carlos Barbosa x Magnus",
+      "canal": "youtube LNF TV"
     },
     {
-      "hora": "21:00",
-      "competicao": "Brasileirão Feminino",
-      "jogo": "Cruzeiro F x Corinthians F",
-      "canais": ["Sportv"]
+      "horario": "20:00",
+      "categoria": "LNF Silver Futsal",
+      "evento": "Vasco x Velez-RS, Sport x Joaçaba",
+      "canal": "youtube LNF TV"
     },
     {
-      "hora": "21:00",
-      "competicao": "Brasileirão Feminino",
-      "jogo": "Palmeiras F x Botafogo F",
-      "canais": ["TV Brasil"]
+      "horario": "20:00",
+      "categoria": "NBB - Liga Ouro",
+      "evento": "Final (j.1) - Tatuí-SP x Brusque",
+      "canal": "youtube NBB"
     },
     {
-      "hora": "21:00",
-      "competicao": "Kings League BR (Fut7)",
-      "jogo": "Final - Desimpain x G3X",
-      "canais": ["XSports", "CazéTV"]
+      "horario": "21:00",
+      "categoria": "LNF Silver Futsal",
+      "evento": "Dracena-SP x Chopinzinho-PR",
+      "canal": "XSPORTS, LNF TV"
     },
     {
-      "hora": "21:00",
-      "competicao": "NBB - Semifinais",
-      "jogo": "J1 - Pinheiros x Corinthians",
-      "canais": ["ESPN2"]
+      "horario": "21:00",
+      "categoria": "NBA - Final Leste",
+      "evento": "J1 - NY Knicks x Clev. Cavaliers",
+      "canal": "ESPN2"
     },
     {
-      "hora": "21:00",
-      "competicao": "WNBA",
-      "jogo": "Dallas Wings x Washington Mystics",
-      "canais": ["YouTube NBA Brasil"]
+      "horario": "21:00",
+      "categoria": "Libertadores",
+      "evento": "Always Ready x Mirassol",
+      "canal": "Paramount+"
     },
     {
-      "hora": "21:30",
-      "competicao": "NBA - Final Oeste",
-      "jogo": "J1 - OKC Thunder x San Antonio Spurs",
-      "canais": ["Prime Video"]
+      "horario": "21:00",
+      "categoria": "Libertadores",
+      "evento": "Santa Fé x Platense",
+      "canal": "ESPN4"
     },
     {
-      "hora": "22:40",
-      "competicao": "MLB",
-      "jogo": "San Diego Padres x LA Dodgers",
-      "canais": ["ESPN3"]
+      "horario": "21:30",
+      "categoria": "Libertadores",
+      "evento": "Boca Juniors x Cruzeiro",
+      "canal": "Paramount+"
+    },
+    {
+      "horario": "21:30",
+      "categoria": "Sul-Americana",
+      "evento": "São Paulo x Millonarios",
+      "canal": "SBT, ESPN"
+    },
+    {
+      "horario": "23:00",
+      "categoria": "WNBA",
+      "evento": "Phoenix Mercury x Toronto Tempo",
+      "canal": "youtube NBA Brasil"
+    },
+    {
+      "horario": "23:00",
+      "categoria": "Libertadores",
+      "evento": "Indep. del Valle x Libertad",
+      "canal": "ESPN4"
+    },
+    {
+      "horario": "23:00",
+      "categoria": "Sul-Americana",
+      "evento": "América de Cali x Tigre-ARG",
+      "canal": "Paramount+"
+    },
+    {
+      "horario": "23:00",
+      "categoria": "Sul-Americana",
+      "evento": "Dep. Cuenca x Recoleta-PAR",
+      "canal": "Disney+"
     }
   ]
 }
