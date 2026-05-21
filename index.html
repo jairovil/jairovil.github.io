@@ -15,18 +15,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- SEU CÓDIGO DE BANNER - SOMENTE TOPO (corrigido dentro de script) -->
-<script>
-  atOptions = {
-    'key' : 'b8faf8b8fb0e8e2f3358fc5893986ebe',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/b8faf8b8fb0e8e2f3358fc5893986ebe/invoke.js"></script>
-
 <style>
 * {
     margin: 0;
@@ -137,18 +125,6 @@ body {
 
 .date-badge i {
     color: #00ffae;
-}
-
-/* BANNER TOPO */
-.banner-topo {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90px;
 }
 
 /* Tabela Estilos */
@@ -434,11 +410,6 @@ tr:hover {
     </div>
 </header>
 
-<!-- SEU BANNER - SOMENTE NO TOPO -->
-<div class="banner-topo" id="bannerTopo">
-    <!-- O script do banner será executado aqui -->
-</div>
-
 <main id="mainContent">
     <div class="tabela-container">
         <div class="section-title" style="text-align: center; margin-bottom: 25px;">
@@ -489,7 +460,7 @@ tr:hover {
             <p><strong>Última atualização:</strong> <span id="currentYear"></span></p>
             <p>A <strong>Agenda Esportiva</strong> respeita sua privacidade. Este site é informativo e não coleta dados pessoais.</p>
             <h2>📊 Cookies</h2>
-            <p>Utilizamos cookies para melhorar sua experiência e exibir anúncios personalizados através do Google AdSense.</p>
+            <p>Utilizamos cookies apenas para melhorar sua experiência. Não coletamos dados pessoais.</p>
             <h2>📧 Contato</h2>
             <p>Dúvidas: <strong>contatoagendaesportiva@gmail.com</strong></p>
             <button class="back-button" onclick="showHome()">← Voltar ao Início</button>
@@ -546,9 +517,8 @@ tr:hover {
 </footer>
 
 <script>
-// Dados carregados diretamente do arquivo dados.json que você enviou
-// (incluído inline para garantir funcionamento mesmo sem servidor)
-const DADOS_DIRETOS = {
+// Dados completos da programação esportiva (baseado no seu arquivo dados.json)
+const DADOS_COMPLETOS = {
   "eventos": [
     {"hora":"10h35","esporte":"Ciclismo","jogo":"La Vuelta (Fem.) - etapa 3","canais":["ESPN3"]},
     {"hora":"12h00","esporte":"Libertadores Fut. Areia","jogo":"Ceilândia x Tito Drago-PER","canais":["SPORTV2","YouTube"]},
@@ -593,18 +563,15 @@ function carregarTabela() {
     const tbody = document.getElementById('tabelaBody');
     
     try {
-        // Usar os dados diretos do JSON que você forneceu
-        const dados = DADOS_DIRETOS;
+        const dados = DADOS_COMPLETOS;
         
         if (!dados.eventos || dados.eventos.length === 0) {
             throw new Error('Nenhum evento encontrado');
         }
         
-        // Monta a tabela
         tbody.innerHTML = '';
         dados.eventos.forEach(evento => {
             const tr = document.createElement('tr');
-            // Formatar canais como string para exibição
             const canaisStr = Array.isArray(evento.canais) ? evento.canais.join(', ') : evento.canais;
             tr.innerHTML = `
                 <td>${evento.hora}</td>
