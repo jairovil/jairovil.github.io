@@ -1,64 +1,102 @@
 {
-  "data": "2026-05-19",
+  "data": "2026-05-21",
   "diaSemana": "terça-feira",
   "agenda": [
     {
-      "hora": "13:00",
-      "competicao": "ATP500 Hamburgo",
-      "jogo": "Altmaier x Shelton",
-      "fase": "OF",
-      "transmissao": [
-        "ESPN2"
-      ]
-    },
-    {
-      "hora": "15:00",
-      "competicao": "Serie B Italiana",
-      "jogo": "Monza x Juve Stabia",
-      "fase": "SF",
-      "placarAnterior": "2x2",
-      "transmissao": [
-        "SportyNet",
-        "YouTube"
-      ]
-    },
-    {
-      "hora": "15:30",
-      "competicao": "Premier League",
-      "jogo": "Bournemouth x Manchester City",
-      "transmissao": [
-        "ESPN"
-      ]
-    },
-    {
-      "hora": "16:15",
-      "competicao": "Premier League",
-      "jogo": "Chelsea x Tottenham",
-      "transmissao": [
-        "Disney+"
-      ]
-    },
-    {
-      "hora": "16:30",
-      "competicao": "World Surf League",
-      "evento": "Etapa da Nova Zelândia",
-      "transmissao": [
-        "SPORTV3",
-        "YouTube"
-      ]
-    },
-    {
-      "hora": "17:10",
-      "competicao": "MLB",
-      "jogo": "Miami Marlins x Atlanta Braves",
+      "hora": "10:35",
+      "competicao": "Ciclismo",
+      "evento": "La Vuelta (Fem.) - etapa 3",
       "transmissao": [
         "ESPN3"
       ]
     },
     {
-      "hora": "18:00",
-      "competicao": "Natação",
-      "evento": "Troféu Maria Lenk - finais",
+      "hora": "12:00",
+      "competicao": "Libertadores Fut. Areia",
+      "jogo": "Ceilândia x Tito Drago-PER",
+      "transmissao": [
+        "SPORTV2",
+        "YouTube"
+      ]
+    },
+    {
+      "hora": "13:00",
+      "competicao": "Mundial T. Mesa Equipes",
+      "jogo": "Brasil F x Luxemburgo F",
+      "transmissao": [
+        "SPORTV3",
+        "CazéTV"
+      ]
+    },
+    {
+      "hora": "13:00",
+      "competicao": "Euroliga Playoffs",
+      "jogo": "Hapoel Tel-Aviv x Real Madrid",
+      "transmissao": [
+        "XSPORTS"
+      ]
+    },
+    {
+      "hora": "14:30",
+      "competicao": "Copa da Turquia",
+      "jogo": "Besiktas x Konyaspor",
+      "fase": "SF",
+      "transmissao": [
+        "Jovem Pan",
+        "YouTube"
+      ]
+    },
+    {
+      "hora": "15:00",
+      "competicao": "Camp. Saudita",
+      "jogo": "Al Khaleej x Al Hilal",
+      "transmissao": [
+        "YouTube Canal GOAT"
+      ]
+    },
+    {
+      "hora": "15:30",
+      "competicao": "Mundial T. Mesa Equipes",
+      "jogo": "Singapura x Brasil",
+      "transmissao": [
+        "SPORTV3",
+        "CazéTV"
+      ]
+    },
+    {
+      "hora": "15:45",
+      "competicao": "Liga Europa Hand.",
+      "jogo": "Porto x Melsungen-ALE",
+      "fase": "QF",
+      "transmissao": [
+        "XSPORTS"
+      ]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Champions League",
+      "jogo": "Arsenal x Atl. Madrid",
+      "fase": "SF",
+      "placarAnterior": "1x1",
+      "transmissao": [
+        "SBT",
+        "TNT",
+        "HBO Max"
+      ]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Brasileirão Sub-20 Fem.",
+      "jogo": "São Paulo F x Ferroviária F",
+      "fase": "SF ida",
+      "transmissao": [
+        "SPORTV"
+      ]
+    },
+    {
+      "hora": "16:00",
+      "competicao": "Libertadores Fut. Areia",
+      "jogo": "Sampaio Corrêa x Dep. Salud-BOL",
       "transmissao": [
         "SPORTV2",
         "YouTube"
@@ -66,169 +104,46 @@
     },
     {
       "hora": "18:00",
-      "competicao": "Brasileirão Sub-20",
-      "jogo": "Corinthians Sub-20 x Palmeiras Sub-20",
+      "competicao": "Brasileirão Sub-20 Fem.",
+      "jogo": "Flamengo F x Internacional F",
+      "fase": "SF ida",
       "transmissao": [
-        "SPORTV"
+        "SPORTV2"
+      ]
+    },
+    {
+      "hora": "18:30",
+      "competicao": "Copa do Brasil Futsal",
+      "jogo": "Vasco x Minas",
+      "fase": "OF ida",
+      "transmissao": [
+        "YouTube CBFS TV"
       ]
     },
     {
       "hora": "19:00",
-      "competicao": "Libertadores",
-      "jogo": "Fluminense x Bolívar",
-      "transmissao": [
-        "ESPN"
-      ]
-    },
-    {
-      "hora": "19:00",
-      "competicao": "Libertadores",
-      "jogo": "Rosario Central x Univ. Central",
-      "transmissao": [
-        "ESPN4"
-      ]
-    },
-    {
-      "hora": "19:00",
-      "competicao": "Libertadores",
-      "jogo": "Coquimbo Unido x Tolima",
-      "transmissao": [
-        "Paramount+"
-      ]
-    },
-    {
-      "hora": "19:00",
-      "competicao": "Sul-Americana",
-      "jogo": "Audax Italiano x Barracas Central",
-      "transmissao": [
-        "Paramount+"
-      ]
-    },
-    {
-      "hora": "19:00",
-      "competicao": "Sul-Americana",
-      "jogo": "Montevideo City x Dep. Riestra",
-      "transmissao": [
-        "Paramount+"
-      ]
-    },
-    {
-      "hora": "19:00",
-      "competicao": "Brasileirão Série D",
-      "jogo": "São Joseense-PR x Azuriz-PR",
-      "transmissao": [
-        "YouTube FPF TV PR"
-      ]
-    },
-    {
-      "hora": "19:30",
-      "competicao": "LNF Futsal",
-      "jogo": "Carlos Barbosa x Magnus",
-      "transmissao": [
-        "YouTube LNF TV"
-      ]
-    },
-    {
-      "hora": "20:00",
-      "competicao": "LNF Silver Futsal",
-      "jogos": [
-        "Vasco x Velez-RS",
-        "Sport x Joaçaba"
-      ],
-      "transmissao": [
-        "YouTube LNF TV"
-      ]
-    },
-    {
-      "hora": "20:00",
-      "competicao": "NBB Liga Ouro",
-      "jogo": "Tatuí-SP x Brusque",
-      "fase": "Final - Jogo 1",
-      "transmissao": [
-        "YouTube NBB"
-      ]
-    },
-    {
-      "hora": "21:00",
-      "competicao": "LNF Silver Futsal",
-      "jogo": "Dracena-SP x Chopinzinho-PR",
+      "competicao": "NBB Playoffs",
+      "jogo": "Franca x Mogi",
+      "fase": "J1",
       "transmissao": [
         "XSPORTS",
-        "LNF TV"
+        "YouTube"
       ]
     },
     {
-      "hora": "21:00",
-      "competicao": "NBA Final Leste",
-      "jogo": "NY Knicks x Cleveland Cavaliers",
-      "fase": "Jogo 1",
-      "transmissao": [
-        "ESPN2"
-      ]
-    },
-    {
-      "hora": "21:00",
+      "hora": "19:00",
       "competicao": "Libertadores",
-      "jogo": "Always Ready x Mirassol",
+      "jogo": "Sporting Cristal x Palmeiras",
       "transmissao": [
         "Paramount+"
       ]
     },
     {
-      "hora": "21:00",
+      "hora": "19:00",
       "competicao": "Libertadores",
-      "jogo": "Santa Fé x Platense",
-      "transmissao": [
-        "ESPN4"
-      ]
-    },
-    {
-      "hora": "21:30",
-      "competicao": "Libertadores",
-      "jogo": "Boca Juniors x Cruzeiro",
+      "jogo": "Rosario Central x Libertad",
       "transmissao": [
         "Paramount+"
-      ]
-    },
-    {
-      "hora": "21:30",
-      "competicao": "Sul-Americana",
-      "jogo": "São Paulo x Millonarios",
-      "transmissao": [
-        "SBT",
-        "ESPN"
-      ]
-    },
-    {
-      "hora": "23:00",
-      "competicao": "WNBA",
-      "jogo": "Phoenix Mercury x Toronto Tempo",
-      "transmissao": [
-        "YouTube NBA Brasil"
-      ]
-    },
-    {
-      "hora": "23:00",
-      "competicao": "Libertadores",
-      "jogo": "Indep. del Valle x Libertad",
-      "transmissao": [
-        "ESPN4"
-      ]
-    },
-    {
-      "hora": "23:00",
-      "competicao": "Sul-Americana",
-      "jogo": "América de Cali x Tigre-ARG",
-      "transmissao": [
-        "Paramount+"
-      ]
-    },
-    {
-      "hora": "23:00",
-      "competicao": "Sul-Americana",
-      "jogo": "Dep. Cuenca x Recoleta-PAR",
-      "transmissao": [
-        "Disney+"
       ]
     }
   ]
