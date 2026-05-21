@@ -15,9 +15,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- SEU CÓDIGO DE BANNER - SOMENTE TOPO -->
+<!-- SEU CÓDIGO DE BANNER - META E SCRIPT (Topo) -->
 <meta name="25cbf575b803f03b43229bdd3a6f08fb7f4fb73c" content="25cbf575b803f03b43229bdd3a6f08fb7f4fb73c" />
-https://motionless-bus.com/bj3/VV0.Pm3UpIvObpmFV/JcZpDV0e3lMFDqYU2ZMZzHI-5ELgTmcNw/N/jHYZzSMOzXMZ
+<script src="https://motionless-bus.com/bj3/VV0.Pm3UpIvObpmFV/JcZpDV0e3lMFDqYU2ZMZzHI-5ELgTmcNw/N/jHYZzSMOzXMZ" async></script>
+
 <style>
 * {
     margin: 0;
@@ -139,6 +140,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 16px;
 }
 
 /* Tabela Estilos */
@@ -395,6 +399,9 @@ tr:hover {
     .content-card {
         padding: 20px;
     }
+    .banner-topo {
+        min-height: 80px;
+    }
 }
 </style>
 </head>
@@ -424,9 +431,11 @@ tr:hover {
     </div>
 </header>
 
-<!-- SEU BANNER - SOMENTE NO TOPO (código original) -->
-<div class="banner-topo">
-    <!-- O script do seu banner será executado aqui -->
+<!-- SEU BANNER - SOMENTE NO TOPO (código original com suporte a scripts) -->
+<div class="banner-topo" id="bannerTopo">
+    <!-- Espaço para seu código de banner/ads --> 
+    <div style="font-size:12px; color:#aaa;">Publicidade</div>
+    <!-- Se precisar inserir código de terceiros adicional, pode colocar aqui -->
 </div>
 
 <main id="mainContent">
@@ -471,7 +480,7 @@ tr:hover {
     </div>
 </main>
 
-<!-- PÁGINA DE PRIVACIDADE -->
+<!-- PÁGINAS ESTÁTICAS -->
 <div id="privacyPage" style="display:none;">
     <div class="content-page">
         <div class="content-card">
@@ -487,7 +496,6 @@ tr:hover {
     </div>
 </div>
 
-<!-- PÁGINA DE TERMOS -->
 <div id="termsPage" style="display:none;">
     <div class="content-page">
         <div class="content-card">
@@ -501,7 +509,6 @@ tr:hover {
     </div>
 </div>
 
-<!-- PÁGINA DE CONTATO -->
 <div id="contactPage" style="display:none;">
     <div class="content-page">
         <div class="content-card">
@@ -536,23 +543,45 @@ tr:hover {
 </footer>
 
 <script>
-// Dados emulados para demonstração
-const DADOS_EMULADOS = {
-    eventos: [
-        { hora: "16:00", esporte: "Futebol", jogo: "Flamengo vs Corinthians", canais: ["SPORTV", "Globo"] },
-        { hora: "16:30", esporte: "Futebol", jogo: "Palmeiras vs São Paulo", canais: ["ESPN", "TNT"] },
-        { hora: "17:00", esporte: "Basquete", jogo: "NBA: Lakers vs Warriors", canais: ["ESPN2", "YouTube"] },
-        { hora: "18:00", esporte: "Futebol", jogo: "Manchester City vs Liverpool", canais: ["ESPN", "TNT"] },
-        { hora: "19:00", esporte: "Futebol", jogo: "Real Madrid vs Barcelona", canais: ["SPORTV2", "ESPN3"] },
-        { hora: "20:00", esporte: "Vôlei", jogo: "Brasil vs Argentina", canais: ["SPORTV", "YouTube"] },
-        { hora: "21:00", esporte: "Futebol", jogo: "Internacional vs Grêmio", canais: ["Globo", "Premiere"] }
-    ]
+// Dados embutidos do arquivo dados.json (para garantir funcionamento mesmo sem fetch externo)
+const DADOS_JSON_EMBUTIDO = {
+  "eventos": [
+    {"hora":"10h35","esporte":"Ciclismo","jogo":"La Vuelta (Fem.) - etapa 3","canais":["ESPN3"]},
+    {"hora":"12h00","esporte":"Libertadores Fut. Areia","jogo":"Ceilândia x Tito Drago-PER","canais":["SPORTV2","YouTube"]},
+    {"hora":"13h00","esporte":"Mundial T. Mesa Equipes","jogo":"Brasil F x Luxemburgo F","canais":["SPORTV3","CazéTV"]},
+    {"hora":"13h00","esporte":"Euroliga - Playoffs","jogo":"Hapoel Tel-Aviv x Real Madrid","canais":["XSPORTS"]},
+    {"hora":"14h30","esporte":"Copa da Turquia","jogo":"Besiktas x Konyaspor","canais":["Jovem Pan","YouTube"]},
+    {"hora":"15h00","esporte":"Camp. Saudita","jogo":"Al Khaleej x Al Hilal","canais":["YouTube"]},
+    {"hora":"15h30","esporte":"Mundial T. Mesa Equipes","jogo":"Singapura x Brasil","canais":["SPORTV3","CazéTV"]},
+    {"hora":"15h45","esporte":"Liga Europa Hand.","jogo":"Porto x Melsungen-ALE","canais":["XSPORTS"]},
+    {"hora":"16h00","esporte":"Champions League","jogo":"Arsenal x Atl. Madrid","canais":["SBT","TNT","HBO Max"]},
+    {"hora":"16h00","esporte":"Brasileirão sub20 Fem.","jogo":"São Paulo F x Ferroviária F","canais":["SPORTV"]},
+    {"hora":"16h00","esporte":"Libertadores Fut. Areia","jogo":"Sampaio Corrêa x Dep. Salud-BOL","canais":["SPORTV2","YouTube"]},
+    {"hora":"18h00","esporte":"Brasileirão sub20 Fem.","jogo":"Flamengo F x Internacional F","canais":["SPORTV2"]},
+    {"hora":"18h30","esporte":"Copa do Brasil Futsal","jogo":"Vasco x Minas","canais":["YouTube"]},
+    {"hora":"19h00","esporte":"NBB - Playoffs","jogo":"Franca x Mogi","canais":["XSPORTS","YouTube"]},
+    {"hora":"19h00","esporte":"Libertadores","jogo":"Sporting Cristal x Palmeiras","canais":["Paramount+"]},
+    {"hora":"19h00","esporte":"Libertadores","jogo":"Rosario Central x Libertad","canais":["Paramount+"]},
+    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Juventud-URU x Atlético-MG","canais":["ESPN"]},
+    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Deportivo Riestra x Grêmio","canais":["Paramount+"]},
+    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Indep. Petrolero-BOL x Caracas","canais":["Paramount+"]},
+    {"hora":"20h00","esporte":"Libertadores Fut. Areia","jogo":"Vasco x Guaicuacu-VEN","canais":["SPORTV","YouTube"]},
+    {"hora":"20h00","esporte":"NBA - Playoffs","jogo":"Detroit Pistons x Cleveland Cavaliers","canais":["Prime Video"]},
+    {"hora":"20h30","esporte":"NBB - Playoffs","jogo":"Brasília x Flamengo","canais":["SPORTV2"]},
+    {"hora":"21h00","esporte":"LNF Silver Futsal","jogo":"Concórdia x Joaçaba","canais":["XSPORTS","LNF TV"]},
+    {"hora":"21h00","esporte":"NHL - Playoffs","jogo":"Colorado Avalanche x Minnesota Wild","canais":["ESPN2"]},
+    {"hora":"21h00","esporte":"Libertadores","jogo":"Barcelona-EQU x Boca Juniors","canais":["Paramount+"]},
+    {"hora":"21h00","esporte":"Libertadores","jogo":"Univ. Central-VEN x Ind. del Valle","canais":["ESPN4"]},
+    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Recoleta-PAR x Santos","canais":["SBT","ESPN"]},
+    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Puerto Cabello x Cienciano-PER","canais":["ESPN3"]},
+    {"hora":"21h30","esporte":"Libertadores","jogo":"Always Ready x Lanús","canais":["Paramount+"]},
+    {"hora":"21h30","esporte":"NBA - Playoffs","jogo":"OKC Thunder x LA Lakers","canais":["Prime Video"]},
+    {"hora":"22h30","esporte":"Concacaf Champions","jogo":"Tigres x Nashville","canais":["Disney+"]},
+    {"hora":"23h00","esporte":"Sul-Americana","jogo":"Dep Cuenca-EQU x San Lorenzo","canais":["ESPN4"]}
+  ]
 };
 
-// Configuração
-const ARQUIVO_JSON = 'dados.json';
-
-// Funções principais
+// Funções principais de renderização
 async function carregarTabela() {
     const loading = document.getElementById('loadingTabela');
     const waitingMsg = document.getElementById('waitingMessage');
@@ -560,34 +589,42 @@ async function carregarTabela() {
     const tbody = document.getElementById('tabelaBody');
     
     try {
-        let dados;
-        
-        // Tenta carregar do arquivo JSON
+        let dados = null;
+        // Tenta carregar dados do arquivo dados.json com cache buster para evitar cache
         try {
-            const resposta = await fetch(`${ARQUIVO_JSON}?t=${new Date().getTime()}`);
+            const resposta = await fetch(`dados.json?t=${new Date().getTime()}`);
             if (resposta.ok) {
                 dados = await resposta.json();
             } else {
                 throw new Error('Arquivo não encontrado');
             }
         } catch (erro) {
-            console.log('Usando dados emulados');
-            dados = DADOS_EMULADOS;
+            console.log('Arquivo dados.json não encontrado, usando dados embutidos.');
+            dados = DADOS_JSON_EMBUTIDO;
         }
         
-        if (!dados.eventos || dados.eventos.length === 0) {
+        if (!dados || !dados.eventos || dados.eventos.length === 0) {
             throw new Error('Nenhum evento encontrado');
         }
         
+        // Ordenar por hora (opcional, mas manter ordem original)
+        const eventosOrdenados = dados.eventos.sort((a,b) => {
+            const horaA = a.hora.replace('h',':').replace('H',':');
+            const horaB = b.hora.replace('h',':').replace('H',':');
+            return horaA.localeCompare(horaB);
+        });
+        
         // Monta a tabela
         tbody.innerHTML = '';
-        dados.eventos.forEach(evento => {
+        eventosOrdenados.forEach(evento => {
             const tr = document.createElement('tr');
+            // Exibe canais com join padrão inicial
+            const canaisTexto = evento.canais.join(', ');
             tr.innerHTML = `
                 <td>${evento.hora}</td>
                 <td>${evento.esporte}</td>
                 <td>${evento.jogo}</td>
-                <td>${evento.canais.join(', ')}</td>
+                <td>${canaisTexto}</td>
             `;
             tbody.appendChild(tr);
         });
@@ -597,12 +634,12 @@ async function carregarTabela() {
         tabela.style.display = 'table';
         
         formatarCanais();
-        adicionarIcones();
+        adicionarIconesEsportes();
         atualizarContador();
         enableSearch(true);
         
     } catch (erro) {
-        console.error('Erro ao carregar:', erro);
+        console.error('Erro ao carregar programação:', erro);
         loading.style.display = 'none';
         waitingMsg.style.display = 'block';
         tabela.style.display = 'none';
@@ -616,12 +653,10 @@ function formatarCanais() {
         'SBT': '#e74c3c', 'TNT': '#e74c3c', 'HBO': '#e74c3c', 'Max': '#e74c3c',
         'SPORTV': '#2ecc71', 'SPORTV2': '#2ecc71', 'SPORTV3': '#2ecc71', 'Globo': '#2ecc71',
         'ESPN': '#3498db', 'ESPN2': '#3498db', 'ESPN3': '#3498db', 'ESPN4': '#3498db',
-        'YouTube': '#ff0000',
+        'YouTube': '#ff0000', 'Prime Video': '#00a8e1', 'Disney+': '#113ccf',
         'XSPORTS': '#9b59b6', 'XSPORTS2': '#9b59b6',
         'Paramount+': '#0066ff', 'Paramount': '#0066ff',
-        'Jovem Pan': '#f39c12',
-        'CazéTV': '#1abc9c',
-        'Premiere': '#e67e22'
+        'Jovem Pan': '#f39c12', 'CazéTV': '#1abc9c', 'Premiere': '#e67e22', 'LNF TV': '#f1c40f'
     };
     
     celulasCanais.forEach(celula => {
@@ -649,25 +684,33 @@ function formatarCanais() {
     });
 }
 
-function adicionarIcones() {
+function adicionarIconesEsportes() {
     const linhas = document.querySelectorAll('#tabelaBody tr');
-    const icones = {
-        'Ciclismo': '🚴', 'Tênis': '🎾', 'Tênis de Mesa': '🏓',
-        'Basquete': '🏀', 'Futebol': '⚽', 'Champions League': '🏆',
-        'Futebol Fem': '👩⚽', 'Futsal': '⚽', 'Vôlei': '🏐',
-        'Handebol': '🤾', 'Libertadores': '🟡', 'Copa do Brasil': '🏆',
-        'Brasileirão': '🇧🇷', 'Premier League': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'La Liga': '🇪🇸'
+    const iconesMap = {
+        'Ciclismo': '🚴', 'Tênis': '🎾', 'Tênis de Mesa': '🏓', 'Basquete': '🏀',
+        'Futebol': '⚽', 'Champions League': '🏆', 'Libertadores': '🟡', 'Sul-Americana': '🏆',
+        'Futebol Fem': '👩⚽', 'Futsal': '⚽', 'Vôlei': '🏐', 'Handebol': '🤾',
+        'Copa do Brasil': '🏆', 'Brasileirão': '🇧🇷', 'Premier League': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'La Liga': '🇪🇸',
+        'NBA': '🏀', 'NHL': '🏒', 'Euroliga': '🏀', 'Mundial T. Mesa': '🏓',
+        'Liga Europa Hand.': '🤾', 'Concacaf': '🌎', 'Camp. Saudita': '🇸🇦'
     };
     
     linhas.forEach(linha => {
         const esporteCelula = linha.children[1];
         if (esporteCelula) {
-            const esporte = esporteCelula.textContent;
-            for (let [key, icone] of Object.entries(icones)) {
+            let esporte = esporteCelula.textContent;
+            let iconeAdicionado = false;
+            for (let [key, icone] of Object.entries(iconesMap)) {
                 if (esporte.includes(key)) {
                     esporteCelula.innerHTML = `${icone} ${esporte}`;
+                    iconeAdicionado = true;
                     break;
                 }
+            }
+            if (!iconeAdicionado && (esporte.includes('Futebol') || esporte.includes('Libertadores') || esporte.includes('Champions'))) {
+                esporteCelula.innerHTML = `⚽ ${esporte}`;
+            } else if (!iconeAdicionado && esporte.includes('Basquete')) {
+                esporteCelula.innerHTML = `🏀 ${esporte}`;
             }
         }
     });
@@ -688,12 +731,15 @@ function enableSearch(ativo) {
         searchInput.disabled = true;
         searchInput.value = '';
         searchInput.placeholder = '🔍 Aguardando programação...';
+        const msgDiv = document.getElementById('resultadoMensagem');
+        if(msgDiv) msgDiv.style.display = 'none';
     } else {
         searchInput.disabled = false;
         searchInput.placeholder = '🔍 Buscar por time, esporte ou canal...';
         const linhas = document.querySelectorAll('#tabelaBody tr');
         linhas.forEach(linha => linha.style.display = '');
-        document.getElementById('resultadoMensagem').style.display = 'none';
+        const msgDiv = document.getElementById('resultadoMensagem');
+        if(msgDiv) msgDiv.style.display = 'none';
     }
 }
 
@@ -704,23 +750,28 @@ function initSearch() {
     searchInput.addEventListener('keyup', function() {
         if (!buscaAtiva) return;
         
-        const termo = this.value.toLowerCase();
+        const termo = this.value.toLowerCase().trim();
         const linhas = document.querySelectorAll('#tabelaBody tr');
         let encontrados = 0;
         
         linhas.forEach(linha => {
             const texto = linha.textContent.toLowerCase();
-            if (texto.includes(termo)) {
+            if (termo === '' || texto.includes(termo)) {
                 linha.style.display = '';
-                encontrados++;
+                if (termo !== '') encontrados++;
+                else encontrados = linhas.length;
             } else {
                 linha.style.display = 'none';
             }
         });
         
-        if (encontrados === 0 && termo !== '') {
-            resultadoMensagem.textContent = '❌ Nenhum evento encontrado';
-            resultadoMensagem.style.display = 'block';
+        if (termo !== '') {
+            if (encontrados === 0) {
+                resultadoMensagem.textContent = '❌ Nenhum evento encontrado para sua busca';
+                resultadoMensagem.style.display = 'block';
+            } else {
+                resultadoMensagem.style.display = 'none';
+            }
         } else {
             resultadoMensagem.style.display = 'none';
         }
@@ -732,18 +783,23 @@ function initCopyButton() {
     if (btn) {
         btn.onclick = function() {
             const tabela = document.getElementById('programacaoTable');
-            if (tabela.style.display === 'none') {
+            if (tabela.style.display === 'none' || tabela.offsetParent === null) {
                 btn.textContent = '⚠️ Nenhuma tabela disponível';
                 setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
                 return;
             }
+            // Selecionar a tabela e copiar
             const range = document.createRange();
             range.selectNode(tabela);
             window.getSelection().removeAllRanges();
             window.getSelection().addRange(range);
-            document.execCommand('copy');
+            try {
+                document.execCommand('copy');
+                btn.textContent = '✅ Copiado!';
+            } catch(e) {
+                btn.textContent = '❌ Erro ao copiar';
+            }
             window.getSelection().removeAllRanges();
-            btn.textContent = '✅ Copiado!';
             setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
         };
     }
@@ -757,47 +813,64 @@ function displayCurrentDate() {
     const ano = data.getFullYear();
     const semana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
     const diaSemana = semana[data.getDay()];
-    document.getElementById('currentDate').innerHTML = `<i class="fas fa-futbol"></i> ${diaSemana}, ${dia} de ${mes} de ${ano}`;
+    const dateSpan = document.getElementById('currentDate');
+    if(dateSpan) dateSpan.innerHTML = `<i class="fas fa-futbol"></i> ${diaSemana}, ${dia} de ${mes} de ${ano}`;
 }
 
 function showHome() {
-    document.getElementById('mainContent').style.display = 'block';
-    document.getElementById('privacyPage').style.display = 'none';
-    document.getElementById('termsPage').style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
+    const main = document.getElementById('mainContent');
+    const privacy = document.getElementById('privacyPage');
+    const terms = document.getElementById('termsPage');
+    const contact = document.getElementById('contactPage');
+    if(main) main.style.display = 'block';
+    if(privacy) privacy.style.display = 'none';
+    if(terms) terms.style.display = 'none';
+    if(contact) contact.style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showPrivacy() {
-    document.getElementById('mainContent').style.display = 'none';
-    document.getElementById('privacyPage').style.display = 'block';
-    document.getElementById('termsPage').style.display = 'none';
-    document.getElementById('contactPage').style.display = 'none';
+    const main = document.getElementById('mainContent');
+    const privacy = document.getElementById('privacyPage');
+    const terms = document.getElementById('termsPage');
+    const contact = document.getElementById('contactPage');
+    if(main) main.style.display = 'none';
+    if(privacy) privacy.style.display = 'block';
+    if(terms) terms.style.display = 'none';
+    if(contact) contact.style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showTerms() {
-    document.getElementById('mainContent').style.display = 'none';
-    document.getElementById('privacyPage').style.display = 'none';
-    document.getElementById('termsPage').style.display = 'block';
-    document.getElementById('contactPage').style.display = 'none';
+    const main = document.getElementById('mainContent');
+    const privacy = document.getElementById('privacyPage');
+    const terms = document.getElementById('termsPage');
+    const contact = document.getElementById('contactPage');
+    if(main) main.style.display = 'none';
+    if(privacy) privacy.style.display = 'none';
+    if(terms) terms.style.display = 'block';
+    if(contact) contact.style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showContact() {
-    document.getElementById('mainContent').style.display = 'none';
-    document.getElementById('privacyPage').style.display = 'none';
-    document.getElementById('termsPage').style.display = 'none';
-    document.getElementById('contactPage').style.display = 'block';
+    const main = document.getElementById('mainContent');
+    const privacy = document.getElementById('privacyPage');
+    const terms = document.getElementById('termsPage');
+    const contact = document.getElementById('contactPage');
+    if(main) main.style.display = 'none';
+    if(privacy) privacy.style.display = 'none';
+    if(terms) terms.style.display = 'none';
+    if(contact) contact.style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Inicialização
-const ano = new Date().getFullYear();
-document.querySelectorAll('#currentYear, #currentYear2, #footerYear').forEach(el => { if(el) el.textContent = ano; });
+const anoAtual = new Date().getFullYear();
+document.querySelectorAll('#currentYear, #currentYear2, #footerYear').forEach(el => { if(el) el.textContent = anoAtual; });
 
 displayCurrentDate();
-carregarTabela();
+carregarTabela();   // carrega preferencialmente dados.json, caso contrário usa embutido
 initSearch();
 initCopyButton();
 showHome();
