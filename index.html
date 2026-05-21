@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- SEU CÓDIGO DE BANNER - META E SCRIPT (Topo) -->
+<!-- SEU CÓDIGO DE BANNER - META + SCRIPT (Topo - local correto) -->
 <meta name="25cbf575b803f03b43229bdd3a6f08fb7f4fb73c" content="25cbf575b803f03b43229bdd3a6f08fb7f4fb73c" />
 <script src="https://motionless-bus.com/bj3/VV0.Pm3UpIvObpmFV/JcZpDV0e3lMFDqYU2ZMZzHI-5ELgTmcNw/N/jHYZzSMOzXMZ" async></script>
 
@@ -131,7 +131,7 @@ body {
     color: #00ffae;
 }
 
-/* BANNER TOPO */
+/* BANNER TOPO - local onde seu anúncio será exibido naturalmente */
 .banner-topo {
     max-width: 1200px;
     margin: 20px auto;
@@ -143,6 +143,7 @@ body {
     min-height: 100px;
     background: rgba(0,0,0,0.2);
     border-radius: 16px;
+    overflow: hidden;
 }
 
 /* Tabela Estilos */
@@ -431,11 +432,9 @@ tr:hover {
     </div>
 </header>
 
-<!-- SEU BANNER - SOMENTE NO TOPO (código original com suporte a scripts) -->
+<!-- SEU BANNER - SOMENTE NO TOPO (Código original vai aparecer aqui) -->
 <div class="banner-topo" id="bannerTopo">
-    <!-- Espaço para seu código de banner/ads --> 
-    <div style="font-size:12px; color:#aaa;">Publicidade</div>
-    <!-- Se precisar inserir código de terceiros adicional, pode colocar aqui -->
+    <!-- O script motionless-bus carregará os anúncios automaticamente nesta div -->
 </div>
 
 <main id="mainContent">
@@ -452,15 +451,16 @@ tr:hover {
         </div>
         <div id="resultadoMensagem" class="resultado-mensagem" style="display:none;"></div>
         
+        <!-- Área de loading enquanto carrega o dados.json -->
         <div id="loadingTabela" class="loading">
             <i class="fas fa-spinner"></i><br>
-            Carregando programação...
+            Carregando programação esportiva...
         </div>
         
         <div id="waitingMessage" class="waiting-message" style="display:none;">
             <i class="fas fa-clock"></i><br>
-            ⏳ Aguardando programação...<br>
-            <small>Programação será carregada automaticamente.</small>
+            ⏳ Aguardando dados do servidor...<br>
+            <small>Verificando arquivo dados.json</small>
         </div>
         
         <table id="programacaoTable" style="display:none;">
@@ -543,83 +543,39 @@ tr:hover {
 </footer>
 
 <script>
-// Dados embutidos do arquivo dados.json (para garantir funcionamento mesmo sem fetch externo)
-const DADOS_JSON_EMBUTIDO = {
-  "eventos": [
-    {"hora":"10h35","esporte":"Ciclismo","jogo":"La Vuelta (Fem.) - etapa 3","canais":["ESPN3"]},
-    {"hora":"12h00","esporte":"Libertadores Fut. Areia","jogo":"Ceilândia x Tito Drago-PER","canais":["SPORTV2","YouTube"]},
-    {"hora":"13h00","esporte":"Mundial T. Mesa Equipes","jogo":"Brasil F x Luxemburgo F","canais":["SPORTV3","CazéTV"]},
-    {"hora":"13h00","esporte":"Euroliga - Playoffs","jogo":"Hapoel Tel-Aviv x Real Madrid","canais":["XSPORTS"]},
-    {"hora":"14h30","esporte":"Copa da Turquia","jogo":"Besiktas x Konyaspor","canais":["Jovem Pan","YouTube"]},
-    {"hora":"15h00","esporte":"Camp. Saudita","jogo":"Al Khaleej x Al Hilal","canais":["YouTube"]},
-    {"hora":"15h30","esporte":"Mundial T. Mesa Equipes","jogo":"Singapura x Brasil","canais":["SPORTV3","CazéTV"]},
-    {"hora":"15h45","esporte":"Liga Europa Hand.","jogo":"Porto x Melsungen-ALE","canais":["XSPORTS"]},
-    {"hora":"16h00","esporte":"Champions League","jogo":"Arsenal x Atl. Madrid","canais":["SBT","TNT","HBO Max"]},
-    {"hora":"16h00","esporte":"Brasileirão sub20 Fem.","jogo":"São Paulo F x Ferroviária F","canais":["SPORTV"]},
-    {"hora":"16h00","esporte":"Libertadores Fut. Areia","jogo":"Sampaio Corrêa x Dep. Salud-BOL","canais":["SPORTV2","YouTube"]},
-    {"hora":"18h00","esporte":"Brasileirão sub20 Fem.","jogo":"Flamengo F x Internacional F","canais":["SPORTV2"]},
-    {"hora":"18h30","esporte":"Copa do Brasil Futsal","jogo":"Vasco x Minas","canais":["YouTube"]},
-    {"hora":"19h00","esporte":"NBB - Playoffs","jogo":"Franca x Mogi","canais":["XSPORTS","YouTube"]},
-    {"hora":"19h00","esporte":"Libertadores","jogo":"Sporting Cristal x Palmeiras","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Libertadores","jogo":"Rosario Central x Libertad","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Juventud-URU x Atlético-MG","canais":["ESPN"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Deportivo Riestra x Grêmio","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Indep. Petrolero-BOL x Caracas","canais":["Paramount+"]},
-    {"hora":"20h00","esporte":"Libertadores Fut. Areia","jogo":"Vasco x Guaicuacu-VEN","canais":["SPORTV","YouTube"]},
-    {"hora":"20h00","esporte":"NBA - Playoffs","jogo":"Detroit Pistons x Cleveland Cavaliers","canais":["Prime Video"]},
-    {"hora":"20h30","esporte":"NBB - Playoffs","jogo":"Brasília x Flamengo","canais":["SPORTV2"]},
-    {"hora":"21h00","esporte":"LNF Silver Futsal","jogo":"Concórdia x Joaçaba","canais":["XSPORTS","LNF TV"]},
-    {"hora":"21h00","esporte":"NHL - Playoffs","jogo":"Colorado Avalanche x Minnesota Wild","canais":["ESPN2"]},
-    {"hora":"21h00","esporte":"Libertadores","jogo":"Barcelona-EQU x Boca Juniors","canais":["Paramount+"]},
-    {"hora":"21h00","esporte":"Libertadores","jogo":"Univ. Central-VEN x Ind. del Valle","canais":["ESPN4"]},
-    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Recoleta-PAR x Santos","canais":["SBT","ESPN"]},
-    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Puerto Cabello x Cienciano-PER","canais":["ESPN3"]},
-    {"hora":"21h30","esporte":"Libertadores","jogo":"Always Ready x Lanús","canais":["Paramount+"]},
-    {"hora":"21h30","esporte":"NBA - Playoffs","jogo":"OKC Thunder x LA Lakers","canais":["Prime Video"]},
-    {"hora":"22h30","esporte":"Concacaf Champions","jogo":"Tigres x Nashville","canais":["Disney+"]},
-    {"hora":"23h00","esporte":"Sul-Americana","jogo":"Dep Cuenca-EQU x San Lorenzo","canais":["ESPN4"]}
-  ]
-};
-
-// Funções principais de renderização
-async function carregarTabela() {
-    const loading = document.getElementById('loadingTabela');
-    const waitingMsg = document.getElementById('waitingMessage');
+// Função para carregar dados do arquivo dados.json (externo)
+async function carregarDadosJson() {
+    const loadingDiv = document.getElementById('loadingTabela');
+    const waitingDiv = document.getElementById('waitingMessage');
     const tabela = document.getElementById('programacaoTable');
     const tbody = document.getElementById('tabelaBody');
     
     try {
-        let dados = null;
-        // Tenta carregar dados do arquivo dados.json com cache buster para evitar cache
-        try {
-            const resposta = await fetch(`dados.json?t=${new Date().getTime()}`);
-            if (resposta.ok) {
-                dados = await resposta.json();
-            } else {
-                throw new Error('Arquivo não encontrado');
-            }
-        } catch (erro) {
-            console.log('Arquivo dados.json não encontrado, usando dados embutidos.');
-            dados = DADOS_JSON_EMBUTIDO;
+        // Tenta buscar o arquivo dados.json com timestamp para evitar cache
+        const response = await fetch(`dados.json?t=${Date.now()}`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status} - Arquivo dados.json não encontrado`);
         }
         
-        if (!dados || !dados.eventos || dados.eventos.length === 0) {
-            throw new Error('Nenhum evento encontrado');
+        const dados = await response.json();
+        
+        if (!dados.eventos || dados.eventos.length === 0) {
+            throw new Error('Nenhum evento encontrado no JSON');
         }
         
-        // Ordenar por hora (opcional, mas manter ordem original)
-        const eventosOrdenados = dados.eventos.sort((a,b) => {
-            const horaA = a.hora.replace('h',':').replace('H',':');
-            const horaB = b.hora.replace('h',':').replace('H',':');
+        // Ordenar eventos por hora
+        const eventos = [...dados.eventos].sort((a, b) => {
+            const horaA = a.hora.replace('h', ':').replace('H', ':');
+            const horaB = b.hora.replace('h', ':').replace('H', ':');
             return horaA.localeCompare(horaB);
         });
         
-        // Monta a tabela
+        // Montar a tabela
         tbody.innerHTML = '';
-        eventosOrdenados.forEach(evento => {
-            const tr = document.createElement('tr');
-            // Exibe canais com join padrão inicial
+        eventos.forEach(evento => {
             const canaisTexto = evento.canais.join(', ');
+            const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${evento.hora}</td>
                 <td>${evento.esporte}</td>
@@ -629,40 +585,51 @@ async function carregarTabela() {
             tbody.appendChild(tr);
         });
         
-        loading.style.display = 'none';
-        waitingMsg.style.display = 'none';
-        tabela.style.display = 'table';
-        
-        formatarCanais();
+        // Aplicar estilos e formatação
+        formatarCanaisComBadges();
         adicionarIconesEsportes();
         atualizarContador();
+        
+        // Esconder loading e mostrar tabela
+        loadingDiv.style.display = 'none';
+        waitingDiv.style.display = 'none';
+        tabela.style.display = 'table';
+        
+        // Ativar busca
         enableSearch(true);
         
     } catch (erro) {
-        console.error('Erro ao carregar programação:', erro);
-        loading.style.display = 'none';
-        waitingMsg.style.display = 'block';
+        console.error('Erro ao carregar dados.json:', erro);
+        loadingDiv.style.display = 'none';
+        waitingDiv.style.display = 'block';
         tabela.style.display = 'none';
         enableSearch(false);
+        
+        // Mensagem de erro amigável
+        const msgError = document.getElementById('waitingMessage');
+        if (msgError) {
+            msgError.innerHTML = `<i class="fas fa-exclamation-triangle"></i><br>
+            ⚠️ Não foi possível carregar o arquivo dados.json<br>
+            <small>Verifique se o arquivo está no mesmo diretório que o HTML.</small><br>
+            <small style="color:#aaa;">Formato esperado: { "eventos": [ { "hora":"...", "esporte":"...", "jogo":"...", "canais":[...] } ] }</small>`;
+        }
     }
 }
 
-function formatarCanais() {
+function formatarCanaisComBadges() {
     const celulasCanais = document.querySelectorAll('#tabelaBody td:last-child');
     const cores = {
-        'SBT': '#e74c3c', 'TNT': '#e74c3c', 'HBO': '#e74c3c', 'Max': '#e74c3c',
+        'SBT': '#e74c3c', 'TNT': '#e74c3c', 'HBO Max': '#e74c3c', 'Max': '#e74c3c',
         'SPORTV': '#2ecc71', 'SPORTV2': '#2ecc71', 'SPORTV3': '#2ecc71', 'Globo': '#2ecc71',
         'ESPN': '#3498db', 'ESPN2': '#3498db', 'ESPN3': '#3498db', 'ESPN4': '#3498db',
         'YouTube': '#ff0000', 'Prime Video': '#00a8e1', 'Disney+': '#113ccf',
-        'XSPORTS': '#9b59b6', 'XSPORTS2': '#9b59b6',
-        'Paramount+': '#0066ff', 'Paramount': '#0066ff',
-        'Jovem Pan': '#f39c12', 'CazéTV': '#1abc9c', 'Premiere': '#e67e22', 'LNF TV': '#f1c40f'
+        'XSPORTS': '#9b59b6', 'Paramount+': '#0066ff', 'Jovem Pan': '#f39c12',
+        'CazéTV': '#1abc9c', 'Premiere': '#e67e22', 'LNF TV': '#f1c40f'
     };
     
     celulasCanais.forEach(celula => {
-        const texto = celula.innerHTML;
-        const canais = texto.split(',').map(c => c.trim());
-        
+        const textoOriginal = celula.innerHTML;
+        const canais = textoOriginal.split(',').map(c => c.trim());
         if (canais.length > 0 && !celula.querySelector('.canal-badge')) {
             celula.innerHTML = '';
             canais.forEach(canal => {
@@ -690,7 +657,6 @@ function adicionarIconesEsportes() {
         'Ciclismo': '🚴', 'Tênis': '🎾', 'Tênis de Mesa': '🏓', 'Basquete': '🏀',
         'Futebol': '⚽', 'Champions League': '🏆', 'Libertadores': '🟡', 'Sul-Americana': '🏆',
         'Futebol Fem': '👩⚽', 'Futsal': '⚽', 'Vôlei': '🏐', 'Handebol': '🤾',
-        'Copa do Brasil': '🏆', 'Brasileirão': '🇧🇷', 'Premier League': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'La Liga': '🇪🇸',
         'NBA': '🏀', 'NHL': '🏒', 'Euroliga': '🏀', 'Mundial T. Mesa': '🏓',
         'Liga Europa Hand.': '🤾', 'Concacaf': '🌎', 'Camp. Saudita': '🇸🇦'
     };
@@ -707,7 +673,7 @@ function adicionarIconesEsportes() {
                     break;
                 }
             }
-            if (!iconeAdicionado && (esporte.includes('Futebol') || esporte.includes('Libertadores') || esporte.includes('Champions'))) {
+            if (!iconeAdicionado && (esporte.includes('Futebol') || esporte.includes('Libertadores') || esporte.includes('Sul-Americana'))) {
                 esporteCelula.innerHTML = `⚽ ${esporte}`;
             } else if (!iconeAdicionado && esporte.includes('Basquete')) {
                 esporteCelula.innerHTML = `🏀 ${esporte}`;
@@ -717,39 +683,39 @@ function adicionarIconesEsportes() {
 }
 
 function atualizarContador() {
-    const totalEventos = document.querySelectorAll('#tabelaBody tr').length;
-    const contador = document.getElementById('contadorEventos');
-    if (contador) contador.innerHTML = `📊 Total de eventos: ${totalEventos}`;
+    const total = document.querySelectorAll('#tabelaBody tr').length;
+    const contadorDiv = document.getElementById('contadorEventos');
+    if (contadorDiv) {
+        contadorDiv.innerHTML = `📊 Total de eventos: ${total}`;
+    }
 }
 
 let buscaAtiva = false;
-
 function enableSearch(ativo) {
     const searchInput = document.getElementById('searchInput');
     buscaAtiva = ativo;
+    if (!searchInput) return;
     if (!ativo) {
         searchInput.disabled = true;
+        searchInput.placeholder = '🔍 Aguardando dados...';
         searchInput.value = '';
-        searchInput.placeholder = '🔍 Aguardando programação...';
-        const msgDiv = document.getElementById('resultadoMensagem');
-        if(msgDiv) msgDiv.style.display = 'none';
     } else {
         searchInput.disabled = false;
         searchInput.placeholder = '🔍 Buscar por time, esporte ou canal...';
         const linhas = document.querySelectorAll('#tabelaBody tr');
         linhas.forEach(linha => linha.style.display = '');
         const msgDiv = document.getElementById('resultadoMensagem');
-        if(msgDiv) msgDiv.style.display = 'none';
+        if (msgDiv) msgDiv.style.display = 'none';
     }
 }
 
 function initSearch() {
     const searchInput = document.getElementById('searchInput');
-    const resultadoMensagem = document.getElementById('resultadoMensagem');
+    const resultadoMsg = document.getElementById('resultadoMensagem');
+    if (!searchInput) return;
     
     searchInput.addEventListener('keyup', function() {
         if (!buscaAtiva) return;
-        
         const termo = this.value.toLowerCase().trim();
         const linhas = document.querySelectorAll('#tabelaBody tr');
         let encontrados = 0;
@@ -765,44 +731,38 @@ function initSearch() {
             }
         });
         
-        if (termo !== '') {
-            if (encontrados === 0) {
-                resultadoMensagem.textContent = '❌ Nenhum evento encontrado para sua busca';
-                resultadoMensagem.style.display = 'block';
-            } else {
-                resultadoMensagem.style.display = 'none';
-            }
+        if (termo !== '' && encontrados === 0) {
+            resultadoMsg.textContent = '❌ Nenhum evento encontrado para sua busca';
+            resultadoMsg.style.display = 'block';
         } else {
-            resultadoMensagem.style.display = 'none';
+            resultadoMsg.style.display = 'none';
         }
     });
 }
 
 function initCopyButton() {
     const btn = document.getElementById('btnCopiarTabela');
-    if (btn) {
-        btn.onclick = function() {
-            const tabela = document.getElementById('programacaoTable');
-            if (tabela.style.display === 'none' || tabela.offsetParent === null) {
-                btn.textContent = '⚠️ Nenhuma tabela disponível';
-                setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
-                return;
-            }
-            // Selecionar a tabela e copiar
-            const range = document.createRange();
-            range.selectNode(tabela);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-            try {
-                document.execCommand('copy');
-                btn.textContent = '✅ Copiado!';
-            } catch(e) {
-                btn.textContent = '❌ Erro ao copiar';
-            }
-            window.getSelection().removeAllRanges();
+    if (!btn) return;
+    btn.onclick = () => {
+        const tabela = document.getElementById('programacaoTable');
+        if (!tabela || tabela.style.display === 'none') {
+            btn.textContent = '⚠️ Tabela indisponível';
             setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
-        };
-    }
+            return;
+        }
+        const range = document.createRange();
+        range.selectNode(tabela);
+        window.getSelection()?.removeAllRanges();
+        window.getSelection()?.addRange(range);
+        try {
+            document.execCommand('copy');
+            btn.textContent = '✅ Copiado!';
+        } catch(e) {
+            btn.textContent = '❌ Erro';
+        }
+        window.getSelection()?.removeAllRanges();
+        setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
+    };
 }
 
 function displayCurrentDate() {
@@ -813,55 +773,36 @@ function displayCurrentDate() {
     const ano = data.getFullYear();
     const semana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
     const diaSemana = semana[data.getDay()];
-    const dateSpan = document.getElementById('currentDate');
-    if(dateSpan) dateSpan.innerHTML = `<i class="fas fa-futbol"></i> ${diaSemana}, ${dia} de ${mes} de ${ano}`;
+    const spanData = document.getElementById('currentDate');
+    if (spanData) spanData.innerHTML = `<i class="fas fa-futbol"></i> ${diaSemana}, ${dia} de ${mes} de ${ano}`;
 }
 
 function showHome() {
-    const main = document.getElementById('mainContent');
-    const privacy = document.getElementById('privacyPage');
-    const terms = document.getElementById('termsPage');
-    const contact = document.getElementById('contactPage');
-    if(main) main.style.display = 'block';
-    if(privacy) privacy.style.display = 'none';
-    if(terms) terms.style.display = 'none';
-    if(contact) contact.style.display = 'none';
+    document.getElementById('mainContent').style.display = 'block';
+    document.getElementById('privacyPage').style.display = 'none';
+    document.getElementById('termsPage').style.display = 'none';
+    document.getElementById('contactPage').style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function showPrivacy() {
-    const main = document.getElementById('mainContent');
-    const privacy = document.getElementById('privacyPage');
-    const terms = document.getElementById('termsPage');
-    const contact = document.getElementById('contactPage');
-    if(main) main.style.display = 'none';
-    if(privacy) privacy.style.display = 'block';
-    if(terms) terms.style.display = 'none';
-    if(contact) contact.style.display = 'none';
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('privacyPage').style.display = 'block';
+    document.getElementById('termsPage').style.display = 'none';
+    document.getElementById('contactPage').style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function showTerms() {
-    const main = document.getElementById('mainContent');
-    const privacy = document.getElementById('privacyPage');
-    const terms = document.getElementById('termsPage');
-    const contact = document.getElementById('contactPage');
-    if(main) main.style.display = 'none';
-    if(privacy) privacy.style.display = 'none';
-    if(terms) terms.style.display = 'block';
-    if(contact) contact.style.display = 'none';
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('privacyPage').style.display = 'none';
+    document.getElementById('termsPage').style.display = 'block';
+    document.getElementById('contactPage').style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function showContact() {
-    const main = document.getElementById('mainContent');
-    const privacy = document.getElementById('privacyPage');
-    const terms = document.getElementById('termsPage');
-    const contact = document.getElementById('contactPage');
-    if(main) main.style.display = 'none';
-    if(privacy) privacy.style.display = 'none';
-    if(terms) terms.style.display = 'none';
-    if(contact) contact.style.display = 'block';
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('privacyPage').style.display = 'none';
+    document.getElementById('termsPage').style.display = 'none';
+    document.getElementById('contactPage').style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -870,7 +811,7 @@ const anoAtual = new Date().getFullYear();
 document.querySelectorAll('#currentYear, #currentYear2, #footerYear').forEach(el => { if(el) el.textContent = anoAtual; });
 
 displayCurrentDate();
-carregarTabela();   // carrega preferencialmente dados.json, caso contrário usa embutido
+carregarDadosJson();  // Carrega o arquivo dados.json separado
 initSearch();
 initCopyButton();
 showHome();
