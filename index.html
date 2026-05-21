@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- SEU CÓDIGO DE BANNER - META + SCRIPT (Topo - local correto) -->
+<!-- SEU CÓDIGO DE BANNER - SOMENTE TOPO -->
 <meta name="25cbf575b803f03b43229bdd3a6f08fb7f4fb73c" content="25cbf575b803f03b43229bdd3a6f08fb7f4fb73c" />
 <script src="https://motionless-bus.com/bj3/VV0.Pm3UpIvObpmFV/JcZpDV0e3lMFDqYU2ZMZzHI-5ELgTmcNw/N/jHYZzSMOzXMZ" async></script>
 
@@ -131,7 +131,7 @@ body {
     color: #00ffae;
 }
 
-/* BANNER TOPO - local onde seu anúncio será exibido naturalmente */
+/* BANNER TOPO */
 .banner-topo {
     max-width: 1200px;
     margin: 20px auto;
@@ -272,15 +272,51 @@ tr:hover {
     text-align: center;
 }
 
-.loading, .waiting-message {
+.loading {
     text-align: center;
     padding: 40px;
     color: #00ffae;
 }
 
-.loading i, .waiting-message i {
+.loading i {
     font-size: 30px;
     animation: spin 1s linear infinite;
+}
+
+.error-message {
+    text-align: center;
+    padding: 40px;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 16px;
+    border: 1px solid #e74c3c;
+    margin: 20px;
+}
+
+.error-message i {
+    font-size: 48px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.error-message h3 {
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.error-message p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.error-message .dica {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: left;
+    max-width: 500px;
+    margin: 15px auto 0;
 }
 
 @keyframes spin {
@@ -432,10 +468,8 @@ tr:hover {
     </div>
 </header>
 
-<!-- SEU BANNER - SOMENTE NO TOPO (Código original vai aparecer aqui) -->
-<div class="banner-topo" id="bannerTopo">
-    <!-- O script motionless-bus carregará os anúncios automaticamente nesta div -->
-</div>
+<!-- SEU BANNER - SOMENTE NO TOPO -->
+<div class="banner-topo" id="bannerTopo"></div>
 
 <main id="mainContent">
     <div class="tabela-container">
@@ -451,17 +485,12 @@ tr:hover {
         </div>
         <div id="resultadoMensagem" class="resultado-mensagem" style="display:none;"></div>
         
-        <!-- Área de loading enquanto carrega o dados.json -->
-        <div id="loadingTabela" class="loading">
+        <div id="loadingArea" class="loading">
             <i class="fas fa-spinner"></i><br>
-            Carregando programação esportiva...
+            Carregando programação de <strong>dados.json</strong>...
         </div>
         
-        <div id="waitingMessage" class="waiting-message" style="display:none;">
-            <i class="fas fa-clock"></i><br>
-            ⏳ Aguardando dados do servidor...<br>
-            <small>Verificando arquivo dados.json</small>
-        </div>
+        <div id="errorArea" style="display:none;"></div>
         
         <table id="programacaoTable" style="display:none;">
             <thead>
@@ -472,8 +501,7 @@ tr:hover {
                     <th>Transmissão</th>
                 </tr>
             </thead>
-            <tbody id="tabelaBody">
-            </tbody>
+            <tbody id="tabelaBody"></tbody>
         </table>
         
         <div id="contadorEventos" class="contador-eventos"></div>
@@ -543,77 +571,133 @@ tr:hover {
 </footer>
 
 <script>
-// Função para carregar dados do arquivo dados.json (externo)
-async function carregarDadosJson() {
-    const loadingDiv = document.getElementById('loadingTabela');
-    const waitingDiv = document.getElementById('waitingMessage');
+// Função que carrega APENAS do arquivo dados.json na raiz
+async function carregarDoJson() {
+    const loadingDiv = document.getElementById('loadingArea');
+    const errorDiv = document.getElementById('errorArea');
     const tabela = document.getElementById('programacaoTable');
     const tbody = document.getElementById('tabelaBody');
+    const searchInput = document.getElementById('searchInput');
+    const btnCopiar = document.getElementById('btnCopiarTabela');
+    
+    // Mostra loading, esconde tabela e erro
+    loadingDiv.style.display = 'block';
+    errorDiv.style.display = 'none';
+    errorDiv.innerHTML = '';
+    tabela.style.display = 'none';
+    if (searchInput) searchInput.disabled = true;
+    if (btnCopiar) btnCopiar.disabled = false;
     
     try {
-        // Tenta buscar o arquivo dados.json com timestamp para evitar cache
-        const response = await fetch(`dados.json?t=${Date.now()}`);
+        // Tenta buscar o dados.json com timestamp para evitar cache
+        const url = `dados.json?t=${Date.now()}`;
+        console.log('Tentando carregar:', url);
+        
+        const response = await fetch(url);
         
         if (!response.ok) {
-            throw new Error(`HTTP ${response.status} - Arquivo dados.json não encontrado`);
+            throw new Error(`HTTP ${response.status} - Arquivo não encontrado`);
         }
         
         const dados = await response.json();
         
-        if (!dados.eventos || dados.eventos.length === 0) {
-            throw new Error('Nenhum evento encontrado no JSON');
+        // Validação básica
+        if (!dados || !dados.eventos || !Array.isArray(dados.eventos)) {
+            throw new Error('Formato inválido: faltando "eventos"');
         }
         
-        // Ordenar eventos por hora
-        const eventos = [...dados.eventos].sort((a, b) => {
+        if (dados.eventos.length === 0) {
+            throw new Error('Nenhum evento encontrado no arquivo');
+        }
+        
+        // Ordenar por hora (formato 10h35, 21h30)
+        const eventosOrdenados = [...dados.eventos].sort((a, b) => {
             const horaA = a.hora.replace('h', ':').replace('H', ':');
             const horaB = b.hora.replace('h', ':').replace('H', ':');
             return horaA.localeCompare(horaB);
         });
         
-        // Montar a tabela
+        // Montar tabela
         tbody.innerHTML = '';
-        eventos.forEach(evento => {
+        eventosOrdenados.forEach(evento => {
             const canaisTexto = evento.canais.join(', ');
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>${evento.hora}</td>
-                <td>${evento.esporte}</td>
-                <td>${evento.jogo}</td>
-                <td>${canaisTexto}</td>
+                <td>${escapeHtml(evento.hora)}</td>
+                <td>${escapeHtml(evento.esporte)}</td>
+                <td>${escapeHtml(evento.jogo)}</td>
+                <td>${escapeHtml(canaisTexto)}</td>
             `;
             tbody.appendChild(tr);
         });
         
-        // Aplicar estilos e formatação
+        // Aplicar formatação
         formatarCanaisComBadges();
         adicionarIconesEsportes();
         atualizarContador();
         
-        // Esconder loading e mostrar tabela
+        // Mostrar tabela
         loadingDiv.style.display = 'none';
-        waitingDiv.style.display = 'none';
         tabela.style.display = 'table';
         
-        // Ativar busca
-        enableSearch(true);
+        // Ativar busca e cópia
+        if (searchInput) {
+            searchInput.disabled = false;
+            searchInput.placeholder = '🔍 Buscar por time, esporte ou canal...';
+            searchInput.value = '';
+        }
+        
+        // Reset busca
+        const msgDiv = document.getElementById('resultadoMensagem');
+        if (msgDiv) msgDiv.style.display = 'none';
+        
+        // Ativar funcionalidade de busca novamente
+        window.buscaAtiva = true;
         
     } catch (erro) {
         console.error('Erro ao carregar dados.json:', erro);
-        loadingDiv.style.display = 'none';
-        waitingDiv.style.display = 'block';
-        tabela.style.display = 'none';
-        enableSearch(false);
         
-        // Mensagem de erro amigável
-        const msgError = document.getElementById('waitingMessage');
-        if (msgError) {
-            msgError.innerHTML = `<i class="fas fa-exclamation-triangle"></i><br>
-            ⚠️ Não foi possível carregar o arquivo dados.json<br>
-            <small>Verifique se o arquivo está no mesmo diretório que o HTML.</small><br>
-            <small style="color:#aaa;">Formato esperado: { "eventos": [ { "hora":"...", "esporte":"...", "jogo":"...", "canais":[...] } ] }</small>`;
-        }
+        // Mostrar erro detalhado
+        loadingDiv.style.display = 'none';
+        errorDiv.style.display = 'block';
+        errorDiv.innerHTML = `
+            <div class="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>⚠️ Não foi possível carregar o arquivo dados.json</h3>
+                <p>${erro.message}</p>
+                <p><strong>Verifique:</strong></p>
+                <ul style="text-align: left; max-width: 500px; margin: 10px auto; color: #bbb;">
+                    <li>✓ O arquivo <strong style="color:#00ffae">dados.json</strong> existe na mesma pasta que este HTML</li>
+                    <li>✓ O formato está correto (veja exemplo abaixo)</li>
+                    <li>✓ O servidor permite acesso ao arquivo</li>
+                </ul>
+                <div class="dica">
+                    <strong>📄 Formato esperado (dados.json):</strong><br>
+                    {<br>
+                    &nbsp;&nbsp;"eventos": [<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"hora": "16:00",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"esporte": "Futebol",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"jogo": "Time A vs Time B",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"canais": ["SPORTV", "Globo"]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;]<br>
+                    }
+                </div>
+                <button onclick="location.reload()" style="margin-top: 20px; padding: 10px 20px; background: #00ffae; border: none; border-radius: 20px; cursor: pointer; font-weight: bold;">↻ Tentar novamente</button>
+            </div>
+        `;
+        
+        if (searchInput) searchInput.disabled = true;
+        window.buscaAtiva = false;
     }
+}
+
+// Funções auxiliares
+function escapeHtml(texto) {
+    const div = document.createElement('div');
+    div.textContent = texto;
+    return div.innerHTML;
 }
 
 function formatarCanaisComBadges() {
@@ -656,9 +740,7 @@ function adicionarIconesEsportes() {
     const iconesMap = {
         'Ciclismo': '🚴', 'Tênis': '🎾', 'Tênis de Mesa': '🏓', 'Basquete': '🏀',
         'Futebol': '⚽', 'Champions League': '🏆', 'Libertadores': '🟡', 'Sul-Americana': '🏆',
-        'Futebol Fem': '👩⚽', 'Futsal': '⚽', 'Vôlei': '🏐', 'Handebol': '🤾',
-        'NBA': '🏀', 'NHL': '🏒', 'Euroliga': '🏀', 'Mundial T. Mesa': '🏓',
-        'Liga Europa Hand.': '🤾', 'Concacaf': '🌎', 'Camp. Saudita': '🇸🇦'
+        'NBA': '🏀', 'NHL': '🏒', 'Euroliga': '🏀', 'Mundial T. Mesa': '🏓'
     };
     
     linhas.forEach(linha => {
@@ -673,10 +755,8 @@ function adicionarIconesEsportes() {
                     break;
                 }
             }
-            if (!iconeAdicionado && (esporte.includes('Futebol') || esporte.includes('Libertadores') || esporte.includes('Sul-Americana'))) {
+            if (!iconeAdicionado && (esporte.includes('Futebol') || esporte.includes('Libertadores'))) {
                 esporteCelula.innerHTML = `⚽ ${esporte}`;
-            } else if (!iconeAdicionado && esporte.includes('Basquete')) {
-                esporteCelula.innerHTML = `🏀 ${esporte}`;
             }
         }
     });
@@ -685,37 +765,20 @@ function adicionarIconesEsportes() {
 function atualizarContador() {
     const total = document.querySelectorAll('#tabelaBody tr').length;
     const contadorDiv = document.getElementById('contadorEventos');
-    if (contadorDiv) {
+    if (contadorDiv && total > 0) {
         contadorDiv.innerHTML = `📊 Total de eventos: ${total}`;
+    } else if (contadorDiv) {
+        contadorDiv.innerHTML = '';
     }
 }
 
-let buscaAtiva = false;
-function enableSearch(ativo) {
-    const searchInput = document.getElementById('searchInput');
-    buscaAtiva = ativo;
-    if (!searchInput) return;
-    if (!ativo) {
-        searchInput.disabled = true;
-        searchInput.placeholder = '🔍 Aguardando dados...';
-        searchInput.value = '';
-    } else {
-        searchInput.disabled = false;
-        searchInput.placeholder = '🔍 Buscar por time, esporte ou canal...';
-        const linhas = document.querySelectorAll('#tabelaBody tr');
-        linhas.forEach(linha => linha.style.display = '');
-        const msgDiv = document.getElementById('resultadoMensagem');
-        if (msgDiv) msgDiv.style.display = 'none';
-    }
-}
-
+// Busca
 function initSearch() {
     const searchInput = document.getElementById('searchInput');
     const resultadoMsg = document.getElementById('resultadoMensagem');
-    if (!searchInput) return;
     
     searchInput.addEventListener('keyup', function() {
-        if (!buscaAtiva) return;
+        if (!window.buscaAtiva) return;
         const termo = this.value.toLowerCase().trim();
         const linhas = document.querySelectorAll('#tabelaBody tr');
         let encontrados = 0;
@@ -725,13 +788,12 @@ function initSearch() {
             if (termo === '' || texto.includes(termo)) {
                 linha.style.display = '';
                 if (termo !== '') encontrados++;
-                else encontrados = linhas.length;
             } else {
                 linha.style.display = 'none';
             }
         });
         
-        if (termo !== '' && encontrados === 0) {
+        if (termo !== '' && encontrados === 0 && linhas.length > 0) {
             resultadoMsg.textContent = '❌ Nenhum evento encontrado para sua busca';
             resultadoMsg.style.display = 'block';
         } else {
@@ -742,25 +804,24 @@ function initSearch() {
 
 function initCopyButton() {
     const btn = document.getElementById('btnCopiarTabela');
-    if (!btn) return;
     btn.onclick = () => {
         const tabela = document.getElementById('programacaoTable');
-        if (!tabela || tabela.style.display === 'none') {
-            btn.textContent = '⚠️ Tabela indisponível';
+        if (tabela.style.display === 'none') {
+            btn.textContent = '⚠️ Aguarde carregar';
             setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
             return;
         }
         const range = document.createRange();
         range.selectNode(tabela);
-        window.getSelection()?.removeAllRanges();
-        window.getSelection()?.addRange(range);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
         try {
             document.execCommand('copy');
             btn.textContent = '✅ Copiado!';
         } catch(e) {
             btn.textContent = '❌ Erro';
         }
-        window.getSelection()?.removeAllRanges();
+        window.getSelection().removeAllRanges();
         setTimeout(() => { btn.textContent = '📋 Copiar tabela'; }, 2000);
     };
 }
@@ -807,11 +868,12 @@ function showContact() {
 }
 
 // Inicialização
+window.buscaAtiva = false;
 const anoAtual = new Date().getFullYear();
 document.querySelectorAll('#currentYear, #currentYear2, #footerYear').forEach(el => { if(el) el.textContent = anoAtual; });
 
 displayCurrentDate();
-carregarDadosJson();  // Carrega o arquivo dados.json separado
+carregarDoJson();  // Carrega SOMENTE do arquivo dados.json
 initSearch();
 initCopyButton();
 showHome();
