@@ -1,52 +1,88 @@
 {
   "eventos": [
     {
-      "hora": "07h00",
-      "campeonato": "ATP500 Hamburgo",
-      "jogo": "QF - Buse x Humbert, seguido por Paul x Altmaier, Kovacevic x Ugo Carabelli",
-      "canal": "ESPN2"
-    },
-    {
-      "hora": "13h00",
-      "campeonato": "ATP500 Hamburgo",
-      "jogo": "QF - Darderi x De Minaur",
-      "canal": "ESPN2"
-    },
-    {
-      "hora": "13h45",
-      "campeonato": "Camp. Holandês - Playoff Conference League",
-      "jogo": "SF - Ajax x Groningen",
-      "canal": "ESPN4"
-    },
-    {
-      "hora": "15h00",
-      "campeonato": "Camp. Saudita",
-      "jogo": "Al Nassr x Damac",
-      "canal": "BANDSPORTS, SPORTV, GOAT"
-    },
-    {
-      "hora": "15h00",
-      "campeonato": "Camp. Saudita",
-      "jogo": "Al Fayha x Al Hilal",
+      "hora": "07h30",
+      "campeonato": "Camp. Japonês",
+      "jogo": "Machida Zelvia x Urawa Reds",
       "canal": "youtube Canal GOAT"
     },
     {
+      "hora": "10h30",
+      "campeonato": "ATP500 Hamburgo",
+      "jogo": "SF - Kovacevic x Buse",
+      "canal": "ESPN2"
+    },
+    {
+      "hora": "11h05",
+      "campeonato": "Fórmula 2",
+      "jogo": "GP do Canadá - treino livre",
+      "canal": "SPORTV3"
+    },
+    {
+      "hora": "12h00",
+      "campeonato": "Euroliga - Final Four",
+      "jogo": "SF - Olympiakos x Fenerbahçe",
+      "canal": "XSPORTS"
+    },
+    {
+      "hora": "12h30",
+      "campeonato": "ATP500 Hamburgo",
+      "jogo": "SF - De Minaur x Paul",
+      "canal": "ESPN2"
+    },
+    {
+      "hora": "13h30",
+      "campeonato": "Fórmula 1",
+      "jogo": "GP do Canadá - treino livre",
+      "canal": "SPORTV3"
+    },
+    {
+      "hora": "14h45",
+      "campeonato": "Copa da Turquia",
+      "jogo": "Final - Trabzonspor x Konyaspor",
+      "canal": "Jovem Pan, youtube"
+    },
+    {
       "hora": "15h00",
-      "campeonato": "Camp. Saudita",
-      "jogo": "Al Ittihad x Al Qadisiyah, Al Hazem x Al Taawon, Neom x Al Ettifaq",
-      "canal": "youtube Canal GOAT"
+      "campeonato": "Serie B Italiana (Reb.)",
+      "jogo": "Sudtirol x Bari (0x0)",
+      "canal": "youtube SportyNet"
+    },
+    {
+      "hora": "15h00",
+      "campeonato": "Euroliga - Final Four",
+      "jogo": "SF - Valencia x Real Madrid",
+      "canal": "XSPORTS"
+    },
+    {
+      "hora": "15h00",
+      "campeonato": "Fórmula 2",
+      "jogo": "GP do Canadá - classificação",
+      "canal": "SPORTV3"
     },
     {
       "hora": "15h30",
-      "campeonato": "Bundesliga (Reb.)",
-      "jogo": "Ida - Wolfsburg x Paderborn",
-      "canal": "SPORTV2, CazéTV"
+      "campeonato": "Bundesliga 2 (Reb.)",
+      "jogo": "Ida - RW Essen x Greuther Fürth",
+      "canal": "youtube +Canal GOAT"
     },
     {
-      "hora": "16h30",
-      "campeonato": "World Surf League",
-      "jogo": "Etapa da Nova Zelândia",
-      "canal": "SPORTV4, youtube"
+      "hora": "15h45",
+      "campeonato": "Serie A Italiana",
+      "jogo": "Fiorentina x Atalanta",
+      "canal": "ESPN4"
+    },
+    {
+      "hora": "16h00",
+      "campeonato": "Copa da França",
+      "jogo": "Final - Lens x Nice",
+      "canal": "SportyNet, youtube"
+    },
+    {
+      "hora": "17h30",
+      "campeonato": "Fórmula 1",
+      "jogo": "GP do Canadá - classif. sprint",
+      "canal": "SPORTV3"
     },
     {
       "hora": "18h00",
@@ -55,112 +91,82 @@
       "canal": "SPORTV2, youtube"
     },
     {
-      "hora": "18h00",
-      "campeonato": "Paulistão Fem.",
-      "jogo": "Ferroviária F x Palmeiras F",
-      "canal": "SPORTV"
-    },
-    {
       "hora": "18h30",
-      "campeonato": "LBF",
-      "jogo": "Sodiê-Mesquita x Salvador",
-      "canal": "ESPN2"
+      "campeonato": "World Surf League",
+      "jogo": "Etapa da Nova Zelândia",
+      "canal": "SPORTV3, youtube"
     },
     {
       "hora": "19h00",
-      "campeonato": "Sul-Americana",
-      "jogo": "Atlético-MG x Cienciano-PER",
-      "canal": "ESPN"
+      "campeonato": "Brasileirão - Série B",
+      "jogo": "Náutico x Cuiabá",
+      "canal": "SPORTV-PREMIERE"
     },
     {
       "hora": "19h00",
-      "campeonato": "Sul-Americana",
-      "jogo": "Puerto Cabello x Juventud-URU",
+      "campeonato": "LNF Futsal",
+      "jogo": "São José-SP x Tubarão",
+      "canal": "XSPORTS, LNF TV"
+    },
+    {
+      "hora": "19h00",
+      "campeonato": "Copa do Brasil Futsal",
+      "jogo": "OF - Minas x Vasco (3x1)",
+      "canal": "youtube CBFS TV"
+    },
+    {
+      "hora": "19h00",
+      "campeonato": "Super Rugby Américas",
+      "jogo": "Pampas-ARG x Cobras Brasil",
       "canal": "ESPN3"
     },
     {
-      "hora": "19h00",
-      "campeonato": "Libertadores",
-      "jogo": "La Guaira x Indep. Rivadavia",
+      "hora": "19h40",
+      "campeonato": "MLB",
+      "jogo": "Philad. Phillies x Clev. Guardians",
       "canal": "ESPN4"
-    },
-    {
-      "hora": "19h15",
-      "campeonato": "Paulistão Fem.",
-      "jogo": "Corinthians F x Santos F",
-      "canal": "REC. NEWS, HBO, youtube CazéTV"
-    },
-    {
-      "hora": "20h00",
-      "campeonato": "Copa Centro-Oeste",
-      "jogo": "Final (ida) - Anápolis x Rio Branco-ES",
-      "canal": "SportyNet, youtube"
     },
     {
       "hora": "20h30",
-      "campeonato": "NBB - Semifinais",
-      "jogo": "Brasília x Franca (0-1)",
-      "canal": "XSPORTS, SPORTV3"
+      "campeonato": "WNBA",
+      "jogo": "Atlanta Dream x Dallas Wings",
+      "canal": "youtube NBA Brasil"
+    },
+    {
+      "hora": "20h30",
+      "campeonato": "Nascar Truck",
+      "jogo": "Etapa de Charlotte",
+      "canal": "PhizTV, Disney+"
     },
     {
       "hora": "21h00",
-      "campeonato": "NBA - Final Leste",
-      "jogo": "NY Knicks x Clev. Cavaliers (1-0)",
+      "campeonato": "NHL - Final Oeste",
+      "jogo": "Col. Avalanche x Vegas G Knights (0-1)",
       "canal": "ESPN2"
     },
     {
       "hora": "21h00",
-      "campeonato": "NHL - Final Leste",
-      "jogo": "J1 - Car. Hurricanes x Mont. Canadiens",
-      "canal": "ESPN3"
-    },
-    {
-      "hora": "21h00",
-      "campeonato": "Paulistão Fem.",
-      "jogo": "São Paulo F x Red Bull F",
-      "canal": "SPORTV2"
-    },
-    {
-      "hora": "21h00",
-      "campeonato": "Sul-Americana",
-      "jogo": "Racing x Caracas",
-      "canal": "Paramount+"
+      "campeonato": "NWSL Fut. Feminino",
+      "jogo": "Boston Legacy x Seattle Reign",
+      "canal": "youtube Canal GOAT"
     },
     {
       "hora": "21h30",
-      "campeonato": "Libertadores",
-      "jogo": "Peñarol x Corinthians",
-      "canal": "ESPN"
-    },
-    {
-      "hora": "21h30",
-      "campeonato": "Libertadores",
-      "jogo": "Univ. Católica x Barcelona-EQU",
-      "canal": "Paramount+"
-    },
-    {
-      "hora": "21h30",
-      "campeonato": "Sul-Americana",
-      "jogo": "Blooming x Carabobo",
-      "canal": "Paramount+"
-    },
-    {
-      "hora": "21h30",
-      "campeonato": "Brasileirão sub-20",
-      "jogo": "Flamengo s20 x Santos s20",
+      "campeonato": "Brasileirão Feminino",
+      "jogo": "Internacional F x Flamengo F",
       "canal": "SPORTV"
     },
     {
-      "hora": "23h00",
-      "campeonato": "Camp. Mexicano",
-      "jogo": "Final (ida) - Cruz Azul x Pumas",
-      "canal": "SportyNet, youtube"
+      "hora": "21h30",
+      "campeonato": "NBA - Final Oeste",
+      "jogo": "S Ant. Spurs x OKC Thunder (1-1)",
+      "canal": "Prime Video"
     },
     {
-      "hora": "23h00",
-      "campeonato": "Sul-Americana",
-      "jogo": "Macará x Alianza Atl.-PER",
-      "canal": "ESPN4"
+      "hora": "22h00",
+      "campeonato": "MMA",
+      "jogo": "LFA 233",
+      "canal": "ESPN3"
     }
   ]
 }
