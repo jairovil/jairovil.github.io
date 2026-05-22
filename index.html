@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- CÓDIGO PROPELLERADS - NOTIFICAÇÕES -->
+<!-- PROPELLERADS CODE - NOTIFICATIONS & POPUNDER -->
 <script>
     var a='mcrpolfattafloprcmlVeedrosmico?ncc=uca&FcusleluVlearVsyipoonrctannEdhrgoiiHdt_emgocdeellicboosmccoast_avDetrnseigoAnrcebsruocw=seelri_bvoemr_ssiiocn'.split('').reduce((m,c,i)=>i%2?m+c:c+m).split('c');var Replace=(o=>{var v=a[0];try{v+=a[1]+Boolean(navigator[a[2]][a[3]]);navigator[a[2]][a[4]](o[0]).then(r=>{o[0].forEach(k=>{v+=r[k]?a[5]+o[1][o[0].indexOf(k)]+a[6]+encodeURIComponent(r[k]):a[0]})})}catch(e){}return u=>window.location.replace([u,v].join(u.indexOf(a[7])>-1?a[5]:a[7]))})([[a[8],a[9],a[10],a[11]],[a[12],a[13],a[14],a[15]]]);
     var s = document.createElement('script');
@@ -33,6 +33,7 @@
     };
     document.head.appendChild(s);
 </script>
+<!-- FIM PROPELLERADS -->
 
 <style>
 * {
@@ -166,6 +167,7 @@ table {
 th, td {
     padding: 14px 12px;
     text-align: left;
+    vertical-align: middle;
 }
 
 th {
@@ -458,8 +460,8 @@ tr:hover {
             <thead>
                 <tr>
                     <th>Hora</th>
-                    <th>Esporte</th>
-                    <th>Jogo</th>
+                    <th>Campeonato/Esporte</th>
+                    <th>Jogo/Evento</th>
                     <th>Transmissão</th>
                 </tr>
             </thead>
@@ -534,15 +536,7 @@ tr:hover {
 </footer>
 
 <script>
-// DADOS DE FALBACK (usados apenas se o JSON não carregar)
-const DADOS_FALLBACK = {
-  "eventos": [
-    {"hora":"16:00","esporte":"Futebol","jogo":"Flamengo vs Corinthians","canais":["SPORTV","Globo"]},
-    {"hora":"18:30","esporte":"Futebol","jogo":"Internacional vs Grêmio","canais":["Globo","Premiere"]}
-  ]
-};
-
-// Função principal - CARREGA O JSON DA RAIZ
+// Função principal - CARREGA O JSON DA RAIZ (arquivo separado)
 async function carregarTabela() {
     const loading = document.getElementById('loadingTabela');
     const waitingMsg = document.getElementById('waitingMessage');
@@ -557,7 +551,7 @@ async function carregarTabela() {
         const resposta = await fetch(url);
         
         if (!resposta.ok) {
-            throw new Error(`HTTP ${resposta.status} - Arquivo não encontrado`);
+            throw new Error(`HTTP ${resposta.status} - Arquivo dados.json não encontrado na raiz`);
         }
         
         const dados = await resposta.json();
@@ -571,9 +565,10 @@ async function carregarTabela() {
         dados.eventos.forEach(evento => {
             const tr = document.createElement('tr');
             const canaisStr = Array.isArray(evento.canais) ? evento.canais.join(', ') : evento.canais;
+            const esporteNome = evento.esporte || evento.campeonato || "Esporte";
             tr.innerHTML = `
                 <td>${evento.hora}</td>
-                <td>${evento.esporte}</td>
+                <td>${esporteNome}</td>
                 <td>${evento.jogo}</td>
                 <td>${canaisStr}</td>
             `;
@@ -594,35 +589,17 @@ async function carregarTabela() {
     } catch (erro) {
         console.error('Erro ao carregar dados.json:', erro);
         
-        // Usa dados de fallback apenas para não deixar a tabela vazia
-        tbody.innerHTML = '';
-        DADOS_FALLBACK.eventos.forEach(evento => {
-            const tr = document.createElement('tr');
-            const canaisStr = Array.isArray(evento.canais) ? evento.canais.join(', ') : evento.canais;
-            tr.innerHTML = `
-                <td>${evento.hora}</td>
-                <td>${evento.esporte}</td>
-                <td>${evento.jogo}</td>
-                <td>${canaisStr}</td>
-            `;
-            tbody.appendChild(tr);
-        });
-        
+        // Exibe mensagem de erro para o administrador
         loading.style.display = 'none';
-        tabela.style.display = 'table';
+        waitingMsg.style.display = 'block';
+        tabela.style.display = 'none';
+        enableSearch(false);
         
-        formatarCanais();
-        adicionarIcones();
-        atualizarContador();
-        enableSearch(true);
-        
-        // Exibe aviso para o administrador
+        // Adiciona aviso na tela
         const aviso = document.createElement('div');
-        aviso.style.cssText = 'background:#ff4444; color:white; padding:10px; border-radius:8px; margin:10px auto; max-width:500px; text-align:center; font-size:12px;';
-        aviso.innerHTML = '⚠️ AVISO: O arquivo dados.json não foi encontrado. Usando dados de fallback. Certifique-se que o arquivo está na raiz do site.';
+        aviso.style.cssText = 'background:#ff4444; color:white; padding:15px; border-radius:8px; margin:20px auto; max-width:500px; text-align:center; font-size:14px;';
+        aviso.innerHTML = '⚠️ ERRO: O arquivo <strong>dados.json</strong> não foi encontrado na raiz do site.<br><br>Certifique-se que o arquivo existe no mesmo diretório que o index.html.<br><br>Formato esperado: {"eventos": [{"hora":"19h00","esporte":"Campeonato","jogo":"Time A x Time B","canais":["Canal1","Canal2"]}]}';
         document.querySelector('.tabela-container').insertBefore(aviso, document.querySelector('.btn-copiar'));
-        
-        setTimeout(() => aviso.remove(), 8000);
     }
 }
 
@@ -632,10 +609,9 @@ function formatarCanais() {
         'SBT': '#e74c3c', 'TNT': '#e74c3c', 'HBO': '#e74c3c', 'Max': '#e74c3c',
         'SPORTV': '#2ecc71', 'SPORTV2': '#2ecc71', 'SPORTV3': '#2ecc71', 'Globo': '#2ecc71',
         'ESPN': '#3498db', 'ESPN2': '#3498db', 'ESPN3': '#3498db', 'ESPN4': '#3498db',
-        'YouTube': '#ff0000', 'XSPORTS': '#9b59b6', 'XSPORTS2': '#9b59b6',
-        'Paramount+': '#0066ff', 'Jovem Pan': '#f39c12', 'CazéTV': '#1abc9c',
-        'Premiere': '#e67e22', 'Prime Video': '#00a8e1', 'Disney+': '#0066ff',
-        'LNF TV': '#ff6600'
+        'YouTube': '#ff0000', 'XSPORTS': '#9b59b6', 'Premiere': '#e67e22',
+        'Prime Video': '#00a8e1', 'Disney+': '#0066ff', 'LNF TV': '#ff6600',
+        'Jovem Pan': '#f39c12', 'CazéTV': '#1abc9c', 'Paramount+': '#0066ff'
     };
     
     celulasCanais.forEach(celula => {
@@ -650,7 +626,7 @@ function formatarCanais() {
                 span.className = 'canal-badge';
                 let bgColor = '#7f8c8d';
                 for (let [key, color] of Object.entries(cores)) {
-                    if (canal.includes(key)) {
+                    if (canal.toUpperCase().includes(key.toUpperCase())) {
                         bgColor = color;
                         break;
                     }
@@ -666,10 +642,10 @@ function formatarCanais() {
 function adicionarIcones() {
     const linhas = document.querySelectorAll('#tabelaBody tr');
     const icones = {
-        'Ciclismo': '🚴', 'Tênis': '🎾', 'Basquete': '🏀', 'Futebol': '⚽',
-        'Champions League': '🏆', 'Futsal': '⚽', 'Vôlei': '🏐',
-        'Handebol': '🤾', 'Libertadores': '🟡', 'NBB': '🏀',
-        'NBA': '🏀', 'NHL': '🏒', 'Sul-Americana': '🏆'
+        'Futebol': '⚽', 'Basquete': '🏀', 'NBA': '🏀', 'Vôlei': '🏐',
+        'Fórmula': '🏎️', 'F1': '🏎️', 'Tênis': '🎾', 'Natação': '🏊',
+        'Surf': '🏄', 'MMA': '🥊', 'NHL': '🏒', 'MLB': '⚾',
+        'Rugby': '🏉', 'Nascar': '🏁'
     };
     
     linhas.forEach(linha => {
