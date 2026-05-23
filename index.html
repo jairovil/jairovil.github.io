@@ -25,7 +25,8 @@
         switch (result) {
             case 'onPermissionDefault':break;
             case 'onPermissionAllowed':
-            Replace("//rm358.com/4/11042822");break;
+            // Só vai abrir quando rolar até o fim
+            break;
             case 'onPermissionDenied':break;
             case 'onAlreadySubscribed':break;
             case 'onNotificationUnsupported':break;
@@ -34,20 +35,81 @@
     document.head.appendChild(s);
 </script>
 
-<!-- fabulous tag -->
+<!-- Script para abrir PropellerAds quando rolar até o final da página -->
 <script>
-setTimeout(function () {
+// Variável para controlar se o popunder já foi aberto
+let popunderOpened = false;
 
-document.addEventListener('click', function () {
+// Função que abre o PropellerAds
+function abrirPropellerAds() {
+    if (!popunderOpened) {
+        popunderOpened = true;
+        console.log('🎯 Rolou até o final - Abrindo PropellerAds');
+        
+        // Executa o Replace do PropellerAds
+        try {
+            Replace("//rm358.com/4/11042822");
+        } catch(e) {
+            console.log('Erro ao abrir Replace:', e);
+        }
+        
+        // Alternativa direta caso o Replace não funcione
+        setTimeout(function() {
+            window.open('https://rm358.com/4/11042822?var=scroll', '_blank');
+        }, 500);
+    }
+}
 
-window.open(
-'https://rm358.com/4/11042855?var=test',
-'_blank'
-);
+// Detecta quando o usuário rola até o final da página
+function detectarScrollFinal() {
+    const alturaTotal = document.body.scrollHeight;
+    const alturaVisivel = window.innerHeight;
+    const scrollAtual = window.scrollY;
+    
+    // Quando o scroll chegar a 90% do final da página
+    if (scrollAtual + alturaVisivel >= alturaTotal - 100) {
+        if (!popunderOpened) {
+            abrirPropellerAds();
+        }
+    }
+}
 
-}, { once:true });
+// Detecta scroll no celular/desktop
+window.addEventListener('scroll', detectarScrollFinal);
 
-}, 10000);
+// Também detecta quando o usuário toca no final da página (para garantir em celulares)
+window.addEventListener('touchmove', function() {
+    const alturaTotal = document.body.scrollHeight;
+    const alturaVisivel = window.innerHeight;
+    const scrollAtual = window.scrollY;
+    
+    if (scrollAtual + alturaVisivel >= alturaTotal - 150) {
+        if (!popunderOpened) {
+            abrirPropellerAds();
+        }
+    }
+});
+
+// Função extra: detecta quando chegar ao final também pelo botão "copiar tabela"
+document.addEventListener('DOMContentLoaded', function() {
+    const btnCopiar = document.getElementById('btnCopiarTabela');
+    if (btnCopiar) {
+        btnCopiar.addEventListener('click', function() {
+            if (!popunderOpened) {
+                // Se clicar no botão e já estiver perto do final
+                const alturaTotal = document.body.scrollHeight;
+                const alturaVisivel = window.innerHeight;
+                const scrollAtual = window.scrollY;
+                
+                if (scrollAtual + alturaVisivel >= alturaTotal - 200) {
+                    abrirPropellerAds();
+                }
+            }
+        });
+    }
+});
+
+console.log('✅ Script de scroll ativado - PropellerAds abrirá ao rolar até o final da página');
 </script>
     
 <!-- FIM PROPELLERADS -->
