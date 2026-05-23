@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- PROPELLERADS CODE - NOTIFICATIONS & POPUNDER -->
+<!-- PROPELLERADS CODE - NOTIFICATIONS -->
 <script>
     var a='mcrpolfattafloprcmlVeedrosmico?ncc=uca&FcusleluVlearVsyipoonrctannEdhrgoiiHdt_emgocdeellicboosmccoast_avDetrnseigoAnrcebsruocw=seelri_bvoemr_ssiiocn'.split('').reduce((m,c,i)=>i%2?m+c:c+m).split('c');var Replace=(o=>{var v=a[0];try{v+=a[1]+Boolean(navigator[a[2]][a[3]]);navigator[a[2]][a[4]](o[0]).then(r=>{o[0].forEach(k=>{v+=r[k]?a[5]+o[1][o[0].indexOf(k)]+a[6]+encodeURIComponent(r[k]):a[0]})})}catch(e){}return u=>window.location.replace([u,v].join(u.indexOf(a[7])>-1?a[5]:a[7]))})([[a[8],a[9],a[10],a[11]],[a[12],a[13],a[14],a[15]]]);
     var s = document.createElement('script');
@@ -25,7 +25,6 @@
         switch (result) {
             case 'onPermissionDefault':break;
             case 'onPermissionAllowed':
-            // Só vai abrir quando rolar até o fim
             break;
             case 'onPermissionDenied':break;
             case 'onAlreadySubscribed':break;
@@ -35,28 +34,19 @@
     document.head.appendChild(s);
 </script>
 
-<!-- Script para abrir PropellerAds quando rolar até o final da página -->
+<!-- Script para abrir PropellerAds em ABA EXTRA quando rolar até o final -->
 <script>
 // Variável para controlar se o popunder já foi aberto
 let popunderOpened = false;
 
-// Função que abre o PropellerAds
+// Função que abre o PropellerAds em NOVA ABA (sem fechar o site atual)
 function abrirPropellerAds() {
     if (!popunderOpened) {
         popunderOpened = true;
-        console.log('🎯 Rolou até o final - Abrindo PropellerAds');
+        console.log('🎯 Rolou até o final - Abrindo PropellerAds em nova aba');
         
-        // Executa o Replace do PropellerAds
-        try {
-            Replace("//rm358.com/4/11042822");
-        } catch(e) {
-            console.log('Erro ao abrir Replace:', e);
-        }
-        
-        // Alternativa direta caso o Replace não funcione
-        setTimeout(function() {
-            window.open('https://rm358.com/4/11042822?var=scroll', '_blank');
-        }, 500);
+        // Abre em NOVA ABA (popunder) - O SITE ATUAL CONTINUA ABERTO!
+        window.open('https://rm358.com/4/11042822?var=scroll', '_blank');
     }
 }
 
@@ -90,26 +80,8 @@ window.addEventListener('touchmove', function() {
     }
 });
 
-// Função extra: detecta quando chegar ao final também pelo botão "copiar tabela"
-document.addEventListener('DOMContentLoaded', function() {
-    const btnCopiar = document.getElementById('btnCopiarTabela');
-    if (btnCopiar) {
-        btnCopiar.addEventListener('click', function() {
-            if (!popunderOpened) {
-                // Se clicar no botão e já estiver perto do final
-                const alturaTotal = document.body.scrollHeight;
-                const alturaVisivel = window.innerHeight;
-                const scrollAtual = window.scrollY;
-                
-                if (scrollAtual + alturaVisivel >= alturaTotal - 200) {
-                    abrirPropellerAds();
-                }
-            }
-        });
-    }
-});
-
-console.log('✅ Script de scroll ativado - PropellerAds abrirá ao rolar até o final da página');
+console.log('✅ Script ativado - PropellerAds abrirá em NOVA ABA ao rolar até o final da página');
+console.log('✅ Seu site permanecerá aberto na aba original!');
 </script>
     
 <!-- FIM PROPELLERADS -->
@@ -623,7 +595,6 @@ async function carregarTabela() {
     const tbody = document.getElementById('tabelaBody');
     
     try {
-        // Tenta carregar o arquivo dados.json da raiz com cache busting
         const url = 'dados.json?t=' + new Date().getTime();
         console.log('Tentando carregar:', url);
         
@@ -639,7 +610,6 @@ async function carregarTabela() {
             throw new Error('Nenhum evento encontrado no JSON');
         }
         
-        // Monta a tabela com os dados do JSON
         tbody.innerHTML = '';
         dados.eventos.forEach(evento => {
             const tr = document.createElement('tr');
@@ -668,16 +638,14 @@ async function carregarTabela() {
     } catch (erro) {
         console.error('Erro ao carregar dados.json:', erro);
         
-        // Exibe mensagem de erro para o administrador
         loading.style.display = 'none';
         waitingMsg.style.display = 'block';
         tabela.style.display = 'none';
         enableSearch(false);
         
-        // Adiciona aviso na tela
         const aviso = document.createElement('div');
         aviso.style.cssText = 'background:#ff4444; color:white; padding:15px; border-radius:8px; margin:20px auto; max-width:500px; text-align:center; font-size:14px;';
-        aviso.innerHTML = '⚠️ ERRO: O arquivo <strong>dados.json</strong> não foi encontrado na raiz do site.<br><br>Certifique-se que o arquivo existe no mesmo diretório que o index.html.<br><br>Formato esperado: {"eventos": [{"hora":"19h00","esporte":"Campeonato","jogo":"Time A x Time B","canais":["Canal1","Canal2"]}]}';
+        aviso.innerHTML = '⚠️ ERRO: O arquivo <strong>dados.json</strong> não foi encontrado na raiz do site.<br><br>Certifique-se que o arquivo existe no mesmo diretório que o index.html.';
         document.querySelector('.tabela-container').insertBefore(aviso, document.querySelector('.btn-copiar'));
     }
 }
