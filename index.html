@@ -34,24 +34,44 @@
     document.head.appendChild(s);
 </script>
 
-<!-- Script para abrir PropellerAds em ABA EXTRA quando rolar até o final -->
+<!-- Script para abrir PropellerAds em ABA EXTRA ao rolar até o final (APENAS 1 VEZ POR VISITA) -->
 <script>
-// Variável para controlar se o popunder já foi aberto
+// Variável para controlar se o popunder já foi aberto nesta sessão
 let popunderOpened = false;
+
+// Verifica se já foi exibido antes (para não abrir toda hora)
+// Usa sessionStorage - expira quando o usuário FECHAR o navegador
+// Se quiser que expire quando fechar a ABA apenas, troque sessionStorage por localStorage
+function verificarSeJaAbriu() {
+    const jaAbriu = sessionStorage.getItem('propeller_aberto');
+    if (jaAbriu === 'true') {
+        popunderOpened = true;
+        console.log('ℹ️ PropellerAds já foi aberto nesta sessão. Não vai abrir novamente.');
+        return true;
+    }
+    return false;
+}
 
 // Função que abre o PropellerAds em NOVA ABA (sem fechar o site atual)
 function abrirPropellerAds() {
     if (!popunderOpened) {
         popunderOpened = true;
+        
+        // Salva no sessionStorage que já abriu nesta sessão
+        sessionStorage.setItem('propeller_aberto', 'true');
+        
         console.log('🎯 Rolou até o final - Abrindo PropellerAds em nova aba');
         
-        // Abre em NOVA ABA (popunder) - O SITE ATUAL CONTINUA ABERTO!
+        // Abre em NOVA ABA - O SITE ATUAL CONTINUA ABERTO!
         window.open('https://rm358.com/4/11042822?var=scroll', '_blank');
     }
 }
 
 // Detecta quando o usuário rola até o final da página
 function detectarScrollFinal() {
+    // Verifica se já abriu antes de tentar abrir
+    if (popunderOpened) return;
+    
     const alturaTotal = document.body.scrollHeight;
     const alturaVisivel = window.innerHeight;
     const scrollAtual = window.scrollY;
@@ -69,6 +89,8 @@ window.addEventListener('scroll', detectarScrollFinal);
 
 // Também detecta quando o usuário toca no final da página (para garantir em celulares)
 window.addEventListener('touchmove', function() {
+    if (popunderOpened) return;
+    
     const alturaTotal = document.body.scrollHeight;
     const alturaVisivel = window.innerHeight;
     const scrollAtual = window.scrollY;
@@ -80,7 +102,11 @@ window.addEventListener('touchmove', function() {
     }
 });
 
-console.log('✅ Script ativado - PropellerAds abrirá em NOVA ABA ao rolar até o final da página');
+// Inicializa a verificação
+verificarSeJaAbriu();
+
+console.log('✅ Script ativado - PropellerAds abrirá em NOVA ABA ao rolar até o final');
+console.log('✅ Abre APENAS 1 vez por sessão (se fechar o navegador, na próxima visita abre de novo)');
 console.log('✅ Seu site permanecerá aberto na aba original!');
 </script>
     
