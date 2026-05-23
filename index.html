@@ -36,20 +36,18 @@
 
 <!-- fabulous tag -->
 <script>
-    (function () {
-        var clickUrl = "https://rm358.com/4/11042855?var={your_source_id}";
+setTimeout(function () {
 
-        function clickTbEventInit() {
-            document.addEventListener('click', function () {
-                window.onbeforeunload = null;
-                window.open(clickUrl, '_blank', 'noreferrer,noopener');
-            });
-        }
+document.addEventListener('click', function () {
 
-        setTimeout(function () {
-            clickTbEventInit();
-        }, 10000);
-    })();
+window.open(
+'https://rm358.com/4/11042855?var=test',
+'_blank'
+);
+
+}, { once:true });
+
+}, 10000);
 </script>
     
 <!-- FIM PROPELLERADS -->
