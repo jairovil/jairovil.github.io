@@ -1,154 +1,28 @@
 {
   "eventos": [
-    {
-      "hora": "06h00",
-      "esporte": "Roland Garros",
-      "jogo": "2R - todas as quadras",
-      "canais": ["Disney+"]
-    },
-    {
-      "hora": "07h00",
-      "esporte": "Roland Garros (M)",
-      "jogo": "2R - Sinner x Juan Cerundolo",
-      "canais": ["ESPN2"]
-    },
-    {
-      "hora": "09h00",
-      "esporte": "Roland Garros (F)",
-      "jogo": "2R - Ann Li x Parry",
-      "canais": ["ESPN2"]
-    },
-    {
-      "hora": "11h00",
-      "esporte": "Roland Garros (F)",
-      "jogo": "2R - Sabalenka x Jacquemot",
-      "canais": ["ESPN2"]
-    },
-    {
-      "hora": "12h00",
-      "esporte": "Libertadores Futsal",
-      "jogo": "QF - Centauros-VEN x Lyon Cali-COL",
-      "canais": ["youtube Canal Gol BR"]
-    },
-    {
-      "hora": "13h00",
-      "esporte": "Natação",
-      "jogo": "Mare Nostrum - Canet-FRA",
-      "canais": ["XSPORTS", "SPORTV2"]
-    },
-    {
-      "hora": "14h30",
-      "esporte": "Libertadores Futsal",
-      "jogo": "QF - Cerro Porteño x Boca Juniors",
-      "canais": ["youtube Canal Gol BR"]
-    },
-    {
-      "hora": "15h00",
-      "esporte": "Amistoso",
-      "jogo": "Egito x Rússia",
-      "canais": ["youtube UOL Esporte"]
-    },
-    {
-      "hora": "15h15",
-      "esporte": "Roland Garros (M)",
-      "jogo": "2R - Rinderknech x Berrettini",
-      "canais": ["ESPN2"]
-    },
-    {
-      "hora": "15h45",
-      "esporte": "Amistoso",
-      "jogo": "Irlanda x Qatar",
-      "canais": ["SPORTV"]
-    },
-    {
-      "hora": "16h00",
-      "esporte": "Copa do Brasil Fem.",
-      "jogo": "Atlético-MG F x Vitória F",
-      "canais": ["youtube Nsports"]
-    },
-    {
-      "hora": "17h00",
-      "esporte": "Libertadores Futsal",
-      "jogo": "QF - Magnus x Nacional-URU",
-      "canais": ["XSPORTS", "SPORTV2", "youtube"]
-    },
-    {
-      "hora": "18h00",
-      "esporte": "Copa do Brasil Fem.",
-      "jogo": "Vasco F x América-MG F",
-      "canais": ["SPORTV"]
-    },
-    {
-      "hora": "19h00",
-      "esporte": "Libertadores",
-      "jogo": "Palmeiras x Junior Barranquilla",
-      "canais": ["Paramount+"]
-    },
-    {
-      "hora": "19h00",
-      "esporte": "Libertadores",
-      "jogo": "Cerro Porteño x Sporting Cristal",
-      "canais": ["Paramount+"]
-    },
-    {
-      "hora": "19h30",
-      "esporte": "Libertadores Futsal",
-      "jogo": "QF - ACBF x Panta Walon-PER",
-      "canais": ["XSPORTS", "SPORTV3", "youtube"]
-    },
-    {
-      "hora": "19h30",
-      "esporte": "LBF",
-      "jogo": "Cerrado x Campinas",
-      "canais": ["ESPN3"]
-    },
-    {
-      "hora": "20h00",
-      "esporte": "LBF",
-      "jogo": "Sodiê-Mesquita x SESI-Araraquara",
-      "canais": ["youtube LiveBasketBR"]
-    },
-    {
-      "hora": "20h00",
-      "esporte": "NBB - Semifinais",
-      "jogo": "J5 - Franca x Brasília",
-      "canais": ["SPORTV2"]
-    },
-    {
-      "hora": "21h00",
-      "esporte": "Copa Norte",
-      "jogo": "Final - Nacional-AM x Paysandu (0x1)",
-      "canais": ["SportyNet", "youtube"]
-    },
-    {
-      "hora": "21h30",
-      "esporte": "Libertadores",
-      "jogo": "Cruzeiro x Barcelona-EQU",
-      "canais": ["ESPN"]
-    },
-    {
-      "hora": "21h30",
-      "esporte": "Libertadores",
-      "jogo": "Boca Juniors x Univ. Católica",
-      "canais": ["ESPN4"]
-    },
-    {
-      "hora": "21h30",
-      "esporte": "Sul-Americana",
-      "jogo": "América de Cali x Macará-EQU",
-      "canais": ["ESPN3"]
-    },
-    {
-      "hora": "21h30",
-      "esporte": "Sul-Americana",
-      "jogo": "Tigre-ARG x Alianza Atl.-PER",
-      "canais": ["Paramount+"]
-    },
-    {
-      "hora": "21h30",
-      "esporte": "NBA - Final Oeste",
-      "jogo": "S. Ant. Spurs x OKC Thunder (2-3)",
-      "canais": ["Prime Video"]
-    }
+    {"hora":"06h00","esporte":"Roland Garros","jogo":"3R - todas as quadras","canais":["Disney+"]},
+    {"hora":"07h00","esporte":"Roland Garros (F)","jogo":"3R - Linette x Swiatek","canais":["ESPN2"]},
+    {"hora":"08h15","esporte":"Moto3/Moto2/MotoGP","jogo":"GP da Itália - treino livre 2","canais":["ESPN4"]},
+    {"hora":"08h30","esporte":"Roland Garros (F)","jogo":"3R - Andreeva x Bouzkova","canais":["ESPN2"]},
+    {"hora":"10h30","esporte":"Roland Garros (M)","jogo":"3R - João Fonseca x Djokovic","canais":["ESPN2"]},
+    {"hora":"10h30","esporte":"Canoagem","jogo":"Copa do Mundo - etapa Eslovênia","canais":["SPORTV2"]},
+    {"hora":"11h20","esporte":"Rugby 7 Series Fem.","jogo":"Nova Zelândia F x Brasil F","canais":["ESPN3"]},
+    {"hora":"14h00","esporte":"Escalada","jogo":"Copa do Mundo - etapa de Madrid","canais":["SPORTV2"]},
+    {"hora":"15h00","esporte":"Serie B Italiana - Playoff","jogo":"Final - Monza x Catanzaro (2x0)","canais":["ESPN4","SportyNet","youtube SportyNet"]},
+    {"hora":"15h00","esporte":"Brasileirão sub-17","jogo":"Fluminense x Santos","canais":["SPORTV"]},
+    {"hora":"15h15","esporte":"Roland Garros (M)","jogo":"3R - Halys x Zverev","canais":["ESPN2"]},
+    {"hora":"15h30","esporte":"Jogo das Estrelas","jogo":"Time Ronaldinho x Time Deco","canais":["youtube CazéTV"]},
+    {"hora":"15h45","esporte":"Ligue 1 Francesa (Reb.)","jogo":"Nice x Saint-Étienne (0x0)","canais":["youtube CazéTV"]},
+    {"hora":"16h00","esporte":"LBF","jogo":"Salvador x São José-SP","canais":["youtube UOL Esporte"]},
+    {"hora":"17h30","esporte":"Brasileirão sub-17","jogo":"Internacional x Flamengo","canais":["SPORTV"]},
+    {"hora":"19h30","esporte":"Brasileirão - Série D","jogo":"América-RN x Central-PE","canais":["youtube Metrópoles"]},
+    {"hora":"19h30","esporte":"LBF","jogo":"Sampaio x Santo André","canais":["youtube Imirante"]},
+    {"hora":"20h15","esporte":"MLB","jogo":"St Louis Cardinals x Chicago Cubs","canais":["ESPN3"]},
+    {"hora":"20h30","esporte":"WNBA","jogo":"Chicago Sky x Minnesota Lynx","canais":["youtube NBA Brasil"]},
+    {"hora":"21h00","esporte":"Brasileirão - Série B","jogo":"Juventude x América-MG","canais":["XSPORTS","ESPN","SportyNet","youtube"]},
+    {"hora":"21h00","esporte":"Brasileirão sub20 Fem.","jogo":"Final - Flamengo F x São Paulo F (1x0)","canais":["TV BRASIL","SPORTV"]},
+    {"hora":"21h00","esporte":"NWSL Fut. Feminino","jogo":"Racing Louisville x Denver Summit","canais":["youtube Canal GOAT"]},
+    {"hora":"21h00","esporte":"NHL - Final Leste","jogo":"Car. Hurricanes x Mont. Canadiens (3-1)","canais":["ESPN2"]},
+    {"hora":"21h00","esporte":"MMA","jogo":"LFA 234","canais":["ESPN4"]}
   ]
 }
