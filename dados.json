@@ -1,140 +1,178 @@
-[
-  {
-    "hora": "02:00",
-    "esporte": "Camp. Japonês - Final",
-    "jogo": "Kash. Antlers x Vissel Kobe",
-    "canais": ["YouTube Canal GOAT"]
-  },
-  {
-    "hora": "04:00",
-    "esporte": "Boxe",
-    "jogo": "Masamichi Yabuki x Rene Calixto",
-    "canais": ["ESPN3"]
-  },
-  {
-    "hora": "09:00",
-    "esporte": "Roland Garros Juvenil",
-    "jogo": "Final - Guto Miguel x Antonius-EUA",
-    "canais": ["Disney+"]
-  },
-  {
-    "hora": "10:00",
-    "esporte": "Roland Garros",
-    "jogo": "Final - Chwalinska x Andreeva",
-    "canais": ["ESPN2"]
-  },
-  {
-    "hora": "11:00",
-    "esporte": "Brasileirão Série B",
-    "jogo": "Criciúma x Londrina",
-    "canais": ["XSports", "ESPN", "SportyNet", "YouTube"]
-  },
-  {
-    "hora": "11:00",
-    "esporte": "Liga das Nações Feminina",
-    "jogo": "Brasil F x Bulgária F",
-    "canais": ["SPORTV2", "GETV"]
-  },
-  {
-    "hora": "14:00",
-    "esporte": "WNBA",
-    "jogo": "Minnesota Lynx x Seattle Storm",
-    "canais": ["ESPN3"]
-  },
-  {
-    "hora": "15:00",
-    "esporte": "Brasileirão Série D",
-    "jogo": "America-RJ x Água Santa",
-    "canais": ["YouTube Metrópoles"]
-  },
-  {
-    "hora": "15:00",
-    "esporte": "Super Rugby Américas",
-    "jogo": "Selknam-CHI x Cobras Brasil",
-    "canais": ["ESPN2"]
-  },
-  {
-    "hora": "15:30",
-    "esporte": "Liga das Nações Feminina",
-    "jogo": "Itália F x Turquia F",
-    "canais": ["SPORTV2"]
-  },
-  {
-    "hora": "16:00",
-    "esporte": "Copa do Nordeste",
-    "jogo": "Final - Vitória x Fortaleza",
-    "canais": ["SBT Nordeste", "YouTube", "SportyNet"]
-  },
-  {
-    "hora": "16:00",
-    "esporte": "Brasileirão Série D",
-    "jogo": "Decisão-PE x Treze-PB; Imperatriz-MA x Tuna Luso",
-    "canais": ["YouTube Metrópoles"]
-  },
-  {
-    "hora": "16:00",
-    "esporte": "WNBA",
-    "jogo": "Las Vegas Aces x GS Valkyries",
-    "canais": ["ESPN3"]
-  },
-  {
-    "hora": "16:30",
-    "esporte": "LNF Futsal",
-    "jogo": "Joinville x Jaraguá",
-    "canais": ["YouTube LNF TV"]
-  },
-  {
-    "hora": "17:30",
-    "esporte": "LBF",
-    "jogo": "Campinas x Salvador",
-    "canais": ["ge.globo/lbfepvtv"]
-  },
-  {
-    "hora": "17:45",
-    "esporte": "LNF Futsal",
-    "jogo": "Carlos Barbosa x São José-SP",
-    "canais": ["XSports", "LNF TV"]
-  },
-  {
-    "hora": "18:30",
-    "esporte": "Amistoso Feminino",
-    "jogo": "Brasil F x EUA F",
-    "canais": ["SPORTV2", "GETV"]
-  },
-  {
-    "hora": "19:00",
-    "esporte": "Amistoso",
-    "jogo": "Brasil x Egito",
-    "canais": ["Globo", "SPORTV", "YouTube GETV"]
-  },
-  {
-    "hora": "20:00",
-    "esporte": "MMA Nacional",
-    "jogo": "Jungle Fight 151",
-    "canais": ["SPORTV3", "Combate"]
-  },
-  {
-    "hora": "21:00",
-    "esporte": "Liga das Nações Feminina",
-    "jogo": "Alemanha F x Japão F",
-    "canais": ["SPORTV2"]
-  },
-  {
-    "hora": "21:00",
-    "esporte": "NHL Stanley Cup",
-    "jogo": "Vegas G. Knights x Car. Hurricanes",
-    "canais": ["ESPN2"]
-  },
-  {
-    "hora": "21:00",
-    "esporte": "UFC Fight Night",
-    "jogo": "Muhammad x Gabriel Bonfim",
-    "canais": ["Paramount+"]
-  },
-  {
-    "hora": "23:00",
-    "esporte": "Boxe",
-    "jogo": "Brandon Mosqueda x Isaac Aranda",
-    "canais": ["ESPN4"]
-  }
-]
+{
+  "eventos": [
+    {
+      "hora": "02h00",
+      "esporte": "Camp. Japonês - Final",
+      "jogo": "Kash. Antlers x Vissel Kobe",
+      "canais": ["YouTube Canal GOAT"]
+    },
+    {
+      "hora": "04h00",
+      "esporte": "Boxe",
+      "jogo": "Masamichi Yabuki x Rene Calixto",
+      "canais": ["ESPN3"]
+    },
+    {
+      "hora": "05h50",
+      "esporte": "MotoGP",
+      "jogo": "GP da Hungria - classificação",
+      "canais": ["ESPN4"]
+    },
+    {
+      "hora": "09h00",
+      "esporte": "Roland Garros Juvenil",
+      "jogo": "Final - Guto Miguel x Antonius-EUA",
+      "canais": ["Disney+"]
+    },
+    {
+      "hora": "10h00",
+      "esporte": "Roland Garros",
+      "jogo": "Final - Chwalinska x Andreeva",
+      "canais": ["ESPN2"]
+    },
+    {
+      "hora": "11h00",
+      "esporte": "Brasileirão Série B",
+      "jogo": "Criciúma x Londrina",
+      "canais": ["XSPORTS", "ESPN", "SportyNet", "YouTube"]
+    },
+    {
+      "hora": "11h00",
+      "esporte": "Liga das Nações Fem.",
+      "jogo": "Brasil F x Bulgária F",
+      "canais": ["SPORTV2", "GETV"]
+    },
+    {
+      "hora": "14h00",
+      "esporte": "WNBA",
+      "jogo": "Minnesota Lynx x Seattle Storm",
+      "canais": ["ESPN3"]
+    },
+    {
+      "hora": "15h00",
+      "esporte": "Brasileirão Série D",
+      "jogo": "America-RJ x Água Santa",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "15h00",
+      "esporte": "Super Rugby Américas",
+      "jogo": "Selknam-CHI x Cobras Brasil",
+      "canais": ["ESPN2"]
+    },
+    {
+      "hora": "15h30",
+      "esporte": "Liga das Nações Fem.",
+      "jogo": "Itália F x Turquia F",
+      "canais": ["SPORTV2"]
+    },
+    {
+      "hora": "15h30",
+      "esporte": "Amistoso",
+      "jogo": "EUA x Alemanha",
+      "canais": ["ESPN4"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "Copa do Nordeste",
+      "jogo": "Final - Vitória x Fortaleza",
+      "canais": ["SBT Nordeste", "YouTube", "SportyNet"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "Brasileirão Série D",
+      "jogo": "Decisão-PE x Treze-PB, Imperatriz-MA x Tuna Luso",
+      "canais": ["YouTube Metrópoles"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "WNBA",
+      "jogo": "Las Vegas Aces x GS Valkyries",
+      "canais": ["ESPN3"]
+    },
+    {
+      "hora": "16h30",
+      "esporte": "LNF Futsal",
+      "jogo": "Joinville x Jaraguá",
+      "canais": ["YouTube LNF TV"]
+    },
+    {
+      "hora": "17h00",
+      "esporte": "Amistoso",
+      "jogo": "Inglaterra x Nova Zelândia",
+      "canais": ["SPORTV3"]
+    },
+    {
+      "hora": "17h00",
+      "esporte": "Amistoso",
+      "jogo": "Bolívia x Escócia",
+      "canais": ["ESPN"]
+    },
+    {
+      "hora": "17h30",
+      "esporte": "LBF",
+      "jogo": "Campinas x Salvador",
+      "canais": ["ge.globo/lbfepvtv"]
+    },
+    {
+      "hora": "17h45",
+      "esporte": "LNF Futsal",
+      "jogo": "Carlos Barbosa x São José-SP",
+      "canais": ["XSPORTS", "LNF TV"]
+    },
+    {
+      "hora": "18h30",
+      "esporte": "Amistoso Feminino",
+      "jogo": "Brasil F x EUA F",
+      "canais": ["SPORTV2", "GETV"]
+    },
+    {
+      "hora": "19h00",
+      "esporte": "Amistoso",
+      "jogo": "Brasil x Egito",
+      "canais": ["GLOBO", "SPORTV", "YouTube GETV"]
+    },
+    {
+      "hora": "19h00",
+      "esporte": "Amistoso",
+      "jogo": "Venezuela x Turquia",
+      "canais": ["ESPN4"]
+    },
+    {
+      "hora": "20h00",
+      "esporte": "MMA Nacional",
+      "jogo": "Jungle Fight 151",
+      "canais": ["SPORTV3", "Combate"]
+    },
+    {
+      "hora": "21h00",
+      "esporte": "Amistoso",
+      "jogo": "Argentina x Honduras",
+      "canais": ["XSPORTS", "CazéTV"]
+    },
+    {
+      "hora": "21h00",
+      "esporte": "Liga das Nações Fem.",
+      "jogo": "Alemanha F x Japão F",
+      "canais": ["SPORTV2"]
+    },
+    {
+      "hora": "21h00",
+      "esporte": "NHL Stanley Cup",
+      "jogo": "Vegas Golden Knights x Carolina Hurricanes",
+      "canais": ["ESPN2"]
+    },
+    {
+      "hora": "21h00",
+      "esporte": "UFC Fight Night",
+      "jogo": "Muhammad x Gabriel Bonfim",
+      "canais": ["Paramount+"]
+    },
+    {
+      "hora": "23h00",
+      "esporte": "Boxe",
+      "jogo": "Brandon Mosqueda x Isaac Aranda",
+      "canais": ["ESPN4"]
+    }
+  ]
+}
