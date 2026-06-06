@@ -1,312 +1,138 @@
 [
   {
-    "horario": "02:00",
-    "esporte": "Campeonato Japonês - Final",
+    "hora": "02:00",
+    "esporte": "Camp. Japonês - Final",
     "jogo": "Kash. Antlers x Vissel Kobe",
     "canais": ["YouTube Canal GOAT"]
   },
   {
-    "horario": "04:00",
+    "hora": "04:00",
     "esporte": "Boxe",
-    "jogo": "Masanichi Yabuki x Rene Calixto",
+    "jogo": "Masamichi Yabuki x Rene Calixto",
     "canais": ["ESPN3"]
   },
   {
-    "horario": "05:50",
-    "esporte": "MotoGP",
-    "jogo": "GP da Hungria - classificação",
-    "canais": ["ESPN4"]
-  },
-  {
-    "horario": "06:00",
-    "esporte": "Fórmula 4 Espanha",
-    "jogo": "Etapa Portimão-POR - corrida 1",
-    "canais": ["Bandsports"]
-  },
-  {
-    "horario": "07:15",
-    "esporte": "Eurocup-3",
-    "jogo": "Etapa Portimão-POR - corrida 1",
-    "canais": ["Bandsports"]
-  },
-  {
-    "horario": "07:30",
-    "esporte": "Fórmula 1",
-    "jogo": "GP de Mônaco - treino livre 3",
-    "canais": ["Sportv3"]
-  },
-  {
-    "horario": "07:45",
-    "esporte": "Moto3 e Moto2",
-    "jogo": "GP da Hungria - classificação",
-    "canais": ["ESPN4"]
-  },
-  {
-    "horario": "09:00",
+    "hora": "09:00",
     "esporte": "Roland Garros Juvenil",
     "jogo": "Final - Guto Miguel x Antonius-EUA",
     "canais": ["Disney+"]
   },
   {
-    "horario": "09:00",
-    "esporte": "Canoagem Slalom",
-    "jogo": "Copa do Mundo - etapa de Praga",
-    "canais": ["YouTube CazéTV"]
-  },
-  {
-    "horario": "09:00",
-    "esporte": "Fórmula 4 Espanha",
-    "jogo": "Etapa Portimão-POR - corrida 2",
-    "canais": ["Bandsports"]
-  },
-  {
-    "horario": "09:15",
-    "esporte": "Fórmula 2",
-    "jogo": "GP de Mônaco - sprint race",
-    "canais": ["Sportv3"]
-  },
-  {
-    "horario": "10:00",
-    "esporte": "MotoGP",
-    "jogo": "GP da Hungria - sprint race",
-    "canais": ["ESPN4"]
-  },
-  {
-    "horario": "10:00",
+    "hora": "10:00",
     "esporte": "Roland Garros",
     "jogo": "Final - Chwalinska x Andreeva",
     "canais": ["ESPN2"]
   },
   {
-    "horario": "10:00",
-    "esporte": "Amistoso",
-    "jogo": "Bélgica x Tunísia",
-    "canais": ["Sportv"]
-  },
-  {
-    "horario": "10:00",
-    "esporte": "World Surf League",
-    "jogo": "Etapa de El Salvador",
-    "canais": ["Sportv4", "YouTube"]
-  },
-  {
-    "horario": "10:30",
-    "esporte": "Triatlo T100",
-    "jogo": "World Tour - etapa San Francisco",
-    "canais": ["Bandsports"]
-  },
-  {
-    "horario": "11:00",
+    "hora": "11:00",
     "esporte": "Brasileirão Série B",
     "jogo": "Criciúma x Londrina",
     "canais": ["XSports", "ESPN", "SportyNet", "YouTube"]
   },
   {
-    "horario": "11:00",
+    "hora": "11:00",
     "esporte": "Liga das Nações Feminina",
     "jogo": "Brasil F x Bulgária F",
-    "canais": ["Sportv2", "GETV"]
+    "canais": ["SPORTV2", "GETV"]
   },
   {
-    "horario": "11:00",
-    "esporte": "Fórmula 1",
-    "jogo": "GP de Mônaco - classificação",
-    "canais": ["Sportv3"]
-  },
-  {
-    "horario": "11:00",
-    "esporte": "Ginástica Rítmica",
-    "jogo": "Pan-Americano - individual geral",
-    "canais": ["YouTube CazéTV"]
-  },
-  {
-    "horario": "12:30",
-    "esporte": "Taekwondo",
-    "jogo": "Grand Prix de Roma - finais",
-    "canais": ["Sportv3", "CazéTV"]
-  },
-  {
-    "horario": "13:00",
-    "esporte": "MMA",
-    "jogo": "Oktagon 89",
-    "canais": ["Combate"]
-  },
-  {
-    "horario": "14:00",
+    "hora": "14:00",
     "esporte": "WNBA",
     "jogo": "Minnesota Lynx x Seattle Storm",
     "canais": ["ESPN3"]
   },
   {
-    "horario": "14:30",
-    "esporte": "Nascar Truck",
-    "jogo": "Etapa de Michigan",
-    "canais": ["PhizTV", "Disney+"]
-  },
-  {
-    "horario": "14:45",
-    "esporte": "Amistoso",
-    "jogo": "Portugal x Chile",
-    "canais": ["ESPN"]
-  },
-  {
-    "horario": "15:00",
+    "hora": "15:00",
     "esporte": "Brasileirão Série D",
     "jogo": "America-RJ x Água Santa",
     "canais": ["YouTube Metrópoles"]
   },
   {
-    "horario": "15:00",
+    "hora": "15:00",
     "esporte": "Super Rugby Américas",
     "jogo": "Selknam-CHI x Cobras Brasil",
     "canais": ["ESPN2"]
   },
   {
-    "horario": "15:30",
+    "hora": "15:30",
     "esporte": "Liga das Nações Feminina",
     "jogo": "Itália F x Turquia F",
-    "canais": ["Sportv2"]
+    "canais": ["SPORTV2"]
   },
   {
-    "horario": "15:30",
-    "esporte": "Amistoso",
-    "jogo": "EUA x Alemanha",
-    "canais": ["ESPN4"]
-  },
-  {
-    "horario": "16:00",
+    "hora": "16:00",
     "esporte": "Copa do Nordeste",
     "jogo": "Final - Vitória x Fortaleza",
     "canais": ["SBT Nordeste", "YouTube", "SportyNet"]
   },
   {
-    "horario": "16:00",
+    "hora": "16:00",
     "esporte": "Brasileirão Série D",
     "jogo": "Decisão-PE x Treze-PB; Imperatriz-MA x Tuna Luso",
     "canais": ["YouTube Metrópoles"]
   },
   {
-    "horario": "16:00",
+    "hora": "16:00",
     "esporte": "WNBA",
     "jogo": "Las Vegas Aces x GS Valkyries",
     "canais": ["ESPN3"]
   },
   {
-    "horario": "16:30",
+    "hora": "16:30",
     "esporte": "LNF Futsal",
     "jogo": "Joinville x Jaraguá",
     "canais": ["YouTube LNF TV"]
   },
   {
-    "horario": "17:00",
-    "esporte": "Amistoso",
-    "jogo": "Inglaterra x Nova Zelândia",
-    "canais": ["Sportv3"]
-  },
-  {
-    "horario": "17:00",
-    "esporte": "Amistoso",
-    "jogo": "Bolívia x Escócia",
-    "canais": ["ESPN"]
-  },
-  {
-    "horario": "17:30",
+    "hora": "17:30",
     "esporte": "LBF",
     "jogo": "Campinas x Salvador",
     "canais": ["ge.globo/lbfepvtv"]
   },
   {
-    "horario": "17:45",
+    "hora": "17:45",
     "esporte": "LNF Futsal",
     "jogo": "Carlos Barbosa x São José-SP",
     "canais": ["XSports", "LNF TV"]
   },
   {
-    "horario": "18:00",
-    "esporte": "Golfe",
-    "jogo": "US Women's Championship - 3R",
-    "canais": ["ESPN3"]
-  },
-  {
-    "horario": "18:00",
-    "esporte": "UFC Fight Night",
-    "jogo": "Card preliminar",
-    "canais": ["Paramount+"]
-  },
-  {
-    "horario": "18:30",
-    "esporte": "Ginástica Rítmica",
-    "jogo": "Pan-Americano - grupos geral",
-    "canais": ["YouTube CazéTV"]
-  },
-  {
-    "horario": "18:30",
-    "esporte": "LNF Futsal",
-    "jogo": "Pato x Praia Clube",
-    "canais": ["YouTube LNF TV"]
-  },
-  {
-    "horario": "18:30",
+    "hora": "18:30",
     "esporte": "Amistoso Feminino",
     "jogo": "Brasil F x EUA F",
-    "canais": ["Sportv2", "GETV"]
+    "canais": ["SPORTV2", "GETV"]
   },
   {
-    "horario": "19:00",
+    "hora": "19:00",
     "esporte": "Amistoso",
     "jogo": "Brasil x Egito",
-    "canais": ["Globo", "Sportv", "YouTube GETV"]
+    "canais": ["Globo", "SPORTV", "YouTube GETV"]
   },
   {
-    "horario": "19:00",
-    "esporte": "Amistoso",
-    "jogo": "Venezuela x Turquia",
-    "canais": ["ESPN4"]
-  },
-  {
-    "horario": "19:00",
-    "esporte": "Turfe",
-    "jogo": "The Belmont Stakes",
-    "canais": ["ESPN2"]
-  },
-  {
-    "horario": "19:30",
-    "esporte": "LNF Futsal",
-    "jogo": "Marreco x Atlântico",
-    "canais": ["YouTube LNF TV"]
-  },
-  {
-    "horario": "20:00",
+    "hora": "20:00",
     "esporte": "MMA Nacional",
     "jogo": "Jungle Fight 151",
-    "canais": ["Sportv3 Combate"]
+    "canais": ["SPORTV3", "Combate"]
   },
   {
-    "horario": "21:00",
-    "esporte": "Amistoso",
-    "jogo": "Argentina x Honduras",
-    "canais": ["XSports", "CazéTV"]
-  },
-  {
-    "horario": "21:00",
+    "hora": "21:00",
     "esporte": "Liga das Nações Feminina",
     "jogo": "Alemanha F x Japão F",
-    "canais": ["Sportv2"]
+    "canais": ["SPORTV2"]
   },
   {
-    "horario": "21:00",
+    "hora": "21:00",
     "esporte": "NHL Stanley Cup",
-    "jogo": "Vegas Golden Knights x Carolina Hurricanes",
+    "jogo": "Vegas G. Knights x Car. Hurricanes",
     "canais": ["ESPN2"]
   },
   {
-    "horario": "21:00",
+    "hora": "21:00",
     "esporte": "UFC Fight Night",
     "jogo": "Muhammad x Gabriel Bonfim",
     "canais": ["Paramount+"]
   },
   {
-    "horario": "23:00",
+    "hora": "23:00",
     "esporte": "Boxe",
     "jogo": "Brandon Mosqueda x Isaac Aranda",
     "canais": ["ESPN4"]
