@@ -1,47 +1,70 @@
 {
   "eventos": [
-    {"hora":"04h25","esporte":"Fórmula 2","jogo":"GP de Mônaco","canais":["SPORTV3"]},
-    {"hora":"06h00","esporte":"Moto3 e Moto2","jogo":"GP da Hungria","canais":["ESPN4"]},
-    {"hora":"07h15","esporte":"Eurocup-3","jogo":"Etapa Portimão-POR - corrida 2","canais":["BANDSPORTS"]},
-    {"hora":"08h00","esporte":"Mundial Motocross","jogo":"MXGP Letônia - corrida 1","canais":["BANDSPORTS"]},
-    {"hora":"08h00","esporte":"Liga das Nações Fem.","jogo":"China F x Polônia F","canais":["SPORTV2"]},
-    {"hora":"08h00","esporte":"Canoagem Slalom","jogo":"Copa do Mundo - etapa de Praga","canais":["YouTube CazéTV"]},
-    {"hora":"08h00","esporte":"Ciclismo","jogo":"Tour Auvergne-Rhône-Alpes - etapa 1","canais":["ESPN3"]},
-    {"hora":"09h00","esporte":"MotoGP","jogo":"GP da Hungria","canais":["ESPN4"]},
-    {"hora":"10h00","esporte":"Fórmula 1","jogo":"GP de Mônaco","canais":["Globo","SPORTV3"]},
-    {"hora":"10h00","esporte":"Mundial Motocross","jogo":"MX2 e MXGP Letônia - corrida 2","canais":["BANDSPORTS"]},
-    {"hora":"10h00","esporte":"Roland Garros","jogo":"Final - Cobolli x Zverev","canais":["ESPN2"]},
-    {"hora":"10h00","esporte":"World Surf League","jogo":"Etapa de El Salvador","canais":["SPORTV4","YouTube"]},
-    {"hora":"10h00","esporte":"Amistoso","jogo":"Liechtenstein x Chipre","canais":["SPORTV"]},
-    {"hora":"11h00","esporte":"Copa Sul-Sudeste","jogo":"Final - Chapecoense x Avaí","canais":["XSPORTS","SportyNet","YouTube"]},
-    {"hora":"11h00","esporte":"LNF Futsal","jogo":"Minas x Campo Mourão","canais":["YouTube LNF TV"]},
-    {"hora":"11h00","esporte":"Liga das Nações Fem.","jogo":"Rep. Dominicana F x Holanda F","canais":["SPORTV2"]},
-    {"hora":"11h00","esporte":"Rugby Sevens Series","jogo":"Etapa de Bordeaux - finais","canais":["ESPN3"]},
-    {"hora":"11h00","esporte":"LBF","jogo":"SESI-Araraquara x Sampaio","canais":["TV Brasil"]},
-    {"hora":"11h30","esporte":"LBF","jogo":"Sodiê-Mesquita x Sport","canais":["YouTube LiveBasketBR"]},
-    {"hora":"11h30","esporte":"Taekwondo","jogo":"Grand Prix de Roma - finais","canais":["YouTube CazéTV"]},
-    {"hora":"12h00","esporte":"Atletismo","jogo":"Diamond League - Estocolmo","canais":["SPORTV3"]},
-    {"hora":"13h00","esporte":"Champ. League Hand. Fem.","jogo":"Final - Metz-FRA x Györ-HUN","canais":["XSPORTS"]},
-    {"hora":"13h00","esporte":"Ginástica Rítmica","jogo":"Camp. Pan-Americano - finais","canais":["SPORTV3","CazéTV"]},
-    {"hora":"13h30","esporte":"Amistoso","jogo":"Dinamarca x Ucrânia","canais":["SPORTV"]},
-    {"hora":"13h45","esporte":"AMG Cup Brasil","jogo":"Etapa de Interlagos","canais":["BANDSPORTS","YouTube"]},
-    {"hora":"14h30","esporte":"Liga das Nações Fem.","jogo":"Brasil F x Itália F","canais":["SPORTV2","GETV"]},
-    {"hora":"15h00","esporte":"Brasileirão Série D","jogo":"Blumenau x São José-RS; Parnahyba x Moto; Sampaio x Iguatu","canais":["YouTube Metrópoles"]},
-    {"hora":"15h45","esporte":"Amistoso","jogo":"Croácia x Eslovênia","canais":["SPORTV"]},
-    {"hora":"16h00","esporte":"Amistoso","jogo":"Marrocos x Noruega","canais":["XSPORTS","CazéTV"]},
-    {"hora":"16h00","esporte":"Amistoso","jogo":"Grécia x Itália","canais":["ESPN"]},
-    {"hora":"16h00","esporte":"Brasileirão Série B","jogo":"CRB x São Bernardo","canais":["REDETV!","Disney+","YouTube Canal GOAT"]},
-    {"hora":"16h00","esporte":"Brasileirão Série D","jogo":"São Luiz-RS x Joinville; Guarany de Bagé x Cianorte","canais":["YouTube Metrópoles"]},
-    {"hora":"16h00","esporte":"LBF","jogo":"Santo André x Maringá","canais":["YouTube LiveBasketBR"]},
-    {"hora":"16h00","esporte":"Golfe","jogo":"US Women's Championship - Final","canais":["ESPN3"]},
-    {"hora":"16h00","esporte":"Nascar Cup","jogo":"Etapa de Michigan","canais":["ESPN4","PhizTV"]},
-    {"hora":"17h00","esporte":"Amistoso","jogo":"Equador x Guatemala","canais":["Jovem Pan","YouTube"]},
-    {"hora":"17h00","esporte":"Brasileirão Série D","jogo":"Primavera x Brasiliense; Gama x Aparecidense; Velo Clube x Maricá; Noroeste x Sampaio Corrêa-RJ","canais":["YouTube Metrópoles"]},
-    {"hora":"17h00","esporte":"NBB Final","jogo":"Franca x Pinheiros (2-1)","canais":["XSPORTS","SPORTV2","ESPN2","YouTube"]},
-    {"hora":"18h30","esporte":"Copa Verde","jogo":"Final - Paysandu x Anápolis","canais":["SportyNet","YouTube"]},
-    {"hora":"19h00","esporte":"Liga das Nações Fem.","jogo":"Canadá F x Japão F","canais":["SPORTV2"]},
-    {"hora":"20h00","esporte":"Amistoso","jogo":"Colômbia x Jordânia","canais":["SPORTV"]},
-    {"hora":"21h30","esporte":"MLB","jogo":"Chicago Cubs x San Francisco Giants","canais":["ESPN2"]},
-    {"hora":"22h00","esporte":"Fórmula Indy","jogo":"GP de Gateway","canais":["BAND","ESPN4"]}
+    {
+      "hora": "10h00",
+      "esporte": "World Surf League",
+      "jogo": "Etapa de El Salvador",
+      "canais": ["SPORTV3", "YouTube"]
+    },
+    {
+      "hora": "10h20",
+      "esporte": "Tour Auvergne-Rhône-Alpes",
+      "jogo": "Etapa 2",
+      "canais": ["ESPN3"]
+    },
+    {
+      "hora": "15h45",
+      "esporte": "Amistoso",
+      "jogo": "Holanda x Uzbequistão",
+      "canais": ["ESPN"]
+    },
+    {
+      "hora": "16h10",
+      "esporte": "Amistoso",
+      "jogo": "França x Irlanda do Norte",
+      "canais": ["SPORTV", "GETV"]
+    },
+    {
+      "hora": "19h30",
+      "esporte": "MLB",
+      "jogo": "Cleveland Guardians x New York Yankees",
+      "canais": ["ESPN2"]
+    },
+    {
+      "hora": "19h30",
+      "esporte": "LNF Futsal",
+      "jogo": "Umuarama x Tubarão",
+      "canais": ["YouTube LNF TV"]
+    },
+    {
+      "hora": "20h00",
+      "esporte": "LNF Futsal",
+      "jogo": "Corinthians x Santo André",
+      "canais": ["XSPORTS", "LNF TV"]
+    },
+    {
+      "hora": "20h00",
+      "esporte": "Brasileirão Série B",
+      "jogo": "América-MG x Atlético-GO",
+      "canais": ["ESPN4"]
+    },
+    {
+      "hora": "20h00",
+      "esporte": "Brasileirão Série B",
+      "jogo": "Vila Nova x Botafogo-SP",
+      "canais": ["Disney+"]
+    },
+    {
+      "hora": "21h30",
+      "esporte": "NBA Finals",
+      "jogo": "New York Knicks x San Antonio Spurs (2-0)",
+      "canais": ["Prime Video"]
+    },
+    {
+      "hora": "23h00",
+      "esporte": "Amistoso",
+      "jogo": "Peru x Espanha",
+      "canais": ["SPORTV"]
+    }
   ]
 }
