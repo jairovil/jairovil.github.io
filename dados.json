@@ -1,70 +1,124 @@
 {
   "eventos": [
     {
+      "hora": "09h00",
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Ucrânia x Japão",
+      "canais": ["SPORTV2"]
+    },
+    {
       "hora": "10h00",
       "esporte": "World Surf League",
       "jogo": "Etapa de El Salvador",
-      "canais": ["SPORTV3", "YouTube"]
+      "canais": ["SPORTV4", "YouTube"]
     },
     {
       "hora": "10h20",
       "esporte": "Tour Auvergne-Rhône-Alpes",
-      "jogo": "Etapa 2",
+      "jogo": "Etapa 4",
       "canais": ["ESPN3"]
     },
     {
-      "hora": "15h45",
-      "esporte": "Amistoso",
-      "jogo": "Holanda x Uzbequistão",
-      "canais": ["ESPN"]
+      "hora": "12h00",
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Turquia x EUA",
+      "canais": ["SPORTV2"]
     },
     {
-      "hora": "16h10",
-      "esporte": "Amistoso",
-      "jogo": "França x Irlanda do Norte",
-      "canais": ["SPORTV", "GETV"]
+      "hora": "15h00",
+      "esporte": "Diamond League",
+      "jogo": "Etapa de Oslo",
+      "canais": ["XSPORTS", "SPORTV3"]
     },
     {
-      "hora": "19h30",
-      "esporte": "MLB",
-      "jogo": "Cleveland Guardians x New York Yankees",
-      "canais": ["ESPN2"]
-    },
-    {
-      "hora": "19h30",
-      "esporte": "LNF Futsal",
-      "jogo": "Umuarama x Tubarão",
-      "canais": ["YouTube LNF TV"]
-    },
-    {
-      "hora": "20h00",
-      "esporte": "LNF Futsal",
-      "jogo": "Corinthians x Santo André",
-      "canais": ["XSPORTS", "LNF TV"]
-    },
-    {
-      "hora": "20h00",
-      "esporte": "Brasileirão Série B",
-      "jogo": "América-MG x Atlético-GO",
+      "hora": "16h00",
+      "esporte": "La Liga 2 Playoffs",
+      "jogo": "Málaga x Las Palmas (1x0)",
       "canais": ["ESPN4"]
     },
     {
+      "hora": "16h30",
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Sérvia x Argentina",
+      "canais": ["SPORTV2"]
+    },
+    {
+      "hora": "16h45",
+      "esporte": "Amistoso",
+      "jogo": "Portugal x Nigéria",
+      "canais": ["SPORTV"]
+    },
+    {
+      "hora": "17h00",
+      "esporte": "Amistoso",
+      "jogo": "Inglaterra x Costa Rica",
+      "canais": ["ESPN"]
+    },
+    {
+      "hora": "18h00",
+      "esporte": "LNF Silver Futsal",
+      "jogo": "Apodi-RN x Lages-SC",
+      "canais": ["XSPORTS", "LNF TV"]
+    },
+    {
+      "hora": "19h30",
+      "esporte": "LBF",
+      "jogo": "Salvador x Cerrado",
+      "canais": ["YouTube LiveBasketBR"]
+    },
+    {
+      "hora": "19h30",
+      "esporte": "LBF",
+      "jogo": "Campinas x Sodiê-Mesquita",
+      "canais": ["ge.globo", "LBF TV"]
+    },
+    {
+      "hora": "20h00",
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Brasil x Irã",
+      "canais": ["SPORTV2", "GETV"]
+    },
+    {
+      "hora": "20h00",
+      "esporte": "Copa do Brasil Futsal",
+      "jogo": "QF (ida) - Pouso-SC x Joinville",
+      "canais": ["YouTube CBFS TV"]
+    },
+    {
       "hora": "20h00",
       "esporte": "Brasileirão Série B",
-      "jogo": "Vila Nova x Botafogo-SP",
+      "jogo": "Ceará x Avaí",
+      "canais": ["XSPORTS", "ESPN", "SportyNet", "YouTube"]
+    },
+    {
+      "hora": "20h00",
+      "esporte": "Brasileirão Série B",
+      "jogo": "Goiás x Novorizontino",
+      "canais": ["Disney+"]
+    },
+    {
+      "hora": "21h00",
+      "esporte": "Brasileirão Série B",
+      "jogo": "Sport x Athletic",
       "canais": ["Disney+"]
     },
     {
       "hora": "21h30",
       "esporte": "NBA Finals",
-      "jogo": "New York Knicks x San Antonio Spurs (2-0)",
+      "jogo": "New York Knicks x San Antonio Spurs (2-1)",
       "canais": ["Prime Video"]
     },
     {
-      "hora": "23h00",
-      "esporte": "Amistoso",
-      "jogo": "Peru x Espanha",
-      "canais": ["SPORTV"]
+      "hora": "22h05",
+      "esporte": "MLB",
+      "jogo": "Oakland Athletics x Milwaukee Brewers",
+      "canais": ["ESPN2"]
+    },
+    {
+      "hora": "22h10",
+      "esporte": "LNF Silver Futsal",
+      "jogo": "Juventude-MS x Vasco",
+      "canais": ["XSPORTS", "LNF TV"]
     }
   ]
 }
