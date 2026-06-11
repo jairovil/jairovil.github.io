@@ -1,124 +1,94 @@
 {
   "eventos": [
     {
-      "hora": "09h00",
-      "esporte": "Liga das Nações Masculina",
-      "jogo": "Ucrânia x Japão",
-      "canais": ["SPORTV2"]
+      "hora": "08h00",
+      "esporte": "Porsche Cup Brasil",
+      "jogo": "Etapa de Le Mans - corrida 1",
+      "canais": ["BANDSPORTS", "YouTube"]
     },
     {
-      "hora": "10h00",
-      "esporte": "World Surf League",
-      "jogo": "Etapa de El Salvador",
-      "canais": ["SPORTV4", "YouTube"]
+      "hora": "09h00",
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Eslovênia x Polônia",
+      "canais": ["SPORTV2"]
     },
     {
       "hora": "10h20",
       "esporte": "Tour Auvergne-Rhône-Alpes",
-      "jogo": "Etapa 4",
+      "jogo": "Etapa 5",
       "canais": ["ESPN3"]
     },
     {
-      "hora": "12h00",
-      "esporte": "Liga das Nações Masculina",
-      "jogo": "Turquia x EUA",
-      "canais": ["SPORTV2"]
-    },
-    {
-      "hora": "15h00",
-      "esporte": "Diamond League",
-      "jogo": "Etapa de Oslo",
-      "canais": ["XSPORTS", "SPORTV3"]
+      "hora": "14h45",
+      "esporte": "WEC Endurance",
+      "jogo": "24h de Le Mans - Hyperpole",
+      "canais": ["BANDSPORTS", "GPTV"]
     },
     {
       "hora": "16h00",
-      "esporte": "La Liga 2 Playoffs",
-      "jogo": "Málaga x Las Palmas (1x0)",
-      "canais": ["ESPN4"]
-    },
-    {
-      "hora": "16h30",
-      "esporte": "Liga das Nações Masculina",
-      "jogo": "Sérvia x Argentina",
-      "canais": ["SPORTV2"]
-    },
-    {
-      "hora": "16h45",
-      "esporte": "Amistoso",
-      "jogo": "Portugal x Nigéria",
-      "canais": ["SPORTV"]
+      "esporte": "Copa do Mundo da FIFA 2026",
+      "jogo": "México x África do Sul",
+      "canais": ["GLOBO", "SPORTV", "GE", "SBT", "Nsports", "CazéTV"]
     },
     {
       "hora": "17h00",
-      "esporte": "Amistoso",
-      "jogo": "Inglaterra x Costa Rica",
-      "canais": ["ESPN"]
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Alemanha x Itália",
+      "canais": ["SPORTV2"]
     },
     {
-      "hora": "18h00",
+      "hora": "19h00",
+      "esporte": "Brasileirão Sub-20",
+      "jogo": "Palmeiras Sub-20 x Santos Sub-20",
+      "canais": ["YouTube UOL Esporte"]
+    },
+    {
+      "hora": "19h00",
       "esporte": "LNF Silver Futsal",
-      "jogo": "Apodi-RN x Lages-SC",
+      "jogo": "São Caetano x Dracena-SP",
       "canais": ["XSPORTS", "LNF TV"]
     },
     {
       "hora": "19h30",
       "esporte": "LBF",
-      "jogo": "Salvador x Cerrado",
-      "canais": ["YouTube LiveBasketBR"]
+      "jogo": "Santo André x SESI-Araraquara",
+      "canais": ["ESPN4"]
     },
     {
       "hora": "19h30",
       "esporte": "LBF",
-      "jogo": "Campinas x Sodiê-Mesquita",
-      "canais": ["ge.globo", "LBF TV"]
+      "jogo": "Sampaio x São José-SP",
+      "canais": ["YouTube Imirante"]
     },
     {
       "hora": "20h00",
       "esporte": "Liga das Nações Masculina",
-      "jogo": "Brasil x Irã",
-      "canais": ["SPORTV2", "GETV"]
+      "jogo": "Brasil x Bélgica",
+      "canais": ["SPORTV2"]
     },
     {
       "hora": "20h00",
       "esporte": "Copa do Brasil Futsal",
-      "jogo": "QF (ida) - Pouso-SC x Joinville",
+      "jogo": "QF (ida) - Fidas-DF x Minas",
       "canais": ["YouTube CBFS TV"]
     },
     {
-      "hora": "20h00",
-      "esporte": "Brasileirão Série B",
-      "jogo": "Ceará x Avaí",
-      "canais": ["XSPORTS", "ESPN", "SportyNet", "YouTube"]
-    },
-    {
-      "hora": "20h00",
-      "esporte": "Brasileirão Série B",
-      "jogo": "Goiás x Novorizontino",
-      "canais": ["Disney+"]
+      "hora": "20h05",
+      "esporte": "MLB",
+      "jogo": "Baltimore Orioles x Seattle Mariners",
+      "canais": ["ESPN3"]
     },
     {
       "hora": "21h00",
-      "esporte": "Brasileirão Série B",
-      "jogo": "Sport x Athletic",
-      "canais": ["Disney+"]
-    },
-    {
-      "hora": "21h30",
-      "esporte": "NBA Finals",
-      "jogo": "New York Knicks x San Antonio Spurs (2-1)",
-      "canais": ["Prime Video"]
-    },
-    {
-      "hora": "22h05",
-      "esporte": "MLB",
-      "jogo": "Oakland Athletics x Milwaukee Brewers",
+      "esporte": "NHL Stanley Cup",
+      "jogo": "Carolina Hurricanes x Vegas Golden Knights (2-2)",
       "canais": ["ESPN2"]
     },
     {
-      "hora": "22h10",
-      "esporte": "LNF Silver Futsal",
-      "jogo": "Juventude-MS x Vasco",
-      "canais": ["XSPORTS", "LNF TV"]
+      "hora": "23h00",
+      "esporte": "Copa do Mundo da FIFA 2026",
+      "jogo": "Coreia do Sul x República Tcheca",
+      "canais": ["YouTube CazéTV"]
     }
   ]
 }
