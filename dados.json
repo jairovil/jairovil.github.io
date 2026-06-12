@@ -1,94 +1,166 @@
 {
   "eventos": [
     {
-      "hora": "08h00",
+      "hora": "05h15",
       "esporte": "Porsche Cup Brasil",
-      "jogo": "Etapa de Le Mans - corrida 1",
-      "canais": ["BANDSPORTS", "YouTube"]
+      "jogo": "Etapa de Le Mans - corrida 2",
+      "canais": ["BAND", "BANDSPORTS", "YouTube"]
     },
     {
-      "hora": "09h00",
-      "esporte": "Liga das Nações Masculina",
-      "jogo": "Eslovênia x Polônia",
+      "hora": "07h30",
+      "esporte": "Fórmula 1",
+      "jogo": "GP de Barcelona - treino livre 3",
+      "canais": ["SPORTV3"]
+    },
+    {
+      "hora": "08h00",
+      "esporte": "Copa do Mundo de Tiro com Arco",
+      "jogo": "Etapa da Turquia",
       "canais": ["SPORTV2"]
     },
     {
-      "hora": "10h20",
+      "hora": "09h15",
+      "esporte": "Fórmula 2",
+      "jogo": "GP de Barcelona - sprint race",
+      "canais": ["SPORTV3"]
+    },
+    {
+      "hora": "09h20",
       "esporte": "Tour Auvergne-Rhône-Alpes",
-      "jogo": "Etapa 5",
+      "jogo": "Etapa 7",
       "canais": ["ESPN3"]
     },
     {
-      "hora": "14h45",
+      "hora": "09h30",
+      "esporte": "Copa do Mundo de Canoagem Slalom",
+      "jogo": "Etapa da Alemanha",
+      "canais": ["YouTube CazéTV 2"]
+    },
+    {
+      "hora": "10h00",
+      "esporte": "Champions League de Handebol",
+      "jogo": "SF - Magdeburg x Füchse Berlin",
+      "canais": ["XSPORTS"]
+    },
+    {
+      "hora": "10h00",
+      "esporte": "World Surf League",
+      "jogo": "Etapa de El Salvador - finais",
+      "canais": ["SPORTV4", "WSL TV"]
+    },
+    {
+      "hora": "10h00",
       "esporte": "WEC Endurance",
-      "jogo": "24h de Le Mans - Hyperpole",
+      "jogo": "24 Horas de Le Mans",
       "canais": ["BANDSPORTS", "GPTV"]
+    },
+    {
+      "hora": "11h00",
+      "esporte": "Brasileirão Série C",
+      "jogo": "Guarani x Caxias",
+      "canais": ["SportyNet", "YouTube"]
+    },
+    {
+      "hora": "11h00",
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Brasil x Sérvia",
+      "canais": ["SPORTV2", "GETV"]
+    },
+    {
+      "hora": "11h00",
+      "esporte": "Fórmula 1",
+      "jogo": "GP de Barcelona - classificação",
+      "canais": ["SPORTV3"]
+    },
+    {
+      "hora": "12h00",
+      "esporte": "Liga Europeia Masculina",
+      "jogo": "Dinamarca x Bósnia",
+      "canais": ["XSPORTS"]
+    },
+    {
+      "hora": "13h00",
+      "esporte": "Copa do Mundo de Skate Park",
+      "jogo": "Roma - semifinais",
+      "canais": ["SPORTV3"]
+    },
+    {
+      "hora": "14h00",
+      "esporte": "Copa LNF Futsal",
+      "jogo": "OF - São Lourenço x Corinthians",
+      "canais": ["XSPORTS", "LNF TV"]
+    },
+    {
+      "hora": "15h30",
+      "esporte": "Liga das Nações Masculina",
+      "jogo": "Bulgária x Argentina",
+      "canais": ["SPORTV2"]
     },
     {
       "hora": "16h00",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "México x África do Sul",
-      "canais": ["GLOBO", "SPORTV", "GE", "SBT", "Nsports", "CazéTV"]
+      "jogo": "Qatar x Suíça",
+      "canais": ["YouTube CazéTV"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "Brasileirão Série C",
+      "jogo": "Amazonas x Anápolis",
+      "canais": ["SportyNet", "YouTube"]
+    },
+    {
+      "hora": "16h00",
+      "esporte": "Brasileirão Série D",
+      "jogo": "Altos-PI x Atlético-CE",
+      "canais": ["YouTube Metrópoles"]
     },
     {
       "hora": "17h00",
       "esporte": "Liga das Nações Masculina",
-      "jogo": "Alemanha x Itália",
+      "jogo": "Canadá x EUA",
       "canais": ["SPORTV2"]
     },
     {
-      "hora": "19h00",
-      "esporte": "Brasileirão Sub-20",
-      "jogo": "Palmeiras Sub-20 x Santos Sub-20",
-      "canais": ["YouTube UOL Esporte"]
+      "hora": "17h00",
+      "esporte": "NASCAR O'Reilly",
+      "jogo": "Etapa de Pocono",
+      "canais": ["PhizTV", "Disney+"]
     },
     {
       "hora": "19h00",
-      "esporte": "LNF Silver Futsal",
-      "jogo": "São Caetano x Dracena-SP",
-      "canais": ["XSPORTS", "LNF TV"]
+      "esporte": "Copa do Mundo da FIFA 2026",
+      "jogo": "Brasil x Marrocos",
+      "canais": ["GLOBO", "SPORTV", "GE", "SBT", "Nsports", "CazéTV"]
     },
     {
-      "hora": "19h30",
-      "esporte": "LBF",
-      "jogo": "Santo André x SESI-Araraquara",
-      "canais": ["ESPN4"]
-    },
-    {
-      "hora": "19h30",
-      "esporte": "LBF",
-      "jogo": "Sampaio x São José-SP",
-      "canais": ["YouTube Imirante"]
-    },
-    {
-      "hora": "20h00",
+      "hora": "20h30",
       "esporte": "Liga das Nações Masculina",
-      "jogo": "Brasil x Bélgica",
+      "jogo": "Turquia x Itália",
       "canais": ["SPORTV2"]
-    },
-    {
-      "hora": "20h00",
-      "esporte": "Copa do Brasil Futsal",
-      "jogo": "QF (ida) - Fidas-DF x Minas",
-      "canais": ["YouTube CBFS TV"]
-    },
-    {
-      "hora": "20h05",
-      "esporte": "MLB",
-      "jogo": "Baltimore Orioles x Seattle Mariners",
-      "canais": ["ESPN3"]
     },
     {
       "hora": "21h00",
-      "esporte": "NHL Stanley Cup",
-      "jogo": "Carolina Hurricanes x Vegas Golden Knights (2-2)",
-      "canais": ["ESPN2"]
+      "esporte": "Boxe",
+      "jogo": "Antonio Vargas x Jesse Rodriguez",
+      "canais": ["ESPN4"]
     },
     {
-      "hora": "23h00",
+      "hora": "21h30",
+      "esporte": "NBA Finals",
+      "jogo": "San Antonio Spurs x New York Knicks (1-3)",
+      "canais": ["Prime Video"]
+    },
+    {
+      "hora": "22h00",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Coreia do Sul x República Tcheca",
+      "jogo": "Haiti x Escócia",
       "canais": ["YouTube CazéTV"]
+    },
+    {
+      "hora": "01h00",
+      "esporte": "Copa do Mundo da FIFA 2026",
+      "jogo": "Austrália x Turquia",
+      "canais": ["GLOBO", "SPORTV", "YouTube CazéTV"]
     }
   ]
 }
