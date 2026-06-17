@@ -1,124 +1,82 @@
 {
   "eventos": [
     {
-      "hora": "16h00",
-      "esporte": "La Liga 2 - Playoffs",
-      "jogo": "Final (ida) - Málaga x Almería",
+      "hora": "06h30",
+      "esporte": "Liga das Nações Fem.",
+      "jogo": "Alemanha F x China F",
+      "canais": ["SPORTV2"]
+    },
+    {
+      "hora": "10h00",
+      "esporte": "Liga das Nações Fem.",
+      "jogo": "França F x Brasil F",
+      "canais": ["SPORTV2"]
+    },
+    {
+      "hora": "10h00",
+      "esporte": "ATP500 Halle",
+      "jogo": "OF - Tien x Auger-Aliassime",
       "canais": ["ESPN2"]
     },
     {
-      "hora": "16h00",
-      "esporte": "Nascar Cup",
-      "jogo": "Etapa de Pocono",
-      "canais": ["ESPN3", "PhizTV"]
+      "hora": "10h35",
+      "esporte": "Ciclismo",
+      "jogo": "Tour da Suíça - etapa 1",
+      "canais": ["XSPORTS"]
     },
     {
-      "hora": "16h00",
-      "esporte": "Copa LNF Futsal",
-      "jogo": "OF - Apodi-RN x Jaraguá",
-      "canais": ["YouTube LNF TV"]
+      "hora": "11h30",
+      "esporte": "ATP500 Halle",
+      "jogo": "OF - Atmane x Medvedev",
+      "canais": ["ESPN2"]
     },
     {
-      "hora": "16h30",
-      "esporte": "Brasileirão - Série C",
-      "jogo": "Itabaiana x Ituano",
-      "canais": ["SportyNet+"]
+      "hora": "13h30",
+      "esporte": "Liga das Nações Fem.",
+      "jogo": "Turquia F x Bélgica F",
+      "canais": ["SPORTV2"]
+    },
+    {
+      "hora": "14h00",
+      "esporte": "Copa do Mundo da FIFA 2026",
+      "jogo": "Portugal x RD Congo",
+      "canais": ["YouTube CazéTV"]
     },
     {
       "hora": "17h00",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Holanda x Japão",
-      "canais": ["Globo", "SporTV", "GE", "SBT/Nsports", "CazéTV"]
+      "jogo": "Inglaterra x Croácia",
+      "canais": ["GLOBO", "SPORTV", "GE", "SBT/Nsports", "CazéTV"]
     },
     {
-      "hora": "17h00",
-      "esporte": "Brasileirão - Série B",
-      "jogo": "Cuiabá x Vila Nova",
-      "canais": ["Disney+"]
-    },
-    {
-      "hora": "17h00",
-      "esporte": "Brasileirão - Série D",
-      "jogo": "Rio Branco-ES x Porto-BA",
-      "canais": ["YouTube Metrópoles"]
-    },
-    {
-      "hora": "17h30",
-      "esporte": "Copa LNF Futsal",
-      "jogo": "OF - Joaçaba x Carlos Barbosa",
-      "canais": ["XSPORTS", "LNF TV"]
-    },
-    {
-      "hora": "18h00",
-      "esporte": "Liga das Nações Masc",
-      "jogo": "Brasil x Argentina",
-      "canais": ["SPORTV2"]
-    },
-    {
-      "hora": "19h00",
-      "esporte": "Brasileirão - Série B",
-      "jogo": "Novorizontino x Náutico",
-      "canais": ["REDETV!", "ESPN4", "SportyNet", "YouTube"]
-    },
-    {
-      "hora": "19h00",
-      "esporte": "Brasileirão - Série B",
-      "jogo": "Botafogo-SP x Operário-PR",
-      "canais": ["Disney+"]
-    },
-    {
-      "hora": "19h00",
-      "esporte": "Copa LNF Futsal",
-      "jogo": "OF - São Caetano x Umuarama",
-      "canais": ["YouTube LNF TV"]
-    },
-    {
-      "hora": "19h30",
-      "esporte": "Brasileirão - Série C",
-      "jogo": "Floresta x Figueirense",
-      "canais": ["SportyNet+", "YouTube Benja"]
-    },
-    {
-      "hora": "19h30",
-      "esporte": "Brasileirão - Série C",
-      "jogo": "Volta Redonda x Confiança",
-      "canais": ["SportyNet+"]
+      "hora": "17h45",
+      "esporte": "Ginástica Artística",
+      "jogo": "Pan-Americano - finais equipes",
+      "canais": ["SPORTV2", "CazéTV"]
     },
     {
       "hora": "20h00",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Costa do Marfim x Equador",
-      "canais": ["Globo", "SporTV", "YouTube CazéTV"]
+      "jogo": "Gana x Panamá",
+      "canais": ["YouTube CazéTV"]
     },
     {
-      "hora": "20h20",
+      "hora": "20h00",
+      "esporte": "Copa do Brasil Futsal",
+      "jogo": "QF - Apodi-RN x Traipu-AL (1x3)",
+      "canais": ["YouTube CBFS TV"]
+    },
+    {
+      "hora": "22h40",
       "esporte": "MLB",
-      "jogo": "Boston Red Sox x Texas Rangers",
-      "canais": ["ESPN3"]
-    },
-    {
-      "hora": "20h30",
-      "esporte": "Copa LNF Futsal",
-      "jogo": "OF - Lages-SC x Vélez Camaquã-RS",
-      "canais": ["YouTube LNF TV"]
-    },
-    {
-      "hora": "21h00",
-      "esporte": "UFC Casa Branca",
-      "jogo": "Poatan x Gane, Topuria x Gaethje",
-      "canais": ["Paramount+"]
-    },
-    {
-      "hora": "21h00",
-      "esporte": "NHL Stanley Cup",
-      "jogo": "Vegas Golden Knights x Carolina Hurricanes (2-3)",
-      "canais": ["ESPN2"]
+      "jogo": "Seattle Mariners x Baltimore Orioles",
+      "canais": ["ESPN4"]
     },
     {
       "hora": "23h00",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Suécia x Tunísia",
-      "canais": ["Globo", "SporTV", "YouTube CazéTV"]
+      "jogo": "Uzbequistão x Colômbia",
+      "canais": ["GLOBO", "SPORTV", "YouTube CazéTV"]
     }
   ]
 }
