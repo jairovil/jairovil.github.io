@@ -1,82 +1,94 @@
 {
   "eventos": [
     {
-      "hora": "06h30",
-      "esporte": "Liga das Nações Fem.",
-      "jogo": "Alemanha F x China F",
-      "canais": ["SPORTV2"]
+      "hora": "15h30",
+      "esporte": "Ginástica Artística",
+      "jogo": "Pan-Americano - indiv. geral masc",
+      "canais": ["SPORTV2", "CazéTV"]
     },
     {
-      "hora": "10h00",
-      "esporte": "Liga das Nações Fem.",
-      "jogo": "França F x Brasil F",
-      "canais": ["SPORTV2"]
-    },
-    {
-      "hora": "10h00",
-      "esporte": "ATP500 Halle",
-      "jogo": "OF - Tien x Auger-Aliassime",
-      "canais": ["ESPN2"]
-    },
-    {
-      "hora": "10h35",
-      "esporte": "Ciclismo",
-      "jogo": "Tour da Suíça - etapa 1",
-      "canais": ["XSPORTS"]
-    },
-    {
-      "hora": "11h30",
-      "esporte": "ATP500 Halle",
-      "jogo": "OF - Atmane x Medvedev",
-      "canais": ["ESPN2"]
-    },
-    {
-      "hora": "13h30",
-      "esporte": "Liga das Nações Fem.",
-      "jogo": "Turquia F x Bélgica F",
-      "canais": ["SPORTV2"]
-    },
-    {
-      "hora": "14h00",
+      "hora": "16h00",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Portugal x RD Congo",
+      "jogo": "EUA x Austrália",
       "canais": ["YouTube CazéTV"]
     },
     {
       "hora": "17h00",
-      "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Inglaterra x Croácia",
-      "canais": ["GLOBO", "SPORTV", "GE", "SBT/Nsports", "CazéTV"]
+      "esporte": "LNF Futsal",
+      "jogo": "Tubarão x Minas",
+      "canais": ["XSPORTS", "LNF TV"]
     },
     {
-      "hora": "17h45",
-      "esporte": "Ginástica Artística",
-      "jogo": "Pan-Americano - finais equipes",
-      "canais": ["SPORTV2", "CazéTV"]
+      "hora": "17h20",
+      "esporte": "Stock Car",
+      "jogo": "Etapa de Cuiabá - classificação",
+      "canais": ["BANDSPORTS", "YouTube"]
     },
     {
-      "hora": "20h00",
+      "hora": "18h00",
+      "esporte": "Nado Artístico",
+      "jogo": "Copa do Mundo - etapa de Toronto",
+      "canais": ["SPORTV3"]
+    },
+    {
+      "hora": "18h50",
+      "esporte": "Stock Light",
+      "jogo": "Etapa de Cuiabá - corrida 1",
+      "canais": ["BANDSPORTS", "YouTube"]
+    },
+    {
+      "hora": "19h00",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Gana x Panamá",
+      "jogo": "Escócia x Marrocos",
       "canais": ["YouTube CazéTV"]
     },
     {
       "hora": "20h00",
-      "esporte": "Copa do Brasil Futsal",
-      "jogo": "QF - Apodi-RN x Traipu-AL (1x3)",
-      "canais": ["YouTube CBFS TV"]
+      "esporte": "Super Rugby Américas",
+      "jogo": "Final - Dogos-ARG x Pampas-ARG",
+      "canais": ["ESPN2"]
     },
     {
-      "hora": "22h40",
-      "esporte": "MLB",
-      "jogo": "Seattle Mariners x Baltimore Orioles",
-      "canais": ["ESPN4"]
+      "hora": "20h00",
+      "esporte": "Nascar Truck",
+      "jogo": "Etapa de San Diego",
+      "canais": ["PhizTV", "Disney+"]
     },
     {
-      "hora": "23h00",
+      "hora": "21h30",
       "esporte": "Copa do Mundo da FIFA 2026",
-      "jogo": "Uzbequistão x Colômbia",
-      "canais": ["GLOBO", "SPORTV", "YouTube CazéTV"]
+      "jogo": "Brasil x Haiti",
+      "canais": ["GLOBO", "SPORTV", "GE", "SBT/Nsports", "CazéTV"]
+    },
+    {
+      "hora": "21h30",
+      "esporte": "Fórmula E",
+      "jogo": "EP da China - treino livre 2",
+      "canais": ["BANDSPORTS", "GPTV"]
+    },
+    {
+      "hora": "22h00",
+      "esporte": "MMA",
+      "jogo": "LFA 235",
+      "canais": ["ESPN3"]
+    },
+    {
+      "hora": "23h40",
+      "esporte": "Fórmula E",
+      "jogo": "EP da China - classificação",
+      "canais": ["BANDSPORTS", "GPTV"]
+    },
+    {
+      "hora": "00h00",
+      "esporte": "Copa do Mundo da FIFA 2026",
+      "jogo": "Turquia x Paraguai",
+      "canais": ["GLOBO", "SPORTV2", "YouTube CazéTV"]
+    },
+    {
+      "hora": "00h55",
+      "esporte": "Stock Car",
+      "jogo": "Etapa de Cuiabá - sprint race",
+      "canais": ["BANDSPORTS", "YouTube"]
     }
   ]
 }
